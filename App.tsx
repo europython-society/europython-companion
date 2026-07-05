@@ -8,7 +8,6 @@ import { PaperProvider, MD3Theme } from "react-native-paper";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import * as Notifications from "expo-notifications";
 
-import { colors } from "@theme";
 import { SettingsProvider, useSettings } from "@store/settings";
 import navigationRef from "@navigation/navigationRef";
 import { RootTabParamList, TabRouteName } from "@navigation/routes";
@@ -90,12 +89,11 @@ function AppContent() {
           <Tab.Navigator
             screenOptions={({ route }) => ({
               headerShown: false,
-              tabBarActiveTintColor: activePaperTheme.colors?.primary ?? colors.primary,
-              tabBarInactiveTintColor:
-                activePaperTheme.colors?.onSurfaceVariant ?? colors.textMuted,
+              tabBarActiveTintColor: activePaperTheme.colors.primary,
+              tabBarInactiveTintColor: activePaperTheme.colors.onSurfaceVariant,
               tabBarStyle: {
-                backgroundColor: activePaperTheme.colors?.surface ?? colors.surface,
-                borderTopColor: activePaperTheme.colors?.outline ?? colors.border,
+                backgroundColor: activePaperTheme.colors.surface,
+                borderTopColor: activePaperTheme.colors.outline,
               },
               tabBarLabelStyle: {
                 fontSize: 12,

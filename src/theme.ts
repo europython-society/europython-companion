@@ -50,9 +50,8 @@ export const nightPalette: Palette = {
   surface: "#121212",
   surfaceAlt: "#1e1e1e",
   border: "#2c2c2c",
-}
+};
 
-export const colors = lightPalette;
 export const spacing = {
   xs: 4,
   sm: 8,
@@ -72,7 +71,8 @@ export const radius = {
 export const paperTheme: MD3Theme = createPaperTheme("light");
 
 export function createPaperTheme(mode: "light" | "dark" | "night"): MD3Theme {
-  const palette = mode === "light" ? lightPalette : mode === "dark" ? darkPalette : nightPalette;
+  const palette =
+    mode === "light" ? lightPalette : mode === "dark" ? darkPalette : nightPalette;
   const base = mode === "dark" || mode === "night" ? MD3DarkTheme : MD3LightTheme;
   return {
     ...base,
