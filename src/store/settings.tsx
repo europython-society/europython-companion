@@ -54,7 +54,6 @@ export const DEFAULT_NOTIFICATIONS_ENABLED = true;
 export const DEFAULT_BREAK_NOTIFICATIONS_ENABLED = true;
 export const DEFAULT_ONBOARDING_SEEN = false;
 export const DEFAULT_HAPTICS_ENABLED = true;
-export { DEFAULT_NOTIFICATION_LEAD_MINUTES };
 
 export function SettingsProvider({ children }: { children: React.ReactNode }) {
   const [conferenceYear, setConferenceYearState] = useState<number>(
