@@ -1,0 +1,38 @@
+{
+  "expo": {
+    "name": "EuroPython Companion",
+    "slug": "europython-companion",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "eu.europython.companion",
+      "infoPlist": {
+        "NSCalendarsUsageDescription": "Allow EuroPython Companion to add sessions to your calendar.",
+        "NSRemindersUsageDescription": "Allow EuroPython Companion to add sessions to your reminders."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "edgeToEdgeEnabled": true,
+      "predictiveBackGestureEnabled": false,
+      "permissions": ["READ_CALENDAR", "WRITE_CALENDAR"],
+      "package": "eu.europython.companion"
+    },
+    "web": {
+      "favicon": "./assets/icon.png"
+    },
+    "plugins": ["expo-notifications", "expo-font", "expo-calendar", "expo-system-ui"]
+  }
+}
