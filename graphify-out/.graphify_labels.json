@@ -19,6 +19,7 @@
   "17": "Settings Row Components",
   "18": "Detail Action Row",
   "19": "Info Card",
+  "20": "SettingsSection.tsx",
   "21": "Settings Section",
   "22": "Social Links Row",
   "23": "Dev Proxy Script",
@@ -31,5 +32,8 @@
   "30": "homeInfo.ts",
   "31": "onboarding.ts",
   "32": "share.ts",
-  "33": "coc.ts"
+  "33": "coc.ts",
+  "34": "ChipPicker.tsx",
+  "35": "SocialLinksRow.tsx",
+  "36": "BreakListItem.tsx"
 }

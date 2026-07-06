@@ -5,12 +5,12 @@
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 544 nodes · 836 edges · 33 communities (27 shown, 6 thin omitted)
+- 544 nodes · 826 edges · 37 communities (30 shown, 7 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 4 edges (avg confidence: 0.69)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `a840918a`
+- Built from commit: `903ef075`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -35,6 +35,7 @@
 - [[_COMMUNITY_Settings Row Components|Settings Row Components]]
 - [[_COMMUNITY_Detail Action Row|Detail Action Row]]
 - [[_COMMUNITY_Info Card|Info Card]]
+- [[_COMMUNITY_SettingsSection.tsx|SettingsSection.tsx]]
 - [[_COMMUNITY_Settings Section|Settings Section]]
 - [[_COMMUNITY_Social Links Row|Social Links Row]]
 - [[_COMMUNITY_Dev Proxy Script|Dev Proxy Script]]
@@ -45,6 +46,9 @@
 - [[_COMMUNITY_homeInfo.ts|homeInfo.ts]]
 - [[_COMMUNITY_onboarding.ts|onboarding.ts]]
 - [[_COMMUNITY_share.ts|share.ts]]
+- [[_COMMUNITY_ChipPicker.tsx|ChipPicker.tsx]]
+- [[_COMMUNITY_SocialLinksRow.tsx|SocialLinksRow.tsx]]
+- [[_COMMUNITY_BreakListItem.tsx|BreakListItem.tsx]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `Architecture (docs)` - 20 edges
@@ -78,7 +82,7 @@
 - **Cross-cutting hooks centralizing side effects and derived values** — architecture_usescheduleNotifications, architecture_usecalendarsync, architecture_useappnavigation, architecture_useeffectivetimezone, architecture_useapptheme [EXTRACTED 1.00]
 - **Documentation suite organized by docs/README.md** — docs_readme_index, docs_architecture_doc, docs_project_structure_doc, docs_development_workflow_doc, docs_navigation_doc, docs_configuration_doc, docs_data_and_state_doc, docs_testing_doc, docs_future_work_doc [EXTRACTED 1.00]
 
-## Communities (33 total, 6 thin omitted)
+## Communities (37 total, 7 thin omitted)
 
 ### Community 0 - "Schedule List Components"
 Cohesion: 0.19
@@ -101,12 +105,12 @@ Cohesion: 0.08
 Nodes (47): addMinutesToIso(), buildBasePath(), buildDays(), buildProdBaseUrl(), CachedConferencePayload, conferenceCacheKey(), fetchJson(), isConferenceData() (+39 more)
 
 ### Community 5 - "Session/Break List Items & Legend"
-Cohesion: 0.06
-Nodes (31): DetailAction, Props, styles, Props, styles, createStyles(), MarkdownBody(), Props (+23 more)
+Cohesion: 0.07
+Nodes (28): DetailAction, Props, styles, Props, styles, createStyles(), MarkdownBody(), Props (+20 more)
 
 ### Community 6 - "Navigation Routes & CoC Data"
-Cohesion: 0.10
-Nodes (28): navigationRef, AgendaStackParamList, AgendaStackRoutes, CombinedParamList, HomeStackParamList, HomeStackRoutes, OnboardingStackParamList, OnboardingStackRoutes (+20 more)
+Cohesion: 0.08
+Nodes (32): navigationRef, AgendaStackParamList, AgendaStackRoutes, CombinedParamList, HomeStackParamList, HomeStackRoutes, OnboardingStackParamList, OnboardingStackRoutes (+24 more)
 
 ### Community 7 - "Expo App Config (app.json)"
 Cohesion: 0.06
@@ -121,8 +125,8 @@ Cohesion: 0.11
 Nodes (18): compilerOptions, noUnusedLocals, noUnusedParameters, paths, strict, extends, @/*, @app-types/* (+10 more)
 
 ### Community 10 - "Schedule Filter Components"
-Cohesion: 0.17
-Nodes (7): DayOption, Props, styles, Props, styles, Props, styles
+Cohesion: 0.12
+Nodes (11): DayOption, Props, styles, Props, styles, capitalizeWords(), Props, ScheduleLevelFilter() (+3 more)
 
 ### Community 11 - "Calendar Sync"
 Cohesion: 0.22
@@ -133,16 +137,16 @@ Cohesion: 0.29
 Nodes (4): Props, styles, ScheduleScreen(), styles
 
 ### Community 13 - "Home Hero & Need-to-Know Cards"
-Cohesion: 0.10
-Nodes (11): HomeHeroCard(), Props, styles, NeedToKnowList(), Props, Action, Props, styles (+3 more)
+Cohesion: 0.13
+Nodes (9): HomeHeroCard(), Props, styles, NeedToKnowList(), Props, Action, Props, styles (+1 more)
 
 ### Community 14 - "Favorites Store & Local Storage"
 Cohesion: 0.32
 Nodes (10): FavoritesContext, FavoritesContextValue, FavoritesProvider(), KEY_PER_YEAR(), loadFavorites(), saveFavorites(), loadJsonData(), loadJsonFromStorage() (+2 more)
 
 ### Community 15 - "Search Bar & Offline Banner"
-Cohesion: 0.22
-Nodes (4): Props, OfflineNotice(), styles, styles
+Cohesion: 0.16
+Nodes (6): Props, styles, Props, OfflineNotice(), styles, styles
 
 ### Community 16 - "Theme & Color Palettes"
 Cohesion: 0.40
@@ -157,16 +161,20 @@ Cohesion: 0.25
 Nodes (8): devDependencies, babel-plugin-module-resolver, express, http-proxy-middleware, prettier, @types/express, @types/react, typescript
 
 ### Community 19 - "Info Card"
-Cohesion: 0.50
-Nodes (4): capitalizeWords(), Props, ScheduleLevelFilter(), styles
+Cohesion: 0.28
+Nodes (5): PaddedScrollView(), Props, Props, SpeakerAvatar(), styles
+
+### Community 20 - "SettingsSection.tsx"
+Cohesion: 0.29
+Nodes (5): CardProps, Props, SettingsSection(), styles, styles
 
 ### Community 21 - "Settings Section"
 Cohesion: 0.33
 Nodes (5): main, name, packageManager, private, version
 
 ### Community 22 - "Social Links Row"
-Cohesion: 0.06
-Nodes (23): Contact, Props, styles, Option, Props, styles, PaddedScrollView(), Props (+15 more)
+Cohesion: 0.25
+Nodes (5): Contact, Props, styles, contacts, styles
 
 ### Community 28 - "Legacy Color Export"
 Cohesion: 0.83
@@ -176,19 +184,29 @@ Nodes (3): extractSessionId(), navigateToSession(), useNotificationDeepLink()
 Cohesion: 0.33
 Nodes (4): CONFERENCE_META, CONFERENCE_YEARS, ConferenceMeta, DEFAULT_CONFERENCE_YEAR
 
+### Community 34 - "ChipPicker.tsx"
+Cohesion: 0.40
+Nodes (3): Option, Props, styles
+
+### Community 35 - "SocialLinksRow.tsx"
+Cohesion: 0.40
+Nodes (3): Props, SocialLink, styles
+
 ## Knowledge Gaps
-- **212 isolated node(s):** `NeedToKnowCard`, `needToKnow`, `Palette`, `nightPalette`, `paperTheme` (+207 more)
+- **212 isolated node(s):** `Action`, `Props`, `styles`, `Props`, `styles` (+207 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **6 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **7 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `SpeakerAvatar()` connect `Social Links Row` to `Session/Break List Items & Legend`?**
-  _High betweenness centrality (0.101) - this node is a cross-community bridge._
+- **Why does `SpeakerAvatar()` connect `Info Card` to `Session/Break List Items & Legend`?**
+  _High betweenness centrality (0.099) - this node is a cross-community bridge._
 - **Why does `Session` connect `App Root & Nav Theme` to `Screen Layout & Conference Config`, `Conference Data Fetch/Cache Service`, `Session/Break List Items & Legend`?**
-  _High betweenness centrality (0.077) - this node is a cross-community bridge._
-- **What connects `NeedToKnowCard`, `needToKnow`, `Palette` to the rest of the system?**
+  _High betweenness centrality (0.075) - this node is a cross-community bridge._
+- **Why does `OfflineNotice()` connect `Search Bar & Offline Banner` to `Schedule List Components`, `CoC Contacts Screen`, `Home Hero & Need-to-Know Cards`, `Theme & Color Palettes`, `Info Card`?**
+  _High betweenness centrality (0.017) - this node is a cross-community bridge._
+- **What connects `Action`, `Props`, `styles` to the rest of the system?**
   _220 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `App Bootstrap & Data Providers` be split into smaller, more focused modules?**
   _Cohesion score 0.05505952380952381 - nodes in this community are weakly interconnected._
@@ -196,5 +214,3 @@ _Questions this graph is uniquely positioned to answer:_
   _Cohesion score 0.10384615384615385 - nodes in this community are weakly interconnected._
 - **Should `NPM Dependencies` be split into smaller, more focused modules?**
   _Cohesion score 0.07142857142857142 - nodes in this community are weakly interconnected._
-- **Should `Conference Data Fetch/Cache Service` be split into smaller, more focused modules?**
-  _Cohesion score 0.0784313725490196 - nodes in this community are weakly interconnected._
