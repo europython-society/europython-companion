@@ -93,8 +93,8 @@ export default function ScreenContainer({
           <View
             style={[
               styles.headerTextBlock,
-              showBack && { paddingLeft: 44 },
-              showEndSlot && { paddingRight: 44 },
+              showBack && { paddingLeft: 22 + spacing.xl },
+              showEndSlot && { paddingRight: 22 + spacing.xl },
             ]}
           >
             <Text variant="titleLarge" style={styles.headerTitle}>

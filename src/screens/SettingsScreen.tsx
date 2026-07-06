@@ -162,7 +162,7 @@ export default function SettingsScreen() {
             onChange={handleYearChange}
           />
           <Text variant="bodySmall" style={{ color: colors.onSurfaceVariant }}>
-            {meta.title} — {meta.subtitle}
+            {meta.title} - {meta.subtitle}
           </Text>
           <Text
             variant="bodySmall"

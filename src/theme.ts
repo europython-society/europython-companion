@@ -102,9 +102,6 @@ export function createPaperTheme(mode: "light" | "dark" | "night"): MD3Theme {
       onSurface: palette.text,
       onSurfaceVariant: palette.textMuted,
       onPrimary: "#ffffff",
-      // MD3 elevation is meant to be a subtle primary-tinted overlay on surface,
-      // not a flat color swap — this keeps level1 (mode="elevated" Card default)
-      // close enough to plain surface to not clash with nested outlined cards.
       elevation: {
         ...base.colors.elevation,
         level0: palette.surface,

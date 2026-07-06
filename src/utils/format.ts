@@ -25,7 +25,7 @@ export const formatSessionTimeRange = (session: TimeRangeInput, timeZone?: strin
     hour: "2-digit",
     minute: "2-digit",
     timeZone,
-  })} – ${end.toLocaleTimeString([], {
+  })} - ${end.toLocaleTimeString([], {
     hour: "2-digit",
     minute: "2-digit",
     timeZone,
