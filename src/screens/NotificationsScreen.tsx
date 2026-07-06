@@ -88,7 +88,7 @@ export default function NotificationsScreen() {
           emptyMessage="No scheduled notifications."
         >
           {items.map((item) => (
-            <Card key={item.id} mode="outlined" style={styles.card}>
+            <Card key={item.id} mode="elevated" style={styles.card}>
               <Card.Content>
                 <Text variant="titleMedium" style={styles.title}>
                   {item.title}

@@ -23,7 +23,7 @@ export default function SettingsSection({
   style,
   action,
 }: Props) {
-  const cardMode = cardProps?.mode ?? "outlined";
+  const cardMode = cardProps?.mode ?? "elevated";
   const cardStyle = cardProps?.style;
 
   const cardElement = card ? (

@@ -72,7 +72,7 @@ export default function OnboardingScreen() {
   return (
     <ScreenContainer title={meta.title} subtitle={meta.subtitle}>
       <View style={styles.wrapper}>
-        <Card mode="elevated" style={styles.card}>
+        <Card mode="elevated" elevation={2} style={styles.card}>
           <Card.Content>
             <Text variant="headlineSmall" style={styles.slideTitle}>
               {slide.title}

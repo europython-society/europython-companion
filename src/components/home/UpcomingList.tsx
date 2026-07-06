@@ -73,7 +73,7 @@ export default function UpcomingList({ data, limit = 4, favoritesOnly = false }:
 
   if (items.length === 0) {
     return (
-      <Card mode="outlined" style={{ marginTop: spacing.xs }}>
+      <Card mode="elevated" style={{ marginTop: spacing.xs }}>
         <Card.Content>
           {header}
           <Text variant="bodySmall" style={{ color: colors.onSurfaceVariant }}>
@@ -86,7 +86,7 @@ export default function UpcomingList({ data, limit = 4, favoritesOnly = false }:
   }
 
   return (
-    <Card mode="outlined" style={{ marginTop: spacing.xs }}>
+    <Card mode="elevated" style={{ marginTop: spacing.xs }}>
       <Card.Content>
         {header}
         <View style={{ gap: spacing.sm }}>

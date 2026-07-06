@@ -1,5 +1,5 @@
 import { View, StyleSheet } from "react-native";
-import { Button, Card, Text, useTheme } from "react-native-paper";
+import { Button, Card, Text } from "react-native-paper";
 
 import { radius, spacing } from "@theme";
 
@@ -16,17 +16,8 @@ export default function HomeHeroCard({
   onPressSchedule,
   onPressSpeakers,
 }: Props) {
-  const { colors } = useTheme();
   return (
-    <Card
-      mode="elevated"
-      style={[
-        styles.card,
-        {
-          backgroundColor: colors.surfaceVariant,
-        },
-      ]}
-    >
+    <Card mode="elevated" elevation={2} style={styles.card}>
       <Card.Content>
         <Text variant="titleLarge" style={{ marginBottom: spacing.xs }}>
           {title}

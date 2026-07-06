@@ -227,7 +227,7 @@ export default function SettingsScreen() {
             </Button>
           }
         >
-          <Card mode="outlined" style={[styles.card, { marginTop: spacing.md }]}>
+          <Card mode="elevated" style={[styles.card, { marginTop: spacing.md }]}>
             <Card.Content>
               <SettingsSwitchRow
                 title="Upcoming session reminders"
@@ -261,7 +261,7 @@ export default function SettingsScreen() {
               </View>
             </Card.Content>
           </Card>
-          <Card mode="outlined" style={[styles.card, { marginTop: spacing.md }]}>
+          <Card mode="elevated" style={[styles.card, { marginTop: spacing.md }]}>
             <Card.Content>
               <SettingsSwitchRow
                 title="Break reminders"
@@ -284,7 +284,7 @@ export default function SettingsScreen() {
               />
             </Card.Content>
           </Card>
-          <Card mode="outlined" style={[styles.card, { marginTop: spacing.md }]}>
+          <Card mode="elevated" style={[styles.card, { marginTop: spacing.md }]}>
             <Card.Content>
               <SettingsSwitchRow
                 title="Push notifications"

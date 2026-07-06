@@ -17,7 +17,7 @@ type Props = {
 export default function InfoCard({ title, lines, actions = [] }: Props) {
   const { colors } = useTheme();
   return (
-    <Card mode="outlined" style={styles.card}>
+    <Card mode="elevated" style={styles.card}>
       <Card.Content>
         <Text variant="titleMedium" style={styles.title}>
           {title}
