@@ -17,13 +17,13 @@
     "discord": "@georgically"
   },
   {
-    "name": "Lumír Balhar",
-    "email": "lumir@europython.eu",
-    "discord": "@lumirbalhar"
-  },
-  {
     "name": "Jakub Vysoky",
     "email": "jakub.vysoky@europython.eu",
     "discord": "@kvbik"
+  },
+  {
+    "name": "Michał Karzyński",
+    "email": "michal@europython.eu",
+    "discord": "@postrational"
   }
 ]

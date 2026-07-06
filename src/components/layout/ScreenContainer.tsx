@@ -150,9 +150,11 @@ const styles = StyleSheet.create({
     position: "relative",
     paddingHorizontal: spacing.md,
     paddingTop: spacing.sm,
-    paddingBottom: spacing.xs,
+    paddingBottom: spacing.md,
   },
-  headerTextBlock: {},
+  headerTextBlock: {
+    paddingLeft: spacing.sm,
+  },
   headerTitle: {
     fontWeight: "bold",
   },

@@ -1,13 +1,18 @@
-# Graph Report - .  (2026-07-06)
+# Graph Report - europython-companion  (2026-07-06)
 
 ## Corpus Check
-- 40 files · ~29,402 words
+- 97 files · ~30,056 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 545 nodes · 910 edges · 36 communities (31 shown, 5 thin omitted)
-- Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 4 edges (avg confidence: 0.69)
+- 645 nodes · 1248 edges · 107 communities (39 shown, 68 thin omitted)
+- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 7 edges (avg confidence: 0.74)
 - Token cost: 0 input · 0 output
+
+## Graph Freshness
+- Built from commit: `f71a78c5`
+- Run `git rev-parse HEAD` and compare to check if the graph is stale.
+- Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - [[_COMMUNITY_Conference Data Layer|Conference Data Layer]]
@@ -42,113 +47,175 @@
 - [[_COMMUNITY_Share Utility|Share Utility]]
 - [[_COMMUNITY_Dev Proxy Server|Dev Proxy Server]]
 - [[_COMMUNITY_App Icon Asset|App Icon Asset]]
+- [[_COMMUNITY_CoC Data|CoC Data]]
 - [[_COMMUNITY_Prod Base URL Constant|Prod Base URL Constant]]
+- [[_COMMUNITY_Configuration|Configuration]]
+- [[_COMMUNITY_Future work|Future work]]
+- [[_COMMUNITY_Testing|Testing]]
+- [[_COMMUNITY_DetailActionRow.tsx|DetailActionRow.tsx]]
+- [[_COMMUNITY_SettingsSection.tsx|SettingsSection.tsx]]
+- [[_COMMUNITY_Documentation|Documentation]]
+- [[_COMMUNITY_ScheduleTrackFilter.tsx|ScheduleTrackFilter.tsx]]
+- [[_COMMUNITY_CLAUDE|CLAUDE.md]]
+- [[_COMMUNITY_app.json (Expo config)|app.json (Expo config)]]
+- [[_COMMUNITY_App.tsx (root component)|App.tsx (root component)]]
+- [[_COMMUNITY_ConferenceDataProvider (srcstoreconferenceData.tsx)|ConferenceDataProvider (src/store/conferenceData.tsx)]]
+- [[_COMMUNITY_srcconfigconference.ts|src/config/conference.ts]]
+- [[_COMMUNITY_srcconfigconstants.ts|src/config/constants.ts]]
+- [[_COMMUNITY_srcdatasessionTypes.ts|src/data/sessionTypes.ts]]
+- [[_COMMUNITY_dev-proxy.mjs|dev-proxy.mjs]]
+- [[_COMMUNITY_FavoritesProvider (srcstorefavorites.tsx)|FavoritesProvider (src/store/favorites.tsx)]]
+- [[_COMMUNITY_index.ts (Expo entry)|index.ts (Expo entry)]]
+- [[_COMMUNITY_srcnavigationnavigationRef.ts|src/navigation/navigationRef.ts]]
+- [[_COMMUNITY_Architecture Overview (root doc)|Architecture Overview (root doc)]]
+- [[_COMMUNITY_package.json (scripts)|package.json (scripts)]]
+- [[_COMMUNITY_srcnavigationroutes.ts|src/navigation/routes.ts]]
+- [[_COMMUNITY_srcservicesdata.ts|src/services/data.ts]]
+- [[_COMMUNITY_SettingsProvider (srcstoresettings.tsx)|SettingsProvider (src/store/settings.tsx)]]
+- [[_COMMUNITY_srcnavigationstackConfigs.ts|src/navigation/stackConfigs.ts]]
+- [[_COMMUNITY_srcstoreconferenceData.tsx|src/store/conferenceData.tsx]]
+- [[_COMMUNITY_srcstorefavorites.tsx|src/store/favorites.tsx]]
+- [[_COMMUNITY_srcstoresettings.tsx|src/store/settings.tsx]]
+- [[_COMMUNITY_srctheme.ts|src/theme.ts]]
+- [[_COMMUNITY_srctypesconference.ts|src/types/conference.ts]]
+- [[_COMMUNITY_srctypesraw.ts|src/types/raw.ts]]
+- [[_COMMUNITY_useAppNavigation hook|useAppNavigation hook]]
+- [[_COMMUNITY_useAppTheme hook|useAppTheme hook]]
+- [[_COMMUNITY_useCalendarSync hook|useCalendarSync hook]]
+- [[_COMMUNITY_useEffectiveTimeZone hook|useEffectiveTimeZone hook]]
+- [[_COMMUNITY_useScheduleNotifications hook|useScheduleNotifications hook]]
+- [[_COMMUNITY_useSpeakerAvatars hook|useSpeakerAvatars hook]]
+- [[_COMMUNITY_srcutilscalendar.ts|src/utils/calendar.ts]]
+- [[_COMMUNITY_srcutilshaptics.ts|src/utils/haptics.ts]]
+- [[_COMMUNITY_srcutilsnotifications.ts|src/utils/notifications.ts]]
+- [[_COMMUNITY_srcutilssessionTypes.ts|src/utils/sessionTypes.ts]]
+- [[_COMMUNITY_srcutilsstorage.ts|src/utils/storage.ts]]
+- [[_COMMUNITY_Cache key version-bump invalidation (conferenceCacheKey)|Cache key version-bump invalidation (conferenceCacheKey)]]
+- [[_COMMUNITY_CI runs typecheck only, no test runner|CI runs typecheck only, no test runner]]
+- [[_COMMUNITY_Device-local preferences (no account sync)|Device-local preferences (no account sync)]]
+- [[_COMMUNITY_EXPO_PUBLIC_ base-URL resolution order|EXPO_PUBLIC_* base-URL resolution order]]
+- [[_COMMUNITY_Local notification cappingre-scheduling|Local notification capping/re-scheduling]]
+- [[_COMMUNITY_Offline-first caching strategy|Offline-first caching strategy]]
+- [[_COMMUNITY_Path alias convention (tsconfigbabel)|Path alias convention (tsconfig/babel)]]
+- [[_COMMUNITY_Static JSON programme data assumption|Static JSON programme data assumption]]
+- [[_COMMUNITY_Tab + stack navigation model|Tab + stack navigation model]]
+- [[_COMMUNITY_Architecture (docs)|Architecture (docs)]]
+- [[_COMMUNITY_Configuration (docs)|Configuration (docs)]]
+- [[_COMMUNITY_Data and State (docs)|Data and State (docs)]]
+- [[_COMMUNITY_Development Workflow (docs)|Development Workflow (docs)]]
+- [[_COMMUNITY_Future Work (docs)|Future Work (docs)]]
+- [[_COMMUNITY_Getting Started (docs)|Getting Started (docs)]]
+- [[_COMMUNITY_Navigation (docs)|Navigation (docs)]]
+- [[_COMMUNITY_Project Structure (docs)|Project Structure (docs)]]
+- [[_COMMUNITY_Documentation Index|Documentation Index]]
+- [[_COMMUNITY_Testing (docs)|Testing (docs)]]
+- [[_COMMUNITY_components folder boundary (presentational UI)|components/ folder boundary (presentational UI)]]
+- [[_COMMUNITY_config folder boundary (static constants)|config/ folder boundary (static constants)]]
+- [[_COMMUNITY_data folder boundary (declarative content)|data/ folder boundary (declarative content)]]
+- [[_COMMUNITY_hooks folder boundary (shared side-effect logic)|hooks/ folder boundary (shared side-effect logic)]]
+- [[_COMMUNITY_navigation folder boundary (routing only)|navigation/ folder boundary (routing only)]]
+- [[_COMMUNITY_screens folder boundary (orchestration)|screens/ folder boundary (orchestration)]]
+- [[_COMMUNITY_services folder boundary (data access only)|services/ folder boundary (data access only)]]
+- [[_COMMUNITY_store folder boundary (global state + persistence)|store/ folder boundary (global state + persistence)]]
+- [[_COMMUNITY_types folder boundary (types only)|types/ folder boundary (types only)]]
+- [[_COMMUNITY_utils folder boundary (pure helpers + isolated side effects)|utils/ folder boundary (pure helpers + isolated side effects)]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `spacing` - 35 edges
-2. `Architecture (docs)` - 20 edges
-3. `radius` - 17 edges
-4. `Data and State (docs)` - 14 edges
-5. `paths` - 13 edges
-6. `Project Structure (docs)` - 12 edges
-7. `Development Workflow (docs)` - 11 edges
-8. `expo` - 11 edges
-9. `useScheduleNotifications()` - 9 edges
-10. `Documentation Index` - 9 edges
+2. `useAppNavigation()` - 23 edges
+3. `useConferenceData()` - 21 edges
+4. `useSettings()` - 19 edges
+5. `radius` - 17 edges
+6. `useFavorites()` - 15 edges
+7. `hapticSelection()` - 14 edges
+8. `useEffectiveTimeZone()` - 13 edges
+9. `compareSessionsByStart()` - 13 edges
+10. `paths` - 13 edges
 
 ## Surprising Connections (you probably didn't know these)
+- `ScheduleNotificationManager()` --calls--> `useScheduleNotifications()`  [EXTRACTED]
+  App.tsx → src/hooks/useScheduleNotifications.ts
+- `AppContent()` --calls--> `useSettings()`  [EXTRACTED]
+  App.tsx → src/store/settings.tsx
 - `pnpm-workspace nodeLinker: hoisted` --conceptually_related_to--> `CI Type Check Job`  [INFERRED]
   pnpm-workspace.yaml → .github/workflows/ci.yml
-- `Architecture (docs)` --references--> `ConferenceDataProvider (src/store/conferenceData.tsx)`  [EXTRACTED]
-  docs/architecture.md → architecture.md
-- `Architecture (docs)` --references--> `FavoritesProvider (src/store/favorites.tsx)`  [EXTRACTED]
-  docs/architecture.md → architecture.md
-- `Architecture (docs)` --references--> `SettingsProvider (src/store/settings.tsx)`  [EXTRACTED]
-  docs/architecture.md → architecture.md
-- `Architecture (docs)` --references--> `useAppTheme hook`  [EXTRACTED]
-  docs/architecture.md → architecture.md
+- `AppContent()` --calls--> `useAppNavTheme()`  [EXTRACTED]
+  App.tsx → src/hooks/useAppNavTheme.ts
+- `AppContent()` --calls--> `useNotificationDeepLink()`  [EXTRACTED]
+  App.tsx → src/hooks/useNotificationDeepLink.ts
 
 ## Import Cycles
 - None detected.
 
-## Hyperedges (group relationships)
-- **App bootstrap: App.tsx mounts SettingsProvider, ConferenceDataProvider, FavoritesProvider** — architecture_app_tsx, architecture_settingsprovider, architecture_conferencedataprovider, architecture_favoritesprovider [EXTRACTED 1.00]
-- **Cross-cutting hooks centralizing side effects and derived values** — architecture_usescheduleNotifications, architecture_usecalendarsync, architecture_useappnavigation, architecture_useeffectivetimezone, architecture_useapptheme [EXTRACTED 1.00]
-- **Documentation suite organized by docs/README.md** — docs_readme_index, docs_architecture_doc, docs_project_structure_doc, docs_development_workflow_doc, docs_navigation_doc, docs_configuration_doc, docs_data_and_state_doc, docs_testing_doc, docs_future_work_doc [EXTRACTED 1.00]
-
-## Communities (36 total, 5 thin omitted)
+## Communities (107 total, 68 thin omitted)
 
 ### Community 0 - "Conference Data Layer"
-Cohesion: 0.05
-Nodes (57): MAX_DATE_ISO, NOTIFICATION_LEAD_OPTIONS, useSpeakerAvatars(), addMinutesToIso(), buildBasePath(), buildDays(), buildProdBaseUrl(), CachedConferencePayload (+49 more)
+Cohesion: 0.10
+Nodes (39): addMinutesToIso(), buildBasePath(), buildDays(), buildProdBaseUrl(), CachedConferencePayload, conferenceCacheKey(), fetchJson(), isConferenceData() (+31 more)
 
 ### Community 1 - "Schedule Utilities & Notifications"
-Cohesion: 0.06
-Nodes (50): FavoriteToggleButton(), IconButtonProps, Props, nameOrUnknown(), Props, SessionListItem(), styles, sessionTypeAccentMap (+42 more)
-
-### Community 2 - "Architecture & Documentation"
-Cohesion: 0.06
-Nodes (64): app.json (Expo config), App.tsx (root component), ConferenceDataProvider (src/store/conferenceData.tsx), src/config/conference.ts, src/config/constants.ts, src/data/sessionTypes.ts, dev-proxy.mjs, FavoritesProvider (src/store/favorites.tsx) (+56 more)
+Cohesion: 0.09
+Nodes (37): FavoriteToggleButton(), IconButtonProps, Props, CONFERENCE_META, CONFERENCE_YEARS, ConferenceMeta, DEFAULT_CONFERENCE_YEAR, getConferenceMeta() (+29 more)
 
 ### Community 3 - "Navigation & Routing"
-Cohesion: 0.10
-Nodes (28): navigationRef, AgendaStackParamList, AgendaStackRoutes, CombinedParamList, HomeStackParamList, HomeStackRoutes, OnboardingStackParamList, OnboardingStackRoutes (+20 more)
+Cohesion: 0.07
+Nodes (47): AppContent(), ScheduleNotificationManager(), useAppNavTheme(), extractSessionId(), navigateToSession(), useNotificationDeepLink(), useScheduleNotifications(), AppTabs() (+39 more)
 
 ### Community 4 - "Package Dependencies"
 Cohesion: 0.07
-Nodes (28): dependencies, expo, expo-calendar, @expo/dom-webview, expo-font, expo-haptics, expo-notifications, expo-splash-screen (+20 more)
+Nodes (30): dependencies, @bottom-tabs/react-navigation, expo, expo-calendar, @expo/dom-webview, expo-font, expo-haptics, expo-notifications (+22 more)
 
 ### Community 5 - "App Config (app.json)"
 Cohesion: 0.08
 Nodes (23): backgroundColor, foregroundImage, adaptiveIcon, package, permissions, predictiveBackGestureEnabled, expo, android (+15 more)
 
 ### Community 6 - "Schedule Filters UI"
-Cohesion: 0.12
-Nodes (12): DayOption, Props, styles, Props, styles, Props, styles, Props (+4 more)
+Cohesion: 0.25
+Nodes (6): DayOption, Props, styles, Props, ScheduleFilters(), styles
 
 ### Community 7 - "TypeScript Config"
 Cohesion: 0.11
 Nodes (18): compilerOptions, noUnusedLocals, noUnusedParameters, paths, strict, extends, @/*, @app-types/* (+10 more)
 
 ### Community 8 - "CoC Contacts & Markdown"
-Cohesion: 0.13
-Nodes (11): Contact, Props, styles, Props, styles, createStyles(), MarkdownBody(), Props (+3 more)
+Cohesion: 0.67
+Nodes (3): createStyles(), MarkdownBody(), Props
 
 ### Community 9 - "Home Screen Components"
-Cohesion: 0.13
-Nodes (9): Props, styles, NeedToKnowList(), Action, Props, styles, needToKnow, NeedToKnowCard (+1 more)
+Cohesion: 0.22
+Nodes (6): NeedToKnowList(), Action, Props, styles, needToKnow, NeedToKnowCard
 
 ### Community 10 - "Speaker & Session Detail Screens"
-Cohesion: 0.16
-Nodes (8): Props, OfflineBanner(), Props, styles, OfflineNotice(), Props, styles, styles
+Cohesion: 0.22
+Nodes (6): Props, styles, OfflineBanner(), Props, styles, radius
 
 ### Community 11 - "Theme & Detail Actions"
-Cohesion: 0.18
-Nodes (10): DetailAction, Props, styles, createPaperTheme(), darkPalette, lightPalette, nightPalette, Palette (+2 more)
+Cohesion: 0.31
+Nodes (7): createPaperTheme(), darkPalette, lightPalette, nightPalette, Palette, paperTheme, tint()
 
 ### Community 12 - "Favorites & Data States"
-Cohesion: 0.19
-Nodes (7): Props, styles, Props, Props, StateMessage(), styles, styles
+Cohesion: 0.08
+Nodes (56): Props, UpcomingList(), Props, SearchBar(), styles, PaddedScrollView(), Props, Props (+48 more)
 
 ### Community 13 - "Settings UI"
-Cohesion: 0.17
-Nodes (8): Option, Props, styles, CardProps, Props, SettingsSection(), styles, styles
+Cohesion: 0.40
+Nodes (3): Option, Props, styles
 
 ### Community 14 - "Speaker Detail & Notifications Screens"
-Cohesion: 0.19
-Nodes (7): PaddedScrollView(), Props, Props, SpeakerAvatar(), ScheduledItem, styles, styles
+Cohesion: 0.10
+Nodes (26): BreakListItem(), Props, styles, nameOrUnknown(), Props, SessionListItem(), styles, Props (+18 more)
 
 ### Community 15 - "Settings & Timezone State"
-Cohesion: 0.22
-Nodes (8): useEffectiveTimeZone(), getEffectiveTimeZone(), SettingsContext, SettingsContextValue, SettingsState, ThemeMode, TimeZonePreference, useSettings()
+Cohesion: 0.20
+Nodes (17): AddResult, BulkOptions, BulkResult, RemoveResult, SingleOptions, useCalendarSync(), addSessionToCalendar(), cacheKey() (+9 more)
 
 ### Community 16 - "Favorites Storage"
-Cohesion: 0.32
-Nodes (10): FavoritesContext, FavoritesContextValue, FavoritesProvider(), KEY_PER_YEAR(), loadFavorites(), saveFavorites(), loadJsonData(), loadJsonFromStorage() (+2 more)
+Cohesion: 0.15
+Nodes (15): Contact, Props, styles, contacts, styles, FavoritesContext, FavoritesContextValue, FavoritesProvider() (+7 more)
 
 ### Community 17 - "App Root Composition"
-Cohesion: 0.22
-Nodes (3): builtStacks, stackScreenOptions, Tab
+Cohesion: 0.17
+Nodes (11): Architecture Overview, Components, Config, Tooling & Scripts, Data & Content, Data Sources & Types, Entry, Navigation & Theme, Hooks, Screens (+3 more)
 
 ### Community 18 - "NPM Scripts"
 Cohesion: 0.22
@@ -159,12 +226,12 @@ Cohesion: 0.25
 Nodes (8): devDependencies, babel-plugin-module-resolver, express, http-proxy-middleware, prettier, @types/express, @types/react, typescript
 
 ### Community 20 - "Screen Container & Onboarding"
-Cohesion: 0.25
-Nodes (4): Props, styles, SlideAction, styles
+Cohesion: 0.17
+Nodes (11): components/, config/, data/, hooks/, navigation/, Project structure, screens/, services/ (+3 more)
 
 ### Community 21 - "Upcoming & Break List Items"
-Cohesion: 0.29
-Nodes (3): Props, Props, styles
+Cohesion: 0.18
+Nodes (11): 1) Create the screen, 2) Register the route name and params, 3) Register the screen in the stack, 4) Link to it from an existing screen, Example: add a new screen, Navigation, Route naming and labels, Screen registration (+3 more)
 
 ### Community 22 - "Package Metadata"
 Cohesion: 0.33
@@ -172,11 +239,11 @@ Nodes (5): main, name, packageManager, private, version
 
 ### Community 23 - "Settings Row Component"
 Cohesion: 0.33
-Nodes (3): BaseProps, styles, SwitchProps
+Nodes (4): BaseProps, SettingsSwitchRow(), styles, SwitchProps
 
 ### Community 24 - "Conference Meta Config"
-Cohesion: 0.33
-Nodes (4): CONFERENCE_META, CONFERENCE_YEARS, ConferenceMeta, DEFAULT_CONFERENCE_YEAR
+Cohesion: 0.22
+Nodes (9): Code style and checks, Common startup failures, Configuration overrides, Getting started, Install dependencies, Native builds, Next steps, Prerequisites (+1 more)
 
 ### Community 25 - "Schedule Level Filter"
 Cohesion: 0.50
@@ -187,28 +254,64 @@ Cohesion: 0.40
 Nodes (3): Props, SocialLink, styles
 
 ### Community 27 - "Notification Deep Link"
-Cohesion: 0.83
-Nodes (3): extractSessionId(), navigateToSession(), useNotificationDeepLink()
+Cohesion: 0.33
+Nodes (6): Props, SessionTypeLegendDialog(), styles, sessionTypeAccentMap, sessionTypeLegendEntries, useSessionTypeLegendEntries()
+
+### Community 28 - "Onboarding Data"
+Cohesion: 0.29
+Nodes (6): Cache invalidation, Data and state, Data sources and normalization, Derived state, Side effects and isolation, Store responsibilities
+
+### Community 29 - "Share Utility"
+Cohesion: 0.29
+Nodes (7): Add a new screen, Add a new UI component safely, Avoid breaking navigation or state, Development workflow, Introduce shared logic, Native project workflow, Testing onboarding flows
+
+### Community 34 - "CoC Data"
+Cohesion: 0.33
+Nodes (5): Architecture, Constraints and tradeoffs, Data flow, Hooks and cross-cutting logic, Runtime composition
+
+### Community 37 - "Configuration"
+Cohesion: 0.40
+Nodes (5): app.json, Configuration, Environment and runtime config, Setting EXPO_PUBLIC_* locally, What contributors should and should not change
+
+### Community 38 - "Future work"
+Cohesion: 0.40
+Nodes (4): Future work, Known limitations, Likely evolution points, Safe areas to experiment
+
+### Community 39 - "Testing"
+Cohesion: 0.40
+Nodes (4): Contributor expectations, Current posture, Testing, Where tests would live
+
+### Community 40 - "DetailActionRow.tsx"
+Cohesion: 0.40
+Nodes (3): DetailAction, Props, styles
+
+### Community 41 - "SettingsSection.tsx"
+Cohesion: 0.40
+Nodes (4): CardProps, Props, SettingsSection(), styles
+
+### Community 42 - "Documentation"
+Cohesion: 0.50
+Nodes (4): Documentation, How this set is organized, Purpose, Where to start
 
 ## Knowledge Gaps
-- **211 isolated node(s):** `DetailAction`, `Props`, `styles`, `Props`, `Props` (+206 more)
+- **301 isolated node(s):** `name`, `slug`, `version`, `orientation`, `icon` (+296 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **5 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **68 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `spacing` connect `Schedule Filters UI` to `Schedule Utilities & Notifications`, `Navigation & Routing`, `CoC Contacts & Markdown`, `Home Screen Components`, `Speaker & Session Detail Screens`, `Theme & Detail Actions`, `Favorites & Data States`, `Settings UI`, `Speaker Detail & Notifications Screens`, `Screen Container & Onboarding`, `Upcoming & Break List Items`, `Settings Row Component`, `Schedule Level Filter`, `Social Links Component`?**
-  _High betweenness centrality (0.123) - this node is a cross-community bridge._
-- **Why does `Session` connect `Schedule Utilities & Notifications` to `Conference Data Layer`?**
-  _High betweenness centrality (0.078) - this node is a cross-community bridge._
-- **Why does `dependencies` connect `Package Dependencies` to `Package Metadata`?**
+- **Why does `spacing` connect `Favorites & Data States` to `Schedule Utilities & Notifications`, `Navigation & Routing`, `Schedule Filters UI`, `DetailActionRow.tsx`, `Home Screen Components`, `Speaker & Session Detail Screens`, `ScheduleTrackFilter.tsx`, `SettingsSection.tsx`, `Settings UI`, `Speaker Detail & Notifications Screens`, `Theme & Detail Actions`, `Favorites Storage`, `Settings Row Component`, `Schedule Level Filter`, `Social Links Component`, `Notification Deep Link`?**
+  _High betweenness centrality (0.037) - this node is a cross-community bridge._
+- **Why does `Session` connect `Favorites & Data States` to `Conference Data Layer`, `Navigation & Routing`, `Speaker Detail & Notifications Screens`, `Settings & Timezone State`?**
+  _High betweenness centrality (0.011) - this node is a cross-community bridge._
+- **Why does `radius` connect `Speaker & Session Detail Screens` to `Schedule Utilities & Notifications`, `Navigation & Routing`, `Schedule Filters UI`, `CoC Contacts & Markdown`, `Home Screen Components`, `SettingsSection.tsx`, `ScheduleTrackFilter.tsx`, `Favorites & Data States`, `Theme & Detail Actions`, `Speaker Detail & Notifications Screens`, `Favorites Storage`, `Notification Deep Link`?**
   _High betweenness centrality (0.007) - this node is a cross-community bridge._
-- **What connects `DetailAction`, `Props`, `styles` to the rest of the system?**
-  _219 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **What connects `name`, `slug`, `version` to the rest of the system?**
+  _320 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Conference Data Layer` be split into smaller, more focused modules?**
-  _Cohesion score 0.0502283105022831 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.0975609756097561 - nodes in this community are weakly interconnected._
 - **Should `Schedule Utilities & Notifications` be split into smaller, more focused modules?**
-  _Cohesion score 0.06340326340326341 - nodes in this community are weakly interconnected._
-- **Should `Architecture & Documentation` be split into smaller, more focused modules?**
-  _Cohesion score 0.05505952380952381 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.09308510638297872 - nodes in this community are weakly interconnected._
+- **Should `Navigation & Routing` be split into smaller, more focused modules?**
+  _Cohesion score 0.06663141195134849 - nodes in this community are weakly interconnected._

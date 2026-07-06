@@ -1,4 +1,5 @@
 import { Ionicons } from "@expo/vector-icons";
+import type { SFSymbol } from "sf-symbols-typescript";
 
 import {
   AgendaStackParamList,
@@ -41,6 +42,15 @@ export const tabIconNames: Record<TabRouteName, keyof typeof Ionicons.glyphMap> 
   [TabRoutes.Speakers]: "people-outline",
   [TabRoutes.Agenda]: "star-outline",
   [TabRoutes.Settings]: "settings-outline",
+};
+
+// SF Symbol names for the native iOS tab bar (react-native-bottom-tabs).
+export const tabSfSymbols: Record<TabRouteName, SFSymbol> = {
+  [TabRoutes.Home]: "house",
+  [TabRoutes.Schedule]: "calendar",
+  [TabRoutes.Speakers]: "person.2",
+  [TabRoutes.Agenda]: "star",
+  [TabRoutes.Settings]: "gearshape",
 };
 
 export type TabScreenConfig = {

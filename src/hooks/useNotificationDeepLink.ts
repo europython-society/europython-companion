@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { Platform } from "react-native";
 import * as Notifications from "expo-notifications";
 
 import navigationRef from "@navigation/navigationRef";
@@ -38,6 +39,11 @@ export function useNotificationDeepLink() {
   const pendingSessionId = useRef<string | null>(null);
 
   useEffect(() => {
+    // Notification-tap deep-linking has no equivalent on web (no OS
+    // notification tray to resolve a cold start from), and getLastNotification-
+    // ResponseAsync isn't implemented there and rejects.
+    if (Platform.OS === "web") return;
+
     const handleResponse = (response: Notifications.NotificationResponse) => {
       const sessionId = extractSessionId(response);
       if (!sessionId) {

@@ -40,7 +40,7 @@ export default function HomeHeroCard({
 
 const styles = StyleSheet.create({
   card: {
-    marginTop: spacing.md,
+    marginTop: spacing.xs,
     marginHorizontal: spacing.md,
     marginBottom: spacing.md,
     borderRadius: radius.xl,
