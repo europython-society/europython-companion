@@ -68,6 +68,17 @@ export const radius = {
   pill: 999,
 };
 
+function tint(base: string, accent: string, amount: number): string {
+  const b = parseInt(base.slice(1, 7), 16);
+  const a = parseInt(accent.slice(1, 7), 16);
+  const mix = (shift: number) => {
+    const bc = (b >> shift) & 255;
+    const ac = (a >> shift) & 255;
+    return Math.round(bc + (ac - bc) * amount);
+  };
+  return `#${[mix(16), mix(8), mix(0)].map((c) => c.toString(16).padStart(2, "0")).join("")}`;
+}
+
 export const paperTheme: MD3Theme = createPaperTheme("light");
 
 export function createPaperTheme(mode: "light" | "dark" | "night"): MD3Theme {
@@ -91,14 +102,17 @@ export function createPaperTheme(mode: "light" | "dark" | "night"): MD3Theme {
       onSurface: palette.text,
       onSurfaceVariant: palette.textMuted,
       onPrimary: "#ffffff",
+      // MD3 elevation is meant to be a subtle primary-tinted overlay on surface,
+      // not a flat color swap — this keeps level1 (mode="elevated" Card default)
+      // close enough to plain surface to not clash with nested outlined cards.
       elevation: {
         ...base.colors.elevation,
         level0: palette.surface,
-        level1: palette.surfaceAlt,
-        level2: palette.surfaceAlt,
-        level3: palette.surfaceAlt,
-        level4: palette.surfaceAlt,
-        level5: palette.surfaceAlt,
+        level1: tint(palette.surface, palette.primary, 0.05),
+        level2: tint(palette.surface, palette.primary, 0.08),
+        level3: tint(palette.surface, palette.primary, 0.11),
+        level4: tint(palette.surface, palette.primary, 0.12),
+        level5: tint(palette.surface, palette.primary, 0.14),
       },
     },
   };

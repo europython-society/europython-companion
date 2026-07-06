@@ -21,6 +21,7 @@ export const needToKnow: NeedToKnowCard[] = [
     lines: [
       "Please read the EuroPython Code of Conduct before attending.",
       "For urgent safety concerns, please come to the registration area or contact a CoC team member.",
+      "For emergencies call 112 directly.",
     ],
     actions: [
       { key: "openCoC", label: "View CoC" },
