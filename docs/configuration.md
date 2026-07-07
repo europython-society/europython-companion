@@ -10,31 +10,25 @@
 Treat these values as release-critical. Coordinate changes to identifiers, permissions, or plugins with maintainers.
 
 ## Environment and runtime config
-The data layer supports two optional environment variables (read in `src/services/data.ts`):
+The data layer supports one optional environment variable (read in `src/services/conference.ts`):
 - `EXPO_PUBLIC_API_BASE` overrides the programme base URL. If it includes `{year}`, it is replaced with the selected year.
-- `EXPO_PUBLIC_WEB_PROXY_BASE` overrides the local web proxy base (defaults to `http://localhost:4000`).
 
-Resolution order in `src/services/data.ts`:
-- Web dev (`__DEV__` + `Platform.OS === "web"`): always use `EXPO_PUBLIC_WEB_PROXY_BASE` (or the default). `EXPO_PUBLIC_API_BASE` is ignored in this path.
-- All other cases: use `EXPO_PUBLIC_API_BASE` when set, otherwise fall back to the production static host.
-- In dev, a failed non-prod fetch falls back to the production host.
+Resolution order in `src/services/conference.ts`:
+- Use `EXPO_PUBLIC_API_BASE` when set, otherwise fall back to the production static host.
+- A failed non-prod fetch falls back to the production host in dev.
 
 Static configuration lives in `src/config/`:
-- `conference.ts` defines the supported years, titles/subtitles, and per-year time zones.
-- `constants.ts` holds notification defaults, proxy defaults, and shared time/date constants.
+- `conference.ts` defines the supported years, titles/subtitles, per-year time zones, and the Wi-Fi info URL.
+- `constants.ts` holds notification defaults and shared time/date constants.
 
-`dev-proxy.mjs` is the local proxy used by `pnpm web` to avoid CORS issues when hitting the EuroPython static host.
+`static.europython.eu` and `ep2026.europython.eu` (Wi-Fi info) both send `Access-Control-Allow-Origin: *`, so web (dev and prod) fetches them directly — no proxy needed.
 
 ## Setting EXPO_PUBLIC_* locally
-This repo uses `app.json` (not `app.config.js`), so environment values must be supplied by your shell when you start Expo. Examples:
+This repo uses `app.json` (not `app.config.js`), so environment values must be supplied by your shell when you start Expo. Example:
 
 - Override the base API for native/dev builds:
   ```sh
   EXPO_PUBLIC_API_BASE="https://example.com/programme/ep{year}/releases/current" pnpm start
-  ```
-- Point web dev at a custom proxy origin:
-  ```sh
-  EXPO_PUBLIC_WEB_PROXY_BASE="http://localhost:4001" pnpm web
   ```
 
 If you want `.env` support, add it explicitly and document it; it is not configured here.
@@ -47,4 +41,4 @@ Safe to change:
 Avoid changing without coordination:
 - Bundle identifiers, Android package, or permission lists in `app.json`.
 - Expo plugin list or `newArchEnabled`.
-- Base URL resolution logic in `src/services/data.ts` (affects production data loading).
+- Base URL resolution logic in `src/services/conference.ts` (affects production data loading).

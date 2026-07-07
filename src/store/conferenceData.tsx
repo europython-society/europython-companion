@@ -7,13 +7,17 @@ import React, {
   useRef,
   useState,
 } from "react";
+import { AppState, type AppStateStatus } from "react-native";
 import NetInfo, { type NetInfoState } from "@react-native-community/netinfo";
 
-import { loadConferenceDataWithMeta } from "@services/data";
+import { DATA_REFRESH_INTERVAL_MS } from "@config/constants";
+import { loadConferenceDataWithMeta } from "@services/conference";
+import { loadWifiInfo, WifiInfo } from "@services/wifi";
 import { ConferenceData } from "@app-types/conference";
 
 type ConferenceContextValue = {
   data: ConferenceData | null;
+  wifi: WifiInfo | null;
   loading: boolean;
   refreshing: boolean;
   error: Error | null;
@@ -38,6 +42,7 @@ export function ConferenceDataProvider({
   year: number;
 }) {
   const [data, setData] = useState<ConferenceData | null>(null);
+  const [wifi, setWifi] = useState<WifiInfo | null>(null);
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
   const [error, setError] = useState<Error | null>(null);
@@ -48,17 +53,31 @@ export function ConferenceDataProvider({
   const [resolvedYear, setResolvedYear] = useState(year);
   const hasLoaded = useRef(false);
   const requestIdRef = useRef(0);
+  const lastFetchAtRef = useRef(0);
 
   const fetchData = useCallback(
-    async (opts?: { forceRefresh?: boolean }) => {
+    async (opts?: { forceRefresh?: boolean; silent?: boolean }) => {
+      // don't fetch if we are in silent mode and the last fetch
+      // was too recent, unless forceRefresh is true (pull to refresh)
+      if (opts?.silent && !opts?.forceRefresh) {
+        if (Date.now() - lastFetchAtRef.current < DATA_REFRESH_INTERVAL_MS) return;
+      }
+      lastFetchAtRef.current = Date.now();
+
       const requestId = (requestIdRef.current += 1);
       const isRefresh = opts?.forceRefresh || hasLoaded.current;
 
-      if (isRefresh) {
-        setRefreshing(true);
-      } else {
-        setLoading(true);
+      if (!opts?.silent) {
+        if (isRefresh) {
+          setRefreshing(true);
+        } else {
+          setLoading(true);
+        }
       }
+
+      loadWifiInfo().then((info) => {
+        if (requestId === requestIdRef.current) setWifi(info);
+      });
 
       try {
         const result = await loadConferenceDataWithMeta(year);
@@ -116,6 +135,25 @@ export function ConferenceDataProvider({
     };
   }, [fetchData]);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      fetchData({ silent: true });
+    }, DATA_REFRESH_INTERVAL_MS);
+    return () => clearInterval(interval);
+  }, [fetchData]);
+
+  useEffect(() => {
+    const subscription = AppState.addEventListener(
+      "change",
+      (nextState: AppStateStatus) => {
+        if (nextState === "active") {
+          fetchData({ silent: true });
+        }
+      },
+    );
+    return () => subscription.remove();
+  }, [fetchData]);
+
   const refresh = useCallback(async () => {
     await fetchData({ forceRefresh: true });
   }, [fetchData]);
@@ -123,6 +161,7 @@ export function ConferenceDataProvider({
   const value = useMemo<ConferenceContextValue>(
     () => ({
       data,
+      wifi,
       loading,
       refreshing,
       error,
@@ -136,6 +175,7 @@ export function ConferenceDataProvider({
     }),
     [
       data,
+      wifi,
       error,
       fetchedAt,
       fromCache,

@@ -19,23 +19,25 @@ Big-picture flow:
 ## Config, Tooling & Scripts
 - `app.json`: Expo config (icon/splash from `assets/icon.png`), permissions (calendar, reminders), plugins (expo-notifications/font/calendar/system-ui), Android/iOS/web basics, and new-architecture flag.
 - `tsconfig.json` / `babel.config.js`: Path aliases (`@`, `@components`, `@hooks`, `@utils`, `@store`, `@screens`, `@navigation`, `@config`, `@app-types`, `@services`, `@theme`, `@data`) and module resolver setup; strict TS with unused checks.
-- `package.json`: Expo entry at `index.ts`; scripts for `start`, `android`, `ios`, `web` (with `dev:proxy`), `format`/`format:check` (Prettier), and `typecheck` (`tsc --noEmit`).
+- `package.json`: Expo entry at `index.ts`; scripts for `start`, `android`, `ios`, `web`, `format`/`format:check` (Prettier), and `typecheck` (`tsc --noEmit`).
 - `.github/workflows/ci.yml`: CI runs pnpm install and `pnpm typecheck`.
-- `dev-proxy.mjs`: Express proxy for web testing; proxies `/programme/ep{year}` to the static host with CORS headers/logging.
-- `src/config/constants.ts`: Shared defaults and caps (notification lead minutes/options, max scheduled notifications, web proxy default, ISO locale, max date sentinel, and refresh intervals).
+- `src/config/constants.ts`: Shared defaults and caps (notification lead minutes/options, max scheduled notifications, ISO locale, max date sentinel, and refresh intervals).
 
 ## Data Sources & Types
-- Remote JSON expected at `https://static.europython.eu/programme/ep{year}/releases/current/`; `EXPO_PUBLIC_API_BASE` or `EXPO_PUBLIC_WEB_PROXY_BASE` can override (proxy default http://localhost:4000 on web testing).
+- Remote JSON expected at `https://static.europython.eu/programme/ep{year}/releases/current/`; `EXPO_PUBLIC_API_BASE` can override. Both this host and `ep2026.europython.eu` (Wi-Fi info) send `Access-Control-Allow-Origin: *`, so web fetches them directly with no proxy.
 - `src/types/raw.ts`: Raw JSON shapes for sessions, speakers, and schedule (map-shaped payloads, typed schedule events).
 - `src/types/conference.ts`: App-facing normalized types (Speaker/Session with optional `slotId`, BreakSlot, DaySchedule, ConferenceData, SpeakerRef).
 - `src/config/conference.ts`: Year list, default year, per-year title/subtitle/time zone, and `getConferenceMeta`.
 
 ## Services & Data Flow
-- `src/services/data.ts`: Resolves base URL (proxy in web dev, env override, otherwise prod), fetches `sessions.json`/`speakers.json`/`schedule.json` (prod fallback in dev on failure), normalizes speakers/sessions, uses schedule as the source of truth for room/time/website overrides while building per-day event lists (multi-slot support via `slotId`), updates base session times from earliest/latest slot, and caches payloads in AsyncStorage (`ep{year}:conferenceData:v2`) with fetched-at metadata. Returns offline cache when network fails.
+- `src/services/guards.ts`: Runtime type guards for raw payloads, conference data, and Wi-Fi info.
+- `src/services/conferenceTransform.ts`: Pure normalization (speakers/sessions) and `buildDays`, which uses schedule as the source of truth for room/time/website overrides while building per-day event lists (multi-slot support via `slotId`) and returns a merged `sessionsById` (earliest/latest slot times, unioned rooms) without mutating its input.
+- `src/services/conference.ts`: Resolves base URL (env override, otherwise prod), fetches `sessions.json`/`speakers.json`/`schedule.json` (prod fallback in dev on failure), and caches payloads in AsyncStorage (`ep{year}:conferenceData:v2`) with fetched-at metadata. Returns offline cache when network fails.
+- `src/services/wifi.ts`: Fetches live venue Wi-Fi credentials directly from the conference host, with AsyncStorage caching (network-first, cache fallback).
 
 ## State & Context
 - `src/store/settings.tsx`: Settings context for year, theme mode (`system`/`light`/`dark`/`night`), TZ preference (conference vs local), notifications (session+break), notification lead minutes, haptics enabled, onboarding seen. Persists to AsyncStorage (`app:settings`), exposes setters, `availableYears`, `getEffectiveTimeZone`, and toggles runtime haptics.
-- `src/store/conferenceData.tsx`: Fetches data via `loadConferenceDataWithMeta`, tracks loading/refreshing/error/offline/cache status, last fetched time, resolved year, and exposes `refresh`. Subscribes to NetInfo and infers offline via `navigator.onLine` for web.
+- `src/store/conferenceData.tsx`: Fetches conference data via `loadConferenceDataWithMeta` and Wi-Fi info via `loadWifiInfo` together on every cycle, tracks loading/refreshing/error/offline/cache status, last fetched time, resolved year, and exposes `refresh`. Auto-refreshes silently on a timer (`DATA_REFRESH_INTERVAL_MS`) and on app-foreground (`AppState`), throttled to avoid duplicate fetches. Subscribes to NetInfo and infers offline via `navigator.onLine` for web.
 - `src/store/favorites.tsx`: Favorites context persisted per year (`europython:favorites:{year}`) with `toggleFavorite`, `setFavorite`, `clearFavorites`, and `loadFavorites`/`saveFavorites` helpers.
 
 ## Hooks

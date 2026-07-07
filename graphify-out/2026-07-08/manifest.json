@@ -20,7 +20,7 @@
     "semantic_hash": "abba34ee03076e881f01c31c57d8f27a"
   },
   "package.json": {
-    "mtime": 1783467393.1843088,
+    "mtime": 1783464863.3805459,
     "ast_hash": "2ed07c91af5f08022fb6208d3de7302b",
     "semantic_hash": ""
   },
@@ -155,13 +155,13 @@
     "semantic_hash": "fa7dae6e36dbd8c4b239938a6a434edc"
   },
   "src/config/conference.ts": {
-    "mtime": 1783467246.9300947,
-    "ast_hash": "bedd8aac7facd9513a8c5e530c12aed4",
+    "mtime": 1783385030.6599827,
+    "ast_hash": "6426b179e88b9a94303d2547b593fc05",
     "semantic_hash": ""
   },
   "src/config/constants.ts": {
-    "mtime": 1783466688.6111908,
-    "ast_hash": "fd32fd8e2d17cd4589f69b59b1a07592",
+    "mtime": 1783464611.052756,
+    "ast_hash": "5d81a10769a6f493998a26384220fe31",
     "semantic_hash": ""
   },
   "src/data/coc.ts": {
@@ -290,8 +290,8 @@
     "semantic_hash": ""
   },
   "src/store/conferenceData.tsx": {
-    "mtime": 1783466728.4672494,
-    "ast_hash": "6b8eaef17344e89ec4c0c4c3f2c308f3",
+    "mtime": 1783463119.7504964,
+    "ast_hash": "c2b963fd305714ce9a48fc136a9e48d4",
     "semantic_hash": ""
   },
   "src/store/favorites.tsx": {
@@ -490,8 +490,8 @@
     "semantic_hash": ""
   },
   "src/services/conference.ts": {
-    "mtime": 1783467331.8341246,
-    "ast_hash": "8f0fc5227c1d4d0eaf3814d1edfa95ca",
+    "mtime": 1783464646.1334536,
+    "ast_hash": "16d9695ade2f9b88264e5de51382dfde",
     "semantic_hash": ""
   },
   "src/services/conferenceTransform.ts": {

@@ -3,10 +3,12 @@ import { View } from "react-native";
 import InfoCard from "@components/InfoCard";
 import { needToKnow } from "@data/homeInfo";
 import useAppNavigation from "@hooks/useAppNavigation";
+import { useConferenceData } from "@store/conferenceData";
 import { spacing } from "@theme";
 
 export default function NeedToKnowList() {
   const navigationActions = useAppNavigation();
+  const { wifi } = useConferenceData();
 
   const mapAction = (key: string, label: string) => {
     const handler = (navigationActions as Record<string, unknown>)[key];
@@ -22,9 +24,14 @@ export default function NeedToKnowList() {
           ?.map((action) => mapAction(action.key, action.label))
           .filter((a): a is { label: string; onPress: () => void } => !!a);
 
+        const lines =
+          card.title === "Wi‑Fi Info" && wifi
+            ? [`SSID: ${wifi.ssid}`, `Password: ${wifi.password}`]
+            : card.lines;
+
         return (
           <View key={card.title} style={{ marginBottom: -spacing.xs }}>
-            <InfoCard title={card.title} lines={card.lines} actions={actions} />
+            <InfoCard title={card.title} lines={lines} actions={actions} />
           </View>
         );
       })}
