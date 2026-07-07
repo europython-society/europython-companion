@@ -9,7 +9,7 @@ import PaddedScrollView from "@components/layout/PaddedScrollView";
 import DataBoundary from "@components/status/DataBoundary";
 import { normalizeTrigger } from "@utils/notifications";
 import { compareSessionsByStart, toSortableStartItem } from "@utils/schedule";
-import { formatMinutesFromMs } from "@utils/format";
+import { formatDurationFromMs } from "@utils/format";
 import { formatSessionStartLabel } from "@utils/time";
 import { radius, spacing } from "@theme";
 
@@ -108,7 +108,7 @@ export default function NotificationsScreen() {
                   </Text>
                 ) : item.relativeMs ? (
                   <Text variant="bodySmall" style={{ color: colors.onSurfaceVariant }}>
-                    Scheduled in ~{formatMinutesFromMs(item.relativeMs)} minutes
+                    Scheduled in ~{formatDurationFromMs(item.relativeMs)}
                   </Text>
                 ) : (
                   <Text variant="bodySmall" style={{ color: colors.onSurfaceVariant }}>

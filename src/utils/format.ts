@@ -44,9 +44,22 @@ export const formatSessionSubtitle = (session: Session, timeZone?: string) => {
 };
 
 /**
- * Format a relative milliseconds value as whole minutes.
+ * Format a relative milliseconds value as "Xd Yh Zm" (omitting zero units).
  */
-export const formatMinutesFromMs = (ms: number) => Math.round(ms / 60_000);
+export const formatDurationFromMs = (ms: number) => {
+  const totalMinutes = Math.round(ms / 60_000);
+  const days = Math.floor(totalMinutes / 1440);
+  const hours = Math.floor((totalMinutes % 1440) / 60);
+  const minutes = totalMinutes % 60;
+
+  const parts = [
+    days && `${days}d`,
+    hours && `${hours}h`,
+    (minutes || (!days && !hours)) && `${minutes}m`,
+  ].filter(Boolean);
+
+  return parts.join(" ");
+};
 
 /**
  * Create initials from a name (up to two parts), defaulting to '?'.
