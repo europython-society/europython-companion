@@ -25,7 +25,7 @@ function buildBaseUrl(year: number) {
   return `${API_BASE}/ep${year}/releases/current`;
 }
 
-const conferenceCacheKey = (year: number) => `ep${year}:conferenceData:v3`;
+const conferenceCacheKey = (year: number) => `ep${year}:conferenceData:v2`;
 
 async function fetchJson<T>(baseUrl: string, path: string): Promise<T> {
   const url = `${baseUrl}/${path}`;
