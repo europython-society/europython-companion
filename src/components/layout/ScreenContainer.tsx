@@ -132,7 +132,9 @@ export default function ScreenContainer({
               />
             </View>
           ) : !infoButton && headerRight ? (
-            <View style={[styles.headerSideSlot, styles.headerEndSlot]}>{headerRight}</View>
+            <View style={[styles.headerSideSlot, styles.headerEndSlot]}>
+              {headerRight}
+            </View>
           ) : null}
         </View>
       )}

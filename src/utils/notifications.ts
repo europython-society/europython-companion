@@ -58,7 +58,10 @@ export function resetNotificationPermissionCache() {
  */
 export function normalizeTrigger(
   trigger: Notifications.NotificationTriggerInput | null,
-): { date: Date | null; relativeMs: number | null } {
+): {
+  date: Date | null;
+  relativeMs: number | null;
+} {
   if (!trigger) return { date: null, relativeMs: null };
   const anyTrigger = trigger as any;
 

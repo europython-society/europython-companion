@@ -57,9 +57,7 @@ export function isScheduleBreakEvent(ev: RawScheduleEvent): ev is RawScheduleBre
   return ev.event_type === "break";
 }
 
-export function isWifiInfo(
-  value: unknown,
-): value is { ssid: string; password: string } {
+export function isWifiInfo(value: unknown): value is { ssid: string; password: string } {
   return (
     isRecord(value) &&
     typeof value.ssid === "string" &&

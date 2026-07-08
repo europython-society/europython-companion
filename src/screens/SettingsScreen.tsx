@@ -55,9 +55,7 @@ export default function SettingsScreen() {
   } = useSettings();
   const meta = getConferenceMeta(conferenceYear);
   const effectiveTimeZone =
-    timeZonePreference === "conference"
-      ? meta.timeZone
-      : getLocalTimeZone();
+    timeZonePreference === "conference" ? meta.timeZone : getLocalTimeZone();
 
   const lastUpdated = useMemo(() => formatFetchedAt(fetchedAt), [fetchedAt]);
 
@@ -66,10 +64,19 @@ export default function SettingsScreen() {
     label: String(year),
     value: year,
   }));
-  const themeOptions = (["system", "light", "dark", "night"] as ThemeMode[]).map((mode) => ({
-    label: mode === "system" ? "System" : mode === "light" ? "Light" : mode === "dark" ? "Dark" : "Night",
-    value: mode,
-  }));
+  const themeOptions = (["system", "light", "dark", "night"] as ThemeMode[]).map(
+    (mode) => ({
+      label:
+        mode === "system"
+          ? "System"
+          : mode === "light"
+            ? "Light"
+            : mode === "dark"
+              ? "Dark"
+              : "Night",
+      value: mode,
+    }),
+  );
 
   const handleYearChange = (year: number) => {
     if (year === conferenceYear) return;

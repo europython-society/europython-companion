@@ -18,11 +18,8 @@ import { getRoomLabel } from "@utils/format";
 export function useScheduleNotifications() {
   const { data, loading } = useConferenceData();
   const { favorites } = useFavorites();
-  const {
-    notificationsEnabled,
-    notificationLeadMinutes,
-    breakNotificationsEnabled,
-  } = useSettings();
+  const { notificationsEnabled, notificationLeadMinutes, breakNotificationsEnabled } =
+    useSettings();
 
   useEffect(() => {
     if (!notificationsEnabled && !breakNotificationsEnabled) {

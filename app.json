@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "EuroPython Companion",
+    "name": "EuroPython",
     "slug": "europython-companion",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -11,8 +11,7 @@
       "supportsTablet": true,
       "bundleIdentifier": "eu.europython.companion",
       "infoPlist": {
-        "NSCalendarsUsageDescription": "Allow EuroPython Companion to add sessions to your calendar.",
-        "NSRemindersUsageDescription": "Allow EuroPython Companion to add sessions to your reminders."
+        "NSCalendarsUsageDescription": "Allow EuroPython Companion to add sessions to your calendar."
       }
     },
     "android": {

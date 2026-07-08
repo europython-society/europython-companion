@@ -23,7 +23,8 @@ export interface RawSession {
   youtube_url: string | null;
 }
 
-export type RawSessions = Record<string, RawSession> | { sessions: Record<string, RawSession> };
+export type RawSessions =
+  Record<string, RawSession> | { sessions: Record<string, RawSession> };
 
 export interface RawSpeaker {
   code: string;
@@ -43,8 +44,7 @@ export interface RawSpeaker {
 }
 
 export type RawSpeakers =
-  | Record<string, RawSpeaker>
-  | { speakers: Record<string, RawSpeaker> };
+  Record<string, RawSpeaker> | { speakers: Record<string, RawSpeaker> };
 
 export interface RawScheduleSpeakerRef {
   code: string;

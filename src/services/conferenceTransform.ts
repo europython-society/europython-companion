@@ -1,4 +1,10 @@
-import { RawSessions, RawSpeakers, RawSchedule, RawSpeaker, RawSession } from "@app-types/raw";
+import {
+  RawSessions,
+  RawSpeakers,
+  RawSchedule,
+  RawSpeaker,
+  RawSession,
+} from "@app-types/raw";
 import {
   BreakSlot,
   DaySchedule,

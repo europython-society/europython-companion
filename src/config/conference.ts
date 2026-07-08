@@ -34,4 +34,5 @@ export const CONFERENCE_META: Record<number, ConferenceMeta> = {
 export const getConferenceMeta = (year: number) => CONFERENCE_META[year]!;
 
 export const API_BASE = "https://static.europython.eu/programme";
+export const SCHEMA_VERSION = 3;
 export const WIFI_INFO_URL = "https://ep2026.europython.eu/17b6ec54daf5cb58-wifi.json";

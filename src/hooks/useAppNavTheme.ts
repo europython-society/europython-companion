@@ -29,7 +29,9 @@ export function useAppNavTheme(themeMode: ThemeMode): {
   // when the two disagree. Not applicable on web (no such trait to override).
   useEffect(() => {
     if (Platform.OS === "web") return;
-    Appearance.setColorScheme(themeMode === "system" ? "unspecified" : isDark ? "dark" : "light");
+    Appearance.setColorScheme(
+      themeMode === "system" ? "unspecified" : isDark ? "dark" : "light",
+    );
   }, [themeMode, isDark]);
 
   return useMemo(() => {

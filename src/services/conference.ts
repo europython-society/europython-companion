@@ -1,11 +1,21 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
-import { CONFERENCE_YEARS, DEFAULT_CONFERENCE_YEAR, API_BASE } from "@config/conference";
+import {
+  CONFERENCE_YEARS,
+  DEFAULT_CONFERENCE_YEAR,
+  API_BASE,
+  SCHEMA_VERSION,
+} from "@config/conference";
 import { RawSessions, RawSpeakers, RawSchedule } from "@app-types/raw";
 import { ConferenceData, Session, Speaker } from "@app-types/conference";
 
 import { isConferenceData, isRecord } from "./guards";
-import { buildDays, normalizeConferencePayload, normalizeSession, normalizeSpeaker } from "./conferenceTransform";
+import {
+  buildDays,
+  normalizeConferencePayload,
+  normalizeSession,
+  normalizeSpeaker,
+} from "./conferenceTransform";
 
 type CachedConferencePayload =
   | {
@@ -25,7 +35,28 @@ function buildBaseUrl(year: number) {
   return `${API_BASE}/ep${year}/releases/current`;
 }
 
-const conferenceCacheKey = (year: number) => `ep${year}:conferenceData:v2`;
+const conferenceCacheKey = (year: number) =>
+  `ep${year}:conferenceData:v${SCHEMA_VERSION}`;
+
+// Purge cache keys from previous schema versions
+async function purgeOldCacheKeys() {
+  const keysToRemove: string[] = [];
+  for (let v = SCHEMA_VERSION - 1; v >= 0; v--) {
+    for (const year of CONFERENCE_YEARS) {
+      keysToRemove.push(`ep${year}:conferenceData:v${v}`);
+    }
+  }
+  await Promise.all(keysToRemove.map((key) => AsyncStorage.removeItem(key)));
+}
+
+// Purge cache keys for other years (except the default year) to save space
+async function purgeOtherYearsCacheKeys(year: number) {
+  await Promise.all(
+    CONFERENCE_YEARS.filter((y) => y !== year && y !== DEFAULT_CONFERENCE_YEAR).map((y) =>
+      AsyncStorage.removeItem(conferenceCacheKey(y)),
+    ),
+  );
+}
 
 async function fetchJson<T>(baseUrl: string, path: string): Promise<T> {
   const url = `${baseUrl}/${path}`;
@@ -51,8 +82,8 @@ async function readCachedConferenceData(cacheKey: string): Promise<{
       return null;
     }
     const fetchedAtValue = isRecord(parsed)
-      ? (parsed as { fetchedAt?: unknown; fetched_at?: unknown }).fetchedAt ??
-        (parsed as { fetchedAt?: unknown; fetched_at?: unknown }).fetched_at
+      ? ((parsed as { fetchedAt?: unknown; fetched_at?: unknown }).fetchedAt ??
+        (parsed as { fetchedAt?: unknown; fetched_at?: unknown }).fetched_at)
       : null;
     const fetchedAt = typeof fetchedAtValue === "string" ? fetchedAtValue : null;
     return { data: dataCandidate, fetchedAt };
@@ -70,8 +101,11 @@ async function loadFromNetwork(year: number): Promise<ConferenceData> {
     fetchJson<RawSchedule>(baseUrl, "schedule.json"),
   ]);
 
-  const { sessions: sessionsPayload, speakers: speakersPayload, schedule } =
-    normalizeConferencePayload(rawSessions, rawSpeakers, rawSchedule);
+  const {
+    sessions: sessionsPayload,
+    speakers: speakersPayload,
+    schedule,
+  } = normalizeConferencePayload(rawSessions, rawSpeakers, rawSchedule);
 
   const speakersById: Record<string, Speaker> = {};
   for (const [code, raw] of Object.entries(speakersPayload)) {
@@ -107,19 +141,21 @@ export async function loadConferenceDataWithMeta(
     const data = await loadFromNetwork(year);
     const fetchedAt = new Date().toISOString();
     try {
-      const payload = JSON.stringify({ data, fetchedAt } satisfies CachedConferencePayload);
+      const payload = JSON.stringify({
+        data,
+        fetchedAt,
+      } satisfies CachedConferencePayload);
       try {
         await AsyncStorage.setItem(cacheKey, payload);
       } catch {
-        await Promise.all(
-          CONFERENCE_YEARS.filter((y) => y !== year && y !== DEFAULT_CONFERENCE_YEAR).map((y) =>
-            AsyncStorage.removeItem(conferenceCacheKey(y)),
-          ),
-        );
+        await Promise.all([purgeOldCacheKeys(), purgeOtherYearsCacheKeys(year)]);
         await AsyncStorage.setItem(cacheKey, payload);
       }
     } catch (cacheErr) {
-      console.warn(`Failed to cache conference data for ${year}; offline fallback unavailable`, cacheErr);
+      console.warn(
+        `Failed to cache conference data for ${year}; offline fallback unavailable`,
+        cacheErr,
+      );
     }
     return {
       data,
