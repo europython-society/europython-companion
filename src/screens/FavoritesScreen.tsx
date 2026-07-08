@@ -19,7 +19,7 @@ import { compareSessionsByStart } from "@utils/schedule";
 import useEffectiveTimeZone from "@hooks/useEffectiveTimeZone";
 
 export default function FavoritesScreen() {
-  const { data, loading, refreshing, refresh, error } = useConferenceData();
+  const { data, loading, refreshing, refreshIfStale, error } = useConferenceData();
   const { favorites, loading: favoritesLoading } = useFavorites();
   const { notificationLeadMinutes } = useSettings();
   const { conferenceYear, timeZone } = useEffectiveTimeZone();
@@ -85,7 +85,7 @@ export default function FavoritesScreen() {
         <SessionList
           sessions={sessionsForList}
           refreshing={refreshing}
-          onRefresh={refresh}
+          onRefresh={refreshIfStale}
           timeZone={timeZone}
           onSelect={openSession}
           emptyMessage="No starred sessions yet."

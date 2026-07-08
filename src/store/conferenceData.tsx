@@ -28,6 +28,7 @@ type ConferenceContextValue = {
   conferenceYear: number;
   resolvedYear: number;
   refresh: () => Promise<void>;
+  refreshIfStale: () => Promise<void>;
 };
 
 const ConferenceDataContext = createContext<ConferenceContextValue | undefined>(
@@ -80,7 +81,9 @@ export function ConferenceDataProvider({
       });
 
       try {
-        const result = await loadConferenceDataWithMeta(year);
+        const result = await loadConferenceDataWithMeta(year, {
+          forceRefresh: opts?.forceRefresh,
+        });
         if (requestId !== requestIdRef.current) return;
         setData(result.data);
         setFromCache(result.fromCache);
@@ -158,6 +161,10 @@ export function ConferenceDataProvider({
     await fetchData({ forceRefresh: true });
   }, [fetchData]);
 
+  const refreshIfStale = useCallback(async () => {
+    await fetchData();
+  }, [fetchData]);
+
   const value = useMemo<ConferenceContextValue>(
     () => ({
       data,
@@ -172,6 +179,7 @@ export function ConferenceDataProvider({
       conferenceYear: year,
       resolvedYear,
       refresh,
+      refreshIfStale,
     }),
     [
       data,
@@ -183,6 +191,7 @@ export function ConferenceDataProvider({
       lastFetchFailed,
       loading,
       refresh,
+      refreshIfStale,
       refreshing,
       year,
       resolvedYear,

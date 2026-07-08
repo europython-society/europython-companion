@@ -24,7 +24,10 @@
       "package": "eu.europython.companion"
     },
     "web": {
-      "favicon": "./assets/icon.png"
+      "favicon": "./assets/icon.png",
+      "name": "EuroPython",
+      "description": "Your companion for the EuroPython in your pocket.",
+      "themeColor": "#001B31"
     },
     "plugins": [
       "expo-notifications",
@@ -32,6 +35,7 @@
       "expo-calendar",
       "expo-system-ui",
       "expo-status-bar",
+      "expo-image",
       [
         "expo-splash-screen",
         {

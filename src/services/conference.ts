@@ -6,6 +6,7 @@ import {
   API_BASE,
   SCHEMA_VERSION,
 } from "@config/conference";
+import { DATA_REFRESH_INTERVAL_MS } from "@config/constants";
 import { RawSessions, RawSpeakers, RawSchedule } from "@app-types/raw";
 import { ConferenceData, Session, Speaker } from "@app-types/conference";
 
@@ -129,13 +130,29 @@ async function loadFromNetwork(year: number): Promise<ConferenceData> {
 
 /**
  * Load conference data with offline caching.
- * - Try network first.
- * - If it fails, fall back to cached ConferenceData in AsyncStorage.
+ * - If a fresh (< DATA_REFRESH_INTERVAL_MS) cached copy exists and forceRefresh
+ *   isn't set, serve it without hitting the network.
+ * - Otherwise try network first.
+ * - If the network fails, fall back to any cached ConferenceData in AsyncStorage.
  */
 export async function loadConferenceDataWithMeta(
   year: number,
+  opts?: { forceRefresh?: boolean },
 ): Promise<LoadConferenceResult> {
   const cacheKey = conferenceCacheKey(year);
+  const cached = await readCachedConferenceData(cacheKey);
+
+  if (!opts?.forceRefresh && cached?.fetchedAt) {
+    const age = Date.now() - Date.parse(cached.fetchedAt);
+    if (age >= 0 && age < DATA_REFRESH_INTERVAL_MS) {
+      return {
+        data: cached.data,
+        fromCache: false,
+        fetchedAt: cached.fetchedAt,
+        resolvedYear: year,
+      };
+    }
+  }
 
   try {
     const data = await loadFromNetwork(year);
@@ -164,7 +181,6 @@ export async function loadConferenceDataWithMeta(
       resolvedYear: year,
     };
   } catch (err) {
-    const cached = await readCachedConferenceData(cacheKey);
     if (cached) {
       return {
         data: cached.data,

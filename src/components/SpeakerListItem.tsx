@@ -1,4 +1,6 @@
-import { Card, Avatar } from "react-native-paper";
+import { Card } from "react-native-paper";
+
+import SpeakerAvatar from "@components/SpeakerAvatar";
 
 type Props = {
   name: string;
@@ -15,13 +17,7 @@ export default function SpeakerListItem({ name, affiliation, avatar, onPress }: 
         subtitle={affiliation ?? undefined}
         titleStyle={{ fontWeight: "bold" }}
         subtitleStyle={{ marginTop: -6 }}
-        left={(props) =>
-          avatar ? (
-            <Avatar.Image {...props} size={40} source={{ uri: avatar }} />
-          ) : (
-            <Avatar.Text {...props} size={40} label={name.slice(0, 2).toUpperCase()} />
-          )
-        }
+        left={() => <SpeakerAvatar name={name} avatarUri={avatar} size={40} />}
       />
     </Card>
   );

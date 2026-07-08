@@ -14,6 +14,8 @@ import { FavoritesProvider } from "@store/favorites";
 import { useScheduleNotifications } from "@hooks/useScheduleNotifications";
 import { useNotificationDeepLink } from "@hooks/useNotificationDeepLink";
 import { useAppNavTheme } from "@hooks/useAppNavTheme";
+import { usePwaInstallPrompt } from "@hooks/usePwaInstallPrompt";
+import InstallPrompt from "@components/status/InstallPrompt";
 
 function ScheduleNotificationManager() {
   useScheduleNotifications();
@@ -33,6 +35,11 @@ function AppContent() {
   const { conferenceYear, themeMode, onboardingSeen, hydrated } = useSettings();
   const { paperTheme: activePaperTheme, navTheme } = useAppNavTheme(themeMode);
   const { onNavReady } = useNotificationDeepLink();
+  // Called unconditionally (not just in the post-onboarding branch below) so its
+  // beforeinstallprompt listener attaches as soon as the app mounts, not only
+  // once onboarding finishes — otherwise an earlier event fire is missed until
+  // the next full page reload.
+  const pwaInstallPrompt = usePwaInstallPrompt();
 
   if (!hydrated) {
     return null;
@@ -53,6 +60,7 @@ function AppContent() {
       <ConferenceDataProvider year={conferenceYear}>
         <FavoritesProvider year={conferenceYear}>
           <ScheduleNotificationManager />
+          <InstallPrompt {...pwaInstallPrompt} />
           <AppTabs theme={activePaperTheme} />
         </FavoritesProvider>
       </ConferenceDataProvider>

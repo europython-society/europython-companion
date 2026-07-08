@@ -20,7 +20,7 @@ import SessionTypeLegendDialog from "@components/schedule/SessionTypeLegendDialo
 
 export default function ScheduleScreen() {
   const { colors } = useTheme();
-  const { data, loading, refreshing, refresh, error } = useConferenceData();
+  const { data, loading, refreshing, refreshIfStale, error } = useConferenceData();
   const [searchQuery, setSearchQuery] = useState("");
   const [legendVisible, setLegendVisible] = useState(false);
 
@@ -233,7 +233,7 @@ export default function ScheduleScreen() {
         <SessionList
           sessions={itemsForList}
           refreshing={refreshing}
-          onRefresh={refresh}
+          onRefresh={refreshIfStale}
           timeZone={timeZone}
           onSelect={openSession}
           emptyMessage="No sessions or breaks match your filters."
