@@ -1,7 +1,7 @@
 {
   "App.tsx": {
-    "mtime": 1783501774.9010565,
-    "ast_hash": "73c4d2df88df849cc9c43ff9f772e95b",
+    "mtime": 1783520507.539668,
+    "ast_hash": "cbe30dc1eac82a8780b6354017c75e5d",
     "semantic_hash": ""
   },
   "app.json": {
@@ -270,9 +270,9 @@
     "semantic_hash": ""
   },
   "src/screens/SessionDetailScreen.tsx": {
-    "mtime": 1783469775.198557,
-    "ast_hash": "03c1e2ccb58202749df8a12ba67c72cf",
-    "semantic_hash": "03c1e2ccb58202749df8a12ba67c72cf"
+    "mtime": 1783520482.2406814,
+    "ast_hash": "83a7cd69a71956fc5f228fc8c9559074",
+    "semantic_hash": ""
   },
   "src/screens/SettingsScreen.tsx": {
     "mtime": 1783469775.2058597,
@@ -300,9 +300,9 @@
     "semantic_hash": "b2329ee741334bae1620e3d8db688991"
   },
   "src/store/settings.tsx": {
-    "mtime": 1783469775.2445786,
-    "ast_hash": "b73e47d5afd09b013c22ca423d897853",
-    "semantic_hash": "b73e47d5afd09b013c22ca423d897853"
+    "mtime": 1783520532.941948,
+    "ast_hash": "7d135696d8aaf5eb1475861d28f77db0",
+    "semantic_hash": ""
   },
   "src/theme.ts": {
     "mtime": 1783469775.2479877,
@@ -557,6 +557,11 @@
   "src/hooks/usePwaInstallPrompt.ts": {
     "mtime": 1783511589.938448,
     "ast_hash": "d99f76d3789e10bce2e1aaa476ecdea1",
+    "semantic_hash": ""
+  },
+  "src/utils/webAlertPolyfill.ts": {
+    "mtime": 1783520495.4931476,
+    "ast_hash": "fbc38f67bb0568429319c163809f9015",
     "semantic_hash": ""
   }
 }

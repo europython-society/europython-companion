@@ -5,6 +5,7 @@ import { PaperProvider, MD3Theme } from "react-native-paper";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import * as Notifications from "expo-notifications";
 
+import "@utils/webAlertPolyfill";
 import { SettingsProvider, useSettings } from "@store/settings";
 import navigationRef from "@navigation/navigationRef";
 import { AppTabs } from "@navigation/AppTabs";
@@ -35,10 +36,6 @@ function AppContent() {
   const { conferenceYear, themeMode, onboardingSeen, hydrated } = useSettings();
   const { paperTheme: activePaperTheme, navTheme } = useAppNavTheme(themeMode);
   const { onNavReady } = useNotificationDeepLink();
-  // Called unconditionally (not just in the post-onboarding branch below) so its
-  // beforeinstallprompt listener attaches as soon as the app mounts, not only
-  // once onboarding finishes — otherwise an earlier event fire is missed until
-  // the next full page reload.
   const pwaInstallPrompt = usePwaInstallPrompt();
 
   if (!hydrated) {

@@ -7,7 +7,6 @@ import type { usePwaInstallPrompt } from "@hooks/usePwaInstallPrompt";
 
 type Props = ReturnType<typeof usePwaInstallPrompt>;
 
-
 export default function InstallPrompt({
   visible,
   canInstall,

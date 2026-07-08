@@ -17,17 +17,17 @@
       "label": "ScheduleNotificationManager()",
       "file_type": "code",
       "source_file": "App.tsx",
-      "source_location": "L19",
+      "source_location": "L20",
       "_origin": "ast",
       "id": "app_schedulenotificationmanager",
-      "community": 14,
+      "community": 3,
       "norm_label": "schedulenotificationmanager()"
     },
     {
       "label": "AppContent()",
       "file_type": "code",
       "source_file": "App.tsx",
-      "source_location": "L33",
+      "source_location": "L34",
       "_origin": "ast",
       "id": "app_appcontent",
       "community": 3,
@@ -37,7 +37,7 @@
       "label": "App()",
       "file_type": "code",
       "source_file": "App.tsx",
-      "source_location": "L65",
+      "source_location": "L71",
       "_origin": "ast",
       "id": "app_app",
       "community": 3,
@@ -47,7 +47,7 @@
       "label": "AppScaffold()",
       "file_type": "code",
       "source_file": "App.tsx",
-      "source_location": "L73",
+      "source_location": "L79",
       "_origin": "ast",
       "id": "app_appscaffold",
       "community": 3,
@@ -444,10 +444,30 @@
       "norm_label": "build:web"
     },
     {
-      "label": "format",
+      "label": "pwa",
       "file_type": "code",
       "source_file": "package.json",
       "source_location": "L11",
+      "_origin": "ast",
+      "id": "package_scripts_pwa",
+      "community": 8,
+      "norm_label": "pwa"
+    },
+    {
+      "label": "tunnel",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "package_scripts_tunnel",
+      "community": 8,
+      "norm_label": "tunnel"
+    },
+    {
+      "label": "format",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L13",
       "_origin": "ast",
       "id": "package_scripts_format",
       "community": 8,
@@ -457,7 +477,7 @@
       "label": "format:check",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L12",
+      "source_location": "L14",
       "_origin": "ast",
       "id": "package_scripts_format_check",
       "community": 8,
@@ -467,7 +487,7 @@
       "label": "typecheck",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L13",
+      "source_location": "L15",
       "_origin": "ast",
       "id": "package_scripts_typecheck",
       "community": 8,
@@ -477,7 +497,7 @@
       "label": "dependencies",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L15",
+      "source_location": "L17",
       "_origin": "ast",
       "id": "package_dependencies",
       "community": 4,
@@ -487,7 +507,7 @@
       "label": "@bottom-tabs/react-navigation",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L16",
+      "source_location": "L18",
       "_origin": "ast",
       "id": "package_dependencies_bottom_tabs_react_navigation",
       "community": 4,
@@ -497,7 +517,7 @@
       "label": "@expo/dom-webview",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L17",
+      "source_location": "L19",
       "_origin": "ast",
       "id": "package_dependencies_expo_dom_webview",
       "community": 4,
@@ -507,7 +527,7 @@
       "label": "@expo/vector-icons",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L18",
+      "source_location": "L20",
       "_origin": "ast",
       "id": "package_dependencies_expo_vector_icons",
       "community": 4,
@@ -517,7 +537,7 @@
       "label": "@react-native-async-storage/async-storage",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L19",
+      "source_location": "L21",
       "_origin": "ast",
       "id": "package_dependencies_react_native_async_storage_async_storage",
       "community": 4,
@@ -527,7 +547,7 @@
       "label": "@react-native-community/netinfo",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L20",
+      "source_location": "L22",
       "_origin": "ast",
       "id": "package_dependencies_react_native_community_netinfo",
       "community": 4,
@@ -537,7 +557,7 @@
       "label": "@react-navigation/bottom-tabs",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L21",
+      "source_location": "L23",
       "_origin": "ast",
       "id": "package_dependencies_react_navigation_bottom_tabs",
       "community": 4,
@@ -547,7 +567,7 @@
       "label": "@react-navigation/native",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L22",
+      "source_location": "L24",
       "_origin": "ast",
       "id": "package_dependencies_react_navigation_native",
       "community": 4,
@@ -557,7 +577,7 @@
       "label": "@react-navigation/native-stack",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L23",
+      "source_location": "L25",
       "_origin": "ast",
       "id": "package_dependencies_react_navigation_native_stack",
       "community": 4,
@@ -567,7 +587,7 @@
       "label": "expo",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L24",
+      "source_location": "L26",
       "_origin": "ast",
       "id": "package_dependencies_expo",
       "community": 4,
@@ -577,7 +597,7 @@
       "label": "expo-calendar",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L25",
+      "source_location": "L27",
       "_origin": "ast",
       "id": "package_dependencies_expo_calendar",
       "community": 4,
@@ -587,7 +607,7 @@
       "label": "expo-font",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L26",
+      "source_location": "L28",
       "_origin": "ast",
       "id": "package_dependencies_expo_font",
       "community": 4,
@@ -597,7 +617,7 @@
       "label": "expo-haptics",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L27",
+      "source_location": "L29",
       "_origin": "ast",
       "id": "package_dependencies_expo_haptics",
       "community": 4,
@@ -607,7 +627,7 @@
       "label": "expo-image",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L28",
+      "source_location": "L30",
       "_origin": "ast",
       "id": "package_dependencies_expo_image",
       "community": 4,
@@ -617,7 +637,7 @@
       "label": "expo-notifications",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L29",
+      "source_location": "L31",
       "_origin": "ast",
       "id": "package_dependencies_expo_notifications",
       "community": 4,
@@ -627,7 +647,7 @@
       "label": "expo-splash-screen",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L30",
+      "source_location": "L32",
       "_origin": "ast",
       "id": "package_dependencies_expo_splash_screen",
       "community": 4,
@@ -637,7 +657,7 @@
       "label": "expo-status-bar",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L31",
+      "source_location": "L33",
       "_origin": "ast",
       "id": "package_dependencies_expo_status_bar",
       "community": 4,
@@ -647,7 +667,7 @@
       "label": "expo-system-ui",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L32",
+      "source_location": "L34",
       "_origin": "ast",
       "id": "package_dependencies_expo_system_ui",
       "community": 4,
@@ -657,7 +677,7 @@
       "label": "punycode",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L33",
+      "source_location": "L35",
       "_origin": "ast",
       "id": "package_dependencies_punycode",
       "community": 4,
@@ -667,7 +687,7 @@
       "label": "react",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L34",
+      "source_location": "L36",
       "_origin": "ast",
       "id": "package_dependencies_react",
       "community": 4,
@@ -677,7 +697,7 @@
       "label": "react-dom",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L35",
+      "source_location": "L37",
       "_origin": "ast",
       "id": "package_dependencies_react_dom",
       "community": 4,
@@ -687,7 +707,7 @@
       "label": "react-native",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L36",
+      "source_location": "L38",
       "_origin": "ast",
       "id": "package_dependencies_react_native",
       "community": 4,
@@ -697,7 +717,7 @@
       "label": "react-native-bottom-tabs",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L37",
+      "source_location": "L39",
       "_origin": "ast",
       "id": "package_dependencies_react_native_bottom_tabs",
       "community": 4,
@@ -707,7 +727,7 @@
       "label": "react-native-markdown-display",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L38",
+      "source_location": "L40",
       "_origin": "ast",
       "id": "package_dependencies_react_native_markdown_display",
       "community": 4,
@@ -717,7 +737,7 @@
       "label": "react-native-paper",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L39",
+      "source_location": "L41",
       "_origin": "ast",
       "id": "package_dependencies_react_native_paper",
       "community": 4,
@@ -727,7 +747,7 @@
       "label": "react-native-reanimated",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L40",
+      "source_location": "L42",
       "_origin": "ast",
       "id": "package_dependencies_react_native_reanimated",
       "community": 4,
@@ -737,7 +757,7 @@
       "label": "react-native-safe-area-context",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L41",
+      "source_location": "L43",
       "_origin": "ast",
       "id": "package_dependencies_react_native_safe_area_context",
       "community": 4,
@@ -747,7 +767,7 @@
       "label": "react-native-screens",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L42",
+      "source_location": "L44",
       "_origin": "ast",
       "id": "package_dependencies_react_native_screens",
       "community": 4,
@@ -757,7 +777,7 @@
       "label": "react-native-web",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L43",
+      "source_location": "L45",
       "_origin": "ast",
       "id": "package_dependencies_react_native_web",
       "community": 4,
@@ -767,7 +787,7 @@
       "label": "react-native-webview",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L44",
+      "source_location": "L46",
       "_origin": "ast",
       "id": "package_dependencies_react_native_webview",
       "community": 4,
@@ -777,7 +797,7 @@
       "label": "react-native-worklets",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L45",
+      "source_location": "L47",
       "_origin": "ast",
       "id": "package_dependencies_react_native_worklets",
       "community": 4,
@@ -787,7 +807,7 @@
       "label": "devDependencies",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L47",
+      "source_location": "L49",
       "_origin": "ast",
       "id": "package_devdependencies",
       "community": 18,
@@ -797,7 +817,7 @@
       "label": "@types/react",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L48",
+      "source_location": "L50",
       "_origin": "ast",
       "id": "package_devdependencies_types_react",
       "community": 18,
@@ -807,7 +827,7 @@
       "label": "babel-plugin-module-resolver",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L49",
+      "source_location": "L51",
       "_origin": "ast",
       "id": "package_devdependencies_babel_plugin_module_resolver",
       "community": 18,
@@ -817,7 +837,7 @@
       "label": "baseline-browser-mapping",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L50",
+      "source_location": "L52",
       "_origin": "ast",
       "id": "package_devdependencies_baseline_browser_mapping",
       "community": 18,
@@ -827,7 +847,7 @@
       "label": "prettier",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L51",
+      "source_location": "L53",
       "_origin": "ast",
       "id": "package_devdependencies_prettier",
       "community": 18,
@@ -837,7 +857,7 @@
       "label": "typescript",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L52",
+      "source_location": "L54",
       "_origin": "ast",
       "id": "package_devdependencies_typescript",
       "community": 18,
@@ -847,7 +867,7 @@
       "label": "workbox-cli",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L53",
+      "source_location": "L55",
       "_origin": "ast",
       "id": "package_devdependencies_workbox_cli",
       "community": 18,
@@ -857,7 +877,7 @@
       "label": "private",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L55",
+      "source_location": "L57",
       "_origin": "ast",
       "id": "package_private",
       "community": 15,
@@ -867,7 +887,7 @@
       "label": "packageManager",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L56",
+      "source_location": "L58",
       "_origin": "ast",
       "id": "package_packagemanager",
       "community": 15,
@@ -1040,7 +1060,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_detailactionrow",
-      "community": 30,
+      "community": 11,
       "norm_label": "detailactionrow.tsx"
     },
     {
@@ -1050,7 +1070,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "src_components_detailactionrow_detailaction",
-      "community": 30,
+      "community": 11,
       "norm_label": "detailaction"
     },
     {
@@ -1060,7 +1080,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "src_components_detailactionrow_props",
-      "community": 30,
+      "community": 11,
       "norm_label": "props"
     },
     {
@@ -1070,7 +1090,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "src_components_detailactionrow_detailactionrow",
-      "community": 30,
+      "community": 11,
       "norm_label": "detailactionrow()"
     },
     {
@@ -1080,7 +1100,7 @@
       "source_location": "L47",
       "_origin": "ast",
       "id": "src_components_detailactionrow_styles",
-      "community": 30,
+      "community": 11,
       "norm_label": "styles"
     },
     {
@@ -1140,7 +1160,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_markdownbody",
-      "community": 22,
+      "community": 12,
       "norm_label": "markdownbody.tsx"
     },
     {
@@ -1150,7 +1170,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "src_components_markdownbody_props",
-      "community": 22,
+      "community": 12,
       "norm_label": "props"
     },
     {
@@ -1160,7 +1180,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "src_components_markdownbody_markdownbody",
-      "community": 22,
+      "community": 12,
       "norm_label": "markdownbody()"
     },
     {
@@ -1170,7 +1190,7 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "src_components_markdownbody_createstyles",
-      "community": 22,
+      "community": 12,
       "norm_label": "createstyles()"
     },
     {
@@ -1330,7 +1350,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_home_needtoknowlist",
-      "community": 12,
+      "community": 27,
       "norm_label": "needtoknowlist.tsx"
     },
     {
@@ -1470,7 +1490,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_layout_paddedscrollview",
-      "community": 12,
+      "community": 40,
       "norm_label": "paddedscrollview.tsx"
     },
     {
@@ -1480,7 +1500,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "src_components_layout_paddedscrollview_props",
-      "community": 12,
+      "community": 40,
       "norm_label": "props"
     },
     {
@@ -1490,7 +1510,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "src_components_layout_paddedscrollview_paddedscrollview",
-      "community": 12,
+      "community": 40,
       "norm_label": "paddedscrollview()"
     },
     {
@@ -1500,7 +1520,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_layout_screencontainer",
-      "community": 12,
+      "community": 22,
       "norm_label": "screencontainer.tsx"
     },
     {
@@ -1510,7 +1530,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "src_components_layout_screencontainer_props",
-      "community": 12,
+      "community": 22,
       "norm_label": "props"
     },
     {
@@ -1530,7 +1550,7 @@
       "source_location": "L147",
       "_origin": "ast",
       "id": "src_components_layout_screencontainer_styles",
-      "community": 12,
+      "community": 22,
       "norm_label": "styles"
     },
     {
@@ -1690,7 +1710,7 @@
       "source_location": "L29",
       "_origin": "ast",
       "id": "src_components_schedule_schedulefilters_schedulefilters",
-      "community": 6,
+      "community": 1,
       "norm_label": "schedulefilters()"
     },
     {
@@ -1890,7 +1910,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_schedule_sessiontypelegenddialog",
-      "community": 14,
+      "community": 10,
       "norm_label": "sessiontypelegenddialog.tsx"
     },
     {
@@ -1900,7 +1920,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "src_components_schedule_sessiontypelegenddialog_props",
-      "community": 14,
+      "community": 10,
       "norm_label": "props"
     },
     {
@@ -1910,7 +1930,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "src_components_schedule_sessiontypelegenddialog_sessiontypelegenddialog",
-      "community": 14,
+      "community": 10,
       "norm_label": "sessiontypelegenddialog()"
     },
     {
@@ -1920,7 +1940,7 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "src_components_schedule_sessiontypelegenddialog_styles",
-      "community": 14,
+      "community": 10,
       "norm_label": "styles"
     },
     {
@@ -2074,10 +2094,20 @@
       "norm_label": "installprompt.tsx"
     },
     {
+      "label": "Props",
+      "file_type": "code",
+      "source_file": "src/components/status/InstallPrompt.tsx",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "src_components_status_installprompt_props",
+      "community": 16,
+      "norm_label": "props"
+    },
+    {
       "label": "InstallPrompt()",
       "file_type": "code",
       "source_file": "src/components/status/InstallPrompt.tsx",
-      "source_location": "L7",
+      "source_location": "L11",
       "_origin": "ast",
       "id": "src_components_status_installprompt_installprompt",
       "community": 16,
@@ -2087,7 +2117,7 @@
       "label": "styles",
       "file_type": "code",
       "source_file": "src/components/status/InstallPrompt.tsx",
-      "source_location": "L43",
+      "source_location": "L55",
       "_origin": "ast",
       "id": "src_components_status_installprompt_styles",
       "community": 16,
@@ -2210,7 +2240,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_config_conference",
-      "community": 1,
+      "community": 16,
       "norm_label": "conference.ts"
     },
     {
@@ -2220,7 +2250,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_config_conference_conference_years",
-      "community": 1,
+      "community": 16,
       "norm_label": "conference_years"
     },
     {
@@ -2230,7 +2260,7 @@
       "source_location": "L2",
       "_origin": "ast",
       "id": "src_config_conference_default_conference_year",
-      "community": 1,
+      "community": 16,
       "norm_label": "default_conference_year"
     },
     {
@@ -2240,7 +2270,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "src_config_conference_conferencemeta",
-      "community": 1,
+      "community": 16,
       "norm_label": "conferencemeta"
     },
     {
@@ -2250,7 +2280,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "src_config_conference_conference_meta",
-      "community": 1,
+      "community": 16,
       "norm_label": "conference_meta"
     },
     {
@@ -2300,7 +2330,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_data_coc",
-      "community": 3,
+      "community": 22,
       "norm_label": "coc.ts"
     },
     {
@@ -2310,7 +2340,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_data_homeinfo",
-      "community": 12,
+      "community": 27,
       "norm_label": "homeinfo.ts"
     },
     {
@@ -2320,7 +2350,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_data_homeinfo_needtoknowcard",
-      "community": 12,
+      "community": 27,
       "norm_label": "needtoknowcard"
     },
     {
@@ -2330,7 +2360,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "src_data_homeinfo_needtoknow",
-      "community": 12,
+      "community": 27,
       "norm_label": "needtoknow"
     },
     {
@@ -2400,7 +2430,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_hooks_useappnavtheme",
-      "community": 1,
+      "community": 16,
       "norm_label": "useappnavtheme.ts"
     },
     {
@@ -2440,7 +2470,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_hooks_useapptheme",
-      "community": 11,
+      "community": 14,
       "norm_label": "useapptheme.ts"
     },
     {
@@ -2460,7 +2490,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_hooks_usecalendarsync",
-      "community": 19,
+      "community": 1,
       "norm_label": "usecalendarsync.ts"
     },
     {
@@ -2470,7 +2500,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "src_hooks_usecalendarsync_addresult",
-      "community": 19,
+      "community": 1,
       "norm_label": "addresult"
     },
     {
@@ -2480,7 +2510,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "src_hooks_usecalendarsync_removeresult",
-      "community": 19,
+      "community": 1,
       "norm_label": "removeresult"
     },
     {
@@ -2490,7 +2520,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "src_hooks_usecalendarsync_bulkresult",
-      "community": 19,
+      "community": 1,
       "norm_label": "bulkresult"
     },
     {
@@ -2500,7 +2530,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "src_hooks_usecalendarsync_singleoptions",
-      "community": 19,
+      "community": 1,
       "norm_label": "singleoptions"
     },
     {
@@ -2510,7 +2540,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "src_hooks_usecalendarsync_bulkoptions",
-      "community": 19,
+      "community": 1,
       "norm_label": "bulkoptions"
     },
     {
@@ -2520,7 +2550,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "src_hooks_usecalendarsync_usecalendarsync",
-      "community": 19,
+      "community": 1,
       "norm_label": "usecalendarsync()"
     },
     {
@@ -2617,7 +2647,7 @@
       "label": "isIos()",
       "file_type": "code",
       "source_file": "src/hooks/usePwaInstallPrompt.ts",
-      "source_location": "L24",
+      "source_location": "L21",
       "_origin": "ast",
       "id": "src_hooks_usepwainstallprompt_isios",
       "community": 16,
@@ -2627,7 +2657,7 @@
       "label": "usePwaInstallPrompt()",
       "file_type": "code",
       "source_file": "src/hooks/usePwaInstallPrompt.ts",
-      "source_location": "L28",
+      "source_location": "L25",
       "_origin": "ast",
       "id": "src_hooks_usepwainstallprompt_usepwainstallprompt",
       "community": 16,
@@ -2727,7 +2757,7 @@
       "label": "Tab",
       "file_type": "code",
       "source_file": "src/navigation/AppTabs.tsx",
-      "source_location": "L9",
+      "source_location": "L10",
       "_origin": "ast",
       "id": "src_navigation_apptabs_tab",
       "community": 3,
@@ -2737,7 +2767,7 @@
       "label": "AppTabs()",
       "file_type": "code",
       "source_file": "src/navigation/AppTabs.tsx",
-      "source_location": "L11",
+      "source_location": "L12",
       "_origin": "ast",
       "id": "src_navigation_apptabs_apptabs",
       "community": 3,
@@ -3130,7 +3160,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_screens_cocscreen",
-      "community": 3,
+      "community": 22,
       "norm_label": "cocscreen.tsx"
     },
     {
@@ -3150,7 +3180,7 @@
       "source_location": "L64",
       "_origin": "ast",
       "id": "src_screens_cocscreen_styles",
-      "community": 3,
+      "community": 22,
       "norm_label": "styles"
     },
     {
@@ -3190,7 +3220,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_screens_homescreen",
-      "community": 12,
+      "community": 40,
       "norm_label": "homescreen.tsx"
     },
     {
@@ -3210,7 +3240,7 @@
       "source_location": "L50",
       "_origin": "ast",
       "id": "src_screens_homescreen_styles",
-      "community": 12,
+      "community": 40,
       "norm_label": "styles"
     },
     {
@@ -3220,7 +3250,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_screens_notificationsscreen",
-      "community": 12,
+      "community": 19,
       "norm_label": "notificationsscreen.tsx"
     },
     {
@@ -3230,7 +3260,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "src_screens_notificationsscreen_scheduleditem",
-      "community": 12,
+      "community": 19,
       "norm_label": "scheduleditem"
     },
     {
@@ -3240,7 +3270,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "src_screens_notificationsscreen_notificationsscreen",
-      "community": 12,
+      "community": 19,
       "norm_label": "notificationsscreen()"
     },
     {
@@ -3250,7 +3280,7 @@
       "source_location": "L127",
       "_origin": "ast",
       "id": "src_screens_notificationsscreen_styles",
-      "community": 12,
+      "community": 19,
       "norm_label": "styles"
     },
     {
@@ -3790,7 +3820,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_store_conferencedata",
-      "community": 12,
+      "community": 0,
       "norm_label": "conferencedata.tsx"
     },
     {
@@ -3800,7 +3830,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "src_store_conferencedata_conferencecontextvalue",
-      "community": 12,
+      "community": 0,
       "norm_label": "conferencecontextvalue"
     },
     {
@@ -3810,7 +3840,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "src_store_conferencedata_conferencedatacontext",
-      "community": 12,
+      "community": 0,
       "norm_label": "conferencedatacontext"
     },
     {
@@ -3920,7 +3950,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_store_settings",
-      "community": 1,
+      "community": 16,
       "norm_label": "settings.tsx"
     },
     {
@@ -3930,7 +3960,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "src_store_settings_settingsstate",
-      "community": 1,
+      "community": 16,
       "norm_label": "settingsstate"
     },
     {
@@ -3940,7 +3970,7 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "src_store_settings_settingscontextvalue",
-      "community": 1,
+      "community": 16,
       "norm_label": "settingscontextvalue"
     },
     {
@@ -3950,7 +3980,7 @@
       "source_location": "L47",
       "_origin": "ast",
       "id": "src_store_settings_settingscontext",
-      "community": 1,
+      "community": 16,
       "norm_label": "settingscontext"
     },
     {
@@ -3960,7 +3990,7 @@
       "source_location": "L49",
       "_origin": "ast",
       "id": "src_store_settings_thememode",
-      "community": 1,
+      "community": 16,
       "norm_label": "thememode"
     },
     {
@@ -3970,7 +4000,7 @@
       "source_location": "L51",
       "_origin": "ast",
       "id": "src_store_settings_timezonepreference",
-      "community": 1,
+      "community": 16,
       "norm_label": "timezonepreference"
     },
     {
@@ -3980,7 +4010,7 @@
       "source_location": "L58",
       "_origin": "ast",
       "id": "src_store_settings_settingsprovider",
-      "community": 1,
+      "community": 16,
       "norm_label": "settingsprovider()"
     },
     {
@@ -4000,7 +4030,7 @@
       "source_location": "L241",
       "_origin": "ast",
       "id": "src_store_settings_geteffectivetimezone",
-      "community": 1,
+      "community": 12,
       "norm_label": "geteffectivetimezone()"
     },
     {
@@ -4030,7 +4060,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "src_theme_lightpalette",
-      "community": 11,
+      "community": 14,
       "norm_label": "lightpalette"
     },
     {
@@ -4040,7 +4070,7 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "src_theme_darkpalette",
-      "community": 11,
+      "community": 14,
       "norm_label": "darkpalette"
     },
     {
@@ -4060,7 +4090,7 @@
       "source_location": "L55",
       "_origin": "ast",
       "id": "src_theme_spacing",
-      "community": 12,
+      "community": 40,
       "norm_label": "spacing"
     },
     {
@@ -4150,7 +4180,7 @@
       "source_location": "L58",
       "_origin": "ast",
       "id": "src_types_conference_breakslot",
-      "community": 14,
+      "community": 12,
       "norm_label": "breakslot"
     },
     {
@@ -4180,7 +4210,7 @@
       "source_location": "L77",
       "_origin": "ast",
       "id": "src_types_conference_conferencedata",
-      "community": 12,
+      "community": 0,
       "norm_label": "conferencedata"
     },
     {
@@ -4300,7 +4330,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_utils_calendar",
-      "community": 19,
+      "community": 1,
       "norm_label": "calendar.ts"
     },
     {
@@ -4310,7 +4340,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "src_utils_calendar_eventcache",
-      "community": 19,
+      "community": 1,
       "norm_label": "eventcache"
     },
     {
@@ -4320,7 +4350,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "src_utils_calendar_cachekey",
-      "community": 19,
+      "community": 1,
       "norm_label": "cachekey()"
     },
     {
@@ -4330,7 +4360,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "src_utils_calendar_calendaridcache",
-      "community": 19,
+      "community": 1,
       "norm_label": "calendaridcache"
     },
     {
@@ -4340,7 +4370,7 @@
       "source_location": "L29",
       "_origin": "ast",
       "id": "src_utils_calendar_loadcache",
-      "community": 19,
+      "community": 1,
       "norm_label": "loadcache()"
     },
     {
@@ -4350,7 +4380,7 @@
       "source_location": "L42",
       "_origin": "ast",
       "id": "src_utils_calendar_savecache",
-      "community": 19,
+      "community": 1,
       "norm_label": "savecache()"
     },
     {
@@ -4360,7 +4390,7 @@
       "source_location": "L51",
       "_origin": "ast",
       "id": "src_utils_calendar_ensurecalendaraccess",
-      "community": 19,
+      "community": 1,
       "norm_label": "ensurecalendaraccess()"
     },
     {
@@ -4370,7 +4400,7 @@
       "source_location": "L123",
       "_origin": "ast",
       "id": "src_utils_calendar_addsessiontocalendar",
-      "community": 19,
+      "community": 1,
       "norm_label": "addsessiontocalendar()"
     },
     {
@@ -4380,7 +4410,7 @@
       "source_location": "L179",
       "_origin": "ast",
       "id": "src_utils_calendar_issessionincalendar",
-      "community": 19,
+      "community": 1,
       "norm_label": "issessionincalendar()"
     },
     {
@@ -4390,7 +4420,7 @@
       "source_location": "L194",
       "_origin": "ast",
       "id": "src_utils_calendar_removesessionfromcalendar",
-      "community": 19,
+      "community": 1,
       "norm_label": "removesessionfromcalendar()"
     },
     {
@@ -4400,7 +4430,7 @@
       "source_location": "L219",
       "_origin": "ast",
       "id": "src_utils_calendar_getcalendaridforyear",
-      "community": 19,
+      "community": 1,
       "norm_label": "getcalendaridforyear()"
     },
     {
@@ -4460,7 +4490,7 @@
       "source_location": "L49",
       "_origin": "ast",
       "id": "src_utils_format_formatdurationfromms",
-      "community": 12,
+      "community": 19,
       "norm_label": "formatdurationfromms()"
     },
     {
@@ -4490,7 +4520,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "src_utils_haptics_sethapticsenabledruntime",
-      "community": 1,
+      "community": 16,
       "norm_label": "sethapticsenabledruntime()"
     },
     {
@@ -4620,7 +4650,7 @@
       "source_location": "L59",
       "_origin": "ast",
       "id": "src_utils_notifications_normalizetrigger",
-      "community": 12,
+      "community": 19,
       "norm_label": "normalizetrigger()"
     },
     {
@@ -4750,7 +4780,7 @@
       "source_location": "L63",
       "_origin": "ast",
       "id": "src_utils_schedule_normalizeiso",
-      "community": 12,
+      "community": 19,
       "norm_label": "normalizeiso()"
     },
     {
@@ -4760,7 +4790,7 @@
       "source_location": "L83",
       "_origin": "ast",
       "id": "src_utils_schedule_tosortablestartitem",
-      "community": 12,
+      "community": 19,
       "norm_label": "tosortablestartitem()"
     },
     {
@@ -4790,7 +4820,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "src_utils_sessiontypes_usesessiontypelegendentries",
-      "community": 14,
+      "community": 10,
       "norm_label": "usesessiontypelegendentries()"
     },
     {
@@ -4940,7 +4970,7 @@
       "source_location": "L67",
       "_origin": "ast",
       "id": "src_utils_time_formatfetchedat",
-      "community": 1,
+      "community": 12,
       "norm_label": "formatfetchedat()"
     },
     {
@@ -6913,7 +6943,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "App.tsx",
-      "source_location": "L65",
+      "source_location": "L71",
       "weight": 1.0,
       "source": "app_tsx_app",
       "target": "app_app",
@@ -6923,7 +6953,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "App.tsx",
-      "source_location": "L33",
+      "source_location": "L34",
       "weight": 1.0,
       "source": "app_tsx_app",
       "target": "app_appcontent",
@@ -6933,7 +6963,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "App.tsx",
-      "source_location": "L73",
+      "source_location": "L79",
       "weight": 1.0,
       "source": "app_tsx_app",
       "target": "app_appscaffold",
@@ -6943,7 +6973,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "App.tsx",
-      "source_location": "L19",
+      "source_location": "L20",
       "weight": 1.0,
       "source": "app_tsx_app",
       "target": "app_schedulenotificationmanager",
@@ -6954,7 +6984,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "App.tsx",
-      "source_location": "L17",
+      "source_location": "L18",
       "weight": 1.0,
       "source": "app_tsx_app",
       "target": "src_components_status_installprompt",
@@ -7002,6 +7032,28 @@
       "weight": 1.0,
       "source": "app_tsx_app",
       "target": "src_hooks_usenotificationdeeplink_usenotificationdeeplink",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "App.tsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "app_tsx_app",
+      "target": "src_hooks_usepwainstallprompt",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "App.tsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "app_tsx_app",
+      "target": "src_hooks_usepwainstallprompt_usepwainstallprompt",
       "confidence_score": 1.0
     },
     {
@@ -7174,7 +7226,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "App.tsx",
-      "source_location": "L20",
+      "source_location": "L21",
       "weight": 1.0,
       "source": "app_schedulenotificationmanager",
       "target": "src_hooks_useschedulenotifications_useschedulenotifications",
@@ -7185,7 +7237,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "App.tsx",
-      "source_location": "L35",
+      "source_location": "L36",
       "weight": 1.0,
       "source": "app_appcontent",
       "target": "src_hooks_useappnavtheme_useappnavtheme",
@@ -7196,7 +7248,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "App.tsx",
-      "source_location": "L36",
+      "source_location": "L37",
       "weight": 1.0,
       "source": "app_appcontent",
       "target": "src_hooks_usenotificationdeeplink_usenotificationdeeplink",
@@ -7207,7 +7259,18 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "App.tsx",
-      "source_location": "L34",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "app_appcontent",
+      "target": "src_hooks_usepwainstallprompt_usepwainstallprompt",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "App.tsx",
+      "source_location": "L35",
       "weight": 1.0,
       "source": "app_appcontent",
       "target": "src_store_settings_usesettings",
@@ -7477,7 +7540,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L15",
+      "source_location": "L17",
       "weight": 1.0,
       "source": "package",
       "target": "package_dependencies",
@@ -7487,7 +7550,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L47",
+      "source_location": "L49",
       "weight": 1.0,
       "source": "package",
       "target": "package_devdependencies",
@@ -7517,7 +7580,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L56",
+      "source_location": "L58",
       "weight": 1.0,
       "source": "package",
       "target": "package_packagemanager",
@@ -7527,7 +7590,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L55",
+      "source_location": "L57",
       "weight": 1.0,
       "source": "package",
       "target": "package_private",
@@ -7577,7 +7640,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L11",
+      "source_location": "L13",
       "weight": 1.0,
       "source": "package_scripts",
       "target": "package_scripts_format",
@@ -7587,7 +7650,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L12",
+      "source_location": "L14",
       "weight": 1.0,
       "source": "package_scripts",
       "target": "package_scripts_format_check",
@@ -7607,6 +7670,16 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_pwa",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
       "source_location": "L6",
       "weight": 1.0,
       "source": "package_scripts",
@@ -7617,7 +7690,17 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L13",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_tunnel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L15",
       "weight": 1.0,
       "source": "package_scripts",
       "target": "package_scripts_typecheck",
@@ -7637,7 +7720,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L16",
+      "source_location": "L18",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_bottom_tabs_react_navigation",
@@ -7647,7 +7730,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L24",
+      "source_location": "L26",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_expo",
@@ -7657,7 +7740,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L25",
+      "source_location": "L27",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_expo_calendar",
@@ -7667,7 +7750,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L17",
+      "source_location": "L19",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_expo_dom_webview",
@@ -7677,7 +7760,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L26",
+      "source_location": "L28",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_expo_font",
@@ -7687,7 +7770,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L27",
+      "source_location": "L29",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_expo_haptics",
@@ -7697,7 +7780,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L28",
+      "source_location": "L30",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_expo_image",
@@ -7707,7 +7790,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L29",
+      "source_location": "L31",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_expo_notifications",
@@ -7717,7 +7800,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L30",
+      "source_location": "L32",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_expo_splash_screen",
@@ -7727,7 +7810,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L31",
+      "source_location": "L33",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_expo_status_bar",
@@ -7737,7 +7820,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L32",
+      "source_location": "L34",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_expo_system_ui",
@@ -7747,7 +7830,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L18",
+      "source_location": "L20",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_expo_vector_icons",
@@ -7757,7 +7840,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L33",
+      "source_location": "L35",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_punycode",
@@ -7767,7 +7850,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L34",
+      "source_location": "L36",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_react",
@@ -7777,7 +7860,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L35",
+      "source_location": "L37",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_react_dom",
@@ -7787,7 +7870,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L36",
+      "source_location": "L38",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_react_native",
@@ -7797,7 +7880,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L19",
+      "source_location": "L21",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_react_native_async_storage_async_storage",
@@ -7807,7 +7890,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L37",
+      "source_location": "L39",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_react_native_bottom_tabs",
@@ -7817,7 +7900,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L20",
+      "source_location": "L22",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_react_native_community_netinfo",
@@ -7827,7 +7910,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L38",
+      "source_location": "L40",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_react_native_markdown_display",
@@ -7837,7 +7920,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L39",
+      "source_location": "L41",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_react_native_paper",
@@ -7847,7 +7930,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L40",
+      "source_location": "L42",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_react_native_reanimated",
@@ -7857,7 +7940,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L41",
+      "source_location": "L43",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_react_native_safe_area_context",
@@ -7867,7 +7950,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L42",
+      "source_location": "L44",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_react_native_screens",
@@ -7877,7 +7960,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L43",
+      "source_location": "L45",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_react_native_web",
@@ -7887,7 +7970,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L44",
+      "source_location": "L46",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_react_native_webview",
@@ -7897,7 +7980,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L45",
+      "source_location": "L47",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_react_native_worklets",
@@ -7907,7 +7990,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L21",
+      "source_location": "L23",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_react_navigation_bottom_tabs",
@@ -7917,7 +8000,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L22",
+      "source_location": "L24",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_react_navigation_native",
@@ -7927,7 +8010,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L23",
+      "source_location": "L25",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_react_navigation_native_stack",
@@ -7948,7 +8031,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L49",
+      "source_location": "L51",
       "weight": 1.0,
       "source": "package_devdependencies",
       "target": "package_devdependencies_babel_plugin_module_resolver",
@@ -7958,7 +8041,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L50",
+      "source_location": "L52",
       "weight": 1.0,
       "source": "package_devdependencies",
       "target": "package_devdependencies_baseline_browser_mapping",
@@ -7968,7 +8051,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L51",
+      "source_location": "L53",
       "weight": 1.0,
       "source": "package_devdependencies",
       "target": "package_devdependencies_prettier",
@@ -7978,7 +8061,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L48",
+      "source_location": "L50",
       "weight": 1.0,
       "source": "package_devdependencies",
       "target": "package_devdependencies_types_react",
@@ -7988,7 +8071,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L52",
+      "source_location": "L54",
       "weight": 1.0,
       "source": "package_devdependencies",
       "target": "package_devdependencies_typescript",
@@ -7998,7 +8081,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L53",
+      "source_location": "L55",
       "weight": 1.0,
       "source": "package_devdependencies",
       "target": "package_devdependencies_workbox_cli",
@@ -11383,7 +11466,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/status/InstallPrompt.tsx",
-      "source_location": "L7",
+      "source_location": "L11",
       "weight": 1.0,
       "source": "src_components_status_installprompt",
       "target": "src_components_status_installprompt_installprompt",
@@ -11393,7 +11476,17 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/status/InstallPrompt.tsx",
-      "source_location": "L43",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "src_components_status_installprompt",
+      "target": "src_components_status_installprompt_props",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/status/InstallPrompt.tsx",
+      "source_location": "L55",
       "weight": 1.0,
       "source": "src_components_status_installprompt",
       "target": "src_components_status_installprompt_styles",
@@ -11404,7 +11497,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/status/InstallPrompt.tsx",
-      "source_location": "L5",
+      "source_location": "L6",
       "weight": 1.0,
       "source": "src_components_status_installprompt",
       "target": "src_hooks_usepwainstallprompt",
@@ -11415,7 +11508,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/status/InstallPrompt.tsx",
-      "source_location": "L5",
+      "source_location": "L6",
       "weight": 1.0,
       "source": "src_components_status_installprompt",
       "target": "src_hooks_usepwainstallprompt_usepwainstallprompt",
@@ -11426,7 +11519,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/status/InstallPrompt.tsx",
-      "source_location": "L4",
+      "source_location": "L5",
       "weight": 1.0,
       "source": "src_components_status_installprompt",
       "target": "src_theme",
@@ -11437,7 +11530,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/status/InstallPrompt.tsx",
-      "source_location": "L4",
+      "source_location": "L5",
       "weight": 1.0,
       "source": "src_components_status_installprompt",
       "target": "src_theme_radius",
@@ -11448,22 +11541,11 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/status/InstallPrompt.tsx",
-      "source_location": "L4",
+      "source_location": "L5",
       "weight": 1.0,
       "source": "src_components_status_installprompt",
       "target": "src_theme_spacing",
       "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/components/status/InstallPrompt.tsx",
-      "source_location": "L8",
-      "weight": 1.0,
-      "source": "src_components_status_installprompt_installprompt",
-      "target": "src_hooks_usepwainstallprompt_usepwainstallprompt"
     },
     {
       "relation": "contains",
@@ -13524,7 +13606,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/hooks/usePwaInstallPrompt.ts",
-      "source_location": "L24",
+      "source_location": "L21",
       "weight": 1.0,
       "source": "src_hooks_usepwainstallprompt",
       "target": "src_hooks_usepwainstallprompt_isios",
@@ -13544,7 +13626,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/hooks/usePwaInstallPrompt.ts",
-      "source_location": "L28",
+      "source_location": "L25",
       "weight": 1.0,
       "source": "src_hooks_usepwainstallprompt",
       "target": "src_hooks_usepwainstallprompt_usepwainstallprompt",
@@ -13588,7 +13670,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/hooks/usePwaInstallPrompt.ts",
-      "source_location": "L37",
+      "source_location": "L34",
       "weight": 1.0,
       "source": "src_hooks_usepwainstallprompt_usepwainstallprompt",
       "target": "src_hooks_usepwainstallprompt_isstandalone",
@@ -13599,7 +13681,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/hooks/usePwaInstallPrompt.ts",
-      "source_location": "L39",
+      "source_location": "L36",
       "weight": 1.0,
       "source": "src_hooks_usepwainstallprompt_usepwainstallprompt",
       "target": "src_hooks_usepwainstallprompt_isios",
@@ -13611,7 +13693,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/hooks/usePwaInstallPrompt.ts",
-      "source_location": "L42",
+      "source_location": "L39",
       "weight": 1.0,
       "source": "src_hooks_usepwainstallprompt_usepwainstallprompt",
       "target": "src_utils_storage_loadjsonfromstorage"
@@ -13622,7 +13704,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/hooks/usePwaInstallPrompt.ts",
-      "source_location": "L68",
+      "source_location": "L65",
       "weight": 1.0,
       "source": "src_hooks_usepwainstallprompt_usepwainstallprompt",
       "target": "src_utils_storage_savejsontostorage"
@@ -14132,7 +14214,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/navigation/AppTabs.tsx",
-      "source_location": "L11",
+      "source_location": "L12",
       "weight": 1.0,
       "source": "src_navigation_apptabs",
       "target": "src_navigation_apptabs_apptabs",
@@ -14142,7 +14224,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/navigation/AppTabs.tsx",
-      "source_location": "L9",
+      "source_location": "L10",
       "weight": 1.0,
       "source": "src_navigation_apptabs",
       "target": "src_navigation_apptabs_tab",
@@ -14153,7 +14235,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/navigation/AppTabs.tsx",
-      "source_location": "L5",
+      "source_location": "L6",
       "weight": 1.0,
       "source": "src_navigation_apptabs",
       "target": "src_navigation_routes",
@@ -14164,7 +14246,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/navigation/AppTabs.tsx",
-      "source_location": "L5",
+      "source_location": "L6",
       "weight": 1.0,
       "source": "src_navigation_apptabs",
       "target": "src_navigation_routes_roottabparamlist",
@@ -14175,7 +14257,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/navigation/AppTabs.tsx",
-      "source_location": "L5",
+      "source_location": "L6",
       "weight": 1.0,
       "source": "src_navigation_apptabs",
       "target": "src_navigation_routes_tabroutename",
@@ -14186,7 +14268,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/navigation/AppTabs.tsx",
-      "source_location": "L6",
+      "source_location": "L7",
       "weight": 1.0,
       "source": "src_navigation_apptabs",
       "target": "src_navigation_stackconfigs",
@@ -14197,7 +14279,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/navigation/AppTabs.tsx",
-      "source_location": "L6",
+      "source_location": "L7",
       "weight": 1.0,
       "source": "src_navigation_apptabs",
       "target": "src_navigation_stackconfigs_tabiconnames",
@@ -14208,7 +14290,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/navigation/AppTabs.tsx",
-      "source_location": "L6",
+      "source_location": "L7",
       "weight": 1.0,
       "source": "src_navigation_apptabs",
       "target": "src_navigation_stackconfigs_tabscreens",
@@ -14219,7 +14301,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/navigation/AppTabs.tsx",
-      "source_location": "L7",
+      "source_location": "L8",
       "weight": 1.0,
       "source": "src_navigation_apptabs",
       "target": "src_navigation_stacks",
@@ -14230,7 +14312,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/navigation/AppTabs.tsx",
-      "source_location": "L7",
+      "source_location": "L8",
       "weight": 1.0,
       "source": "src_navigation_apptabs",
       "target": "src_navigation_stacks_builtstacks",

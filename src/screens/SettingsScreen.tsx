@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { Alert, Share, StyleSheet, View } from "react-native";
+import { Alert, Platform, Share, StyleSheet, View } from "react-native";
 import { Button, Card, Text, useTheme } from "react-native-paper";
 
 import ScreenContainer from "@components/layout/ScreenContainer";
@@ -240,6 +240,7 @@ export default function SettingsScreen() {
                 title="Upcoming session reminders"
                 subtitle={`Receive a reminder ${notificationLeadMinutes} minutes before keynotes and any sessions you have favorited start.`}
                 value={notificationsEnabled}
+                disabled={Platform.OS === "web"}
                 onValueChange={async (val) => {
                   if (!val) {
                     await setNotificationsEnabled(false);
@@ -274,6 +275,7 @@ export default function SettingsScreen() {
                 title="Break reminders"
                 subtitle="Get notified when scheduled breaks start."
                 value={breakNotificationsEnabled}
+                disabled={Platform.OS === "web"}
                 onValueChange={async (val) => {
                   if (!val) {
                     await setBreakNotificationsEnabled(false);
@@ -309,6 +311,7 @@ export default function SettingsScreen() {
             title="Haptic feedback"
             subtitle="Haptic feedback for actions like refreshing, toggles, onboarding steps, and favorites/calendar. Some haptics may still occur if system-level."
             value={hapticsEnabled}
+            disabled={Platform.OS === "web"}
             onValueChange={async (val) => {
               if (val) {
                 hapticSelection();

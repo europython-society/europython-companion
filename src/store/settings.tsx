@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useEffect, useMemo, useState } from "react";
+import { Platform } from "react-native";
 
 import {
   CONFERENCE_YEARS,
@@ -50,10 +51,10 @@ export type ThemeMode = "system" | "light" | "dark" | "night";
 export const DEFAULT_THEME_MODE: ThemeMode = "system";
 export type TimeZonePreference = "conference" | "local";
 export const DEFAULT_TIMEZONE_PREFERENCE: TimeZonePreference = "conference";
-export const DEFAULT_NOTIFICATIONS_ENABLED = true;
-export const DEFAULT_BREAK_NOTIFICATIONS_ENABLED = true;
+export const DEFAULT_NOTIFICATIONS_ENABLED = Platform.OS !== "web";
+export const DEFAULT_BREAK_NOTIFICATIONS_ENABLED = Platform.OS !== "web";
 export const DEFAULT_ONBOARDING_SEEN = false;
-export const DEFAULT_HAPTICS_ENABLED = true;
+export const DEFAULT_HAPTICS_ENABLED = Platform.OS !== "web";
 
 export function SettingsProvider({ children }: { children: React.ReactNode }) {
   const [conferenceYear, setConferenceYearState] = useState<number>(

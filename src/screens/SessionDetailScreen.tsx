@@ -255,6 +255,7 @@ const styles = StyleSheet.create({
   headerWrapper: {
     position: "relative",
     paddingRight: spacing.lg,
+    zIndex: 1, // so the button is on top of the card
   },
   headerActions: {
     position: "absolute",

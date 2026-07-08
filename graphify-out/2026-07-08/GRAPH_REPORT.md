@@ -1,11 +1,11 @@
 # Graph Report - europython-companion  (2026-07-08)
 
 ## Corpus Check
-- 103 files · ~47,051 words
+- 103 files · ~44,435 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 669 nodes · 1322 edges · 106 communities (40 shown, 66 thin omitted)
+- 672 nodes · 1327 edges · 105 communities (40 shown, 65 thin omitted)
 - Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 7 edges (avg confidence: 0.74)
 - Token cost: 0 input · 0 output
 
@@ -45,7 +45,6 @@
 - [[_COMMUNITY_Notification Deep Link|Notification Deep Link]]
 - [[_COMMUNITY_Onboarding Data|Onboarding Data]]
 - [[_COMMUNITY_Share Utility|Share Utility]]
-- [[_COMMUNITY_DetailActionRow.tsx|DetailActionRow.tsx]]
 - [[_COMMUNITY_App Icon Asset|App Icon Asset]]
 - [[_COMMUNITY_CoC Data|CoC Data]]
 - [[_COMMUNITY_Configuration|Configuration]]
@@ -131,33 +130,33 @@
 10. `compareSessionsByStart()` - 13 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `addSessionToCalendar()` --references--> `expo-calendar`  [EXTRACTED]
-  src/utils/calendar.ts → package.json
 - `ScheduleNotificationManager()` --calls--> `useScheduleNotifications()`  [EXTRACTED]
   App.tsx → src/hooks/useScheduleNotifications.ts
+- `addSessionToCalendar()` --references--> `expo-calendar`  [EXTRACTED]
+  src/utils/calendar.ts → package.json
+- `AppContent()` --calls--> `usePwaInstallPrompt()`  [EXTRACTED]
+  App.tsx → src/hooks/usePwaInstallPrompt.ts
 - `AppContent()` --calls--> `useSettings()`  [EXTRACTED]
   App.tsx → src/store/settings.tsx
 - `pnpm-workspace nodeLinker: hoisted` --conceptually_related_to--> `CI Type Check Job`  [INFERRED]
   pnpm-workspace.yaml → .github/workflows/ci.yml
-- `AppContent()` --calls--> `useAppNavTheme()`  [EXTRACTED]
-  App.tsx → src/hooks/useAppNavTheme.ts
 
 ## Import Cycles
 - None detected.
 
-## Communities (106 total, 66 thin omitted)
+## Communities (105 total, 65 thin omitted)
 
 ### Community 0 - "Conference Data Layer"
-Cohesion: 0.10
-Nodes (43): buildBaseUrl(), CachedConferencePayload, conferenceCacheKey(), fetchJson(), loadConferenceDataWithMeta(), LoadConferenceResult, loadFromNetwork(), purgeOldCacheKeys() (+35 more)
+Cohesion: 0.09
+Nodes (46): buildBaseUrl(), CachedConferencePayload, conferenceCacheKey(), fetchJson(), loadConferenceDataWithMeta(), LoadConferenceResult, loadFromNetwork(), purgeOldCacheKeys() (+38 more)
 
 ### Community 1 - "Schedule Utilities & Notifications"
 Cohesion: 0.08
-Nodes (42): FavoriteToggleButton(), IconButtonProps, Props, BaseProps, SettingsSwitchRow(), styles, SwitchProps, CONFERENCE_META (+34 more)
+Nodes (46): FavoriteToggleButton(), IconButtonProps, Props, ScheduleFilters(), BaseProps, SettingsSwitchRow(), styles, SwitchProps (+38 more)
 
 ### Community 3 - "Navigation & Routing"
 Cohesion: 0.08
-Nodes (41): AppContent(), useAppNavTheme(), extractSessionId(), navigateToSession(), useNotificationDeepLink(), AppTabs(), AppTabs(), resolveAndroidIcons() (+33 more)
+Nodes (41): AppContent(), ScheduleNotificationManager(), useAppNavTheme(), extractSessionId(), navigateToSession(), useNotificationDeepLink(), AppTabs(), AppTabs() (+33 more)
 
 ### Community 4 - "Package Dependencies"
 Cohesion: 0.06
@@ -168,48 +167,48 @@ Cohesion: 0.07
 Nodes (26): backgroundColor, foregroundImage, adaptiveIcon, package, permissions, predictiveBackGestureEnabled, expo, android (+18 more)
 
 ### Community 6 - "Schedule Filters UI"
-Cohesion: 0.17
-Nodes (8): DayOption, Props, styles, Props, ScheduleFilters(), styles, Props, styles
+Cohesion: 0.18
+Nodes (7): DayOption, Props, styles, Props, styles, Props, styles
 
 ### Community 7 - "TypeScript Config"
 Cohesion: 0.11
 Nodes (18): compilerOptions, noUnusedLocals, noUnusedParameters, paths, strict, extends, @/*, @app-types/* (+10 more)
 
 ### Community 8 - "CoC Contacts & Markdown"
-Cohesion: 0.22
-Nodes (9): scripts, android, build:web, format, format:check, ios, start, typecheck (+1 more)
+Cohesion: 0.18
+Nodes (11): scripts, android, build:web, format, format:check, ios, pwa, start (+3 more)
 
 ### Community 9 - "Home Screen Components"
 Cohesion: 0.20
 Nodes (9): background_color, display, icons, name, orientation, scope, short_name, start_url (+1 more)
 
 ### Community 10 - "Speaker & Session Detail Screens"
-Cohesion: 0.25
-Nodes (6): Props, styles, OfflineBanner(), Props, styles, radius
+Cohesion: 0.17
+Nodes (10): Props, styles, Props, SessionTypeLegendDialog(), styles, OfflineBanner(), Props, styles (+2 more)
 
 ### Community 11 - "Theme & Detail Actions"
-Cohesion: 0.31
-Nodes (7): createPaperTheme(), darkPalette, lightPalette, nightPalette, Palette, paperTheme, tint()
+Cohesion: 0.20
+Nodes (8): DetailAction, Props, styles, createPaperTheme(), nightPalette, Palette, paperTheme, tint()
 
 ### Community 12 - "Favorites & Data States"
-Cohesion: 0.07
-Nodes (63): NeedToKnowList(), Props, UpcomingList(), SearchBar(), PaddedScrollView(), Props, Props, ScreenContainer() (+55 more)
+Cohesion: 0.09
+Nodes (51): NeedToKnowList(), Props, UpcomingList(), SearchBar(), ScreenContainer(), createStyles(), MarkdownBody(), Props (+43 more)
 
 ### Community 13 - "Settings UI"
 Cohesion: 0.40
 Nodes (3): Option, Props, styles
 
 ### Community 14 - "Speaker Detail & Notifications Screens"
-Cohesion: 0.08
-Nodes (30): ScheduleNotificationManager(), BreakListItem(), Props, styles, nameOrUnknown(), Props, SessionListItem(), styles (+22 more)
+Cohesion: 0.09
+Nodes (26): BreakListItem(), Props, styles, nameOrUnknown(), Props, SessionListItem(), styles, Props (+18 more)
 
 ### Community 15 - "Settings & Timezone State"
 Cohesion: 0.33
 Nodes (5): main, name, packageManager, private, version
 
 ### Community 16 - "Favorites Storage"
-Cohesion: 0.19
-Nodes (16): InstallPrompt(), styles, BeforeInstallPromptEvent, isIos(), isStandalone(), usePwaInstallPrompt(), FavoritesContext, FavoritesContextValue (+8 more)
+Cohesion: 0.10
+Nodes (27): Props, styles, CONFERENCE_META, CONFERENCE_YEARS, ConferenceMeta, DEFAULT_CONFERENCE_YEAR, BeforeInstallPromptEvent, isIos() (+19 more)
 
 ### Community 17 - "App Root Composition"
 Cohesion: 0.17
@@ -220,8 +219,8 @@ Cohesion: 0.29
 Nodes (7): devDependencies, babel-plugin-module-resolver, baseline-browser-mapping, prettier, @types/react, typescript, workbox-cli
 
 ### Community 19 - "SettingsRow.tsx"
-Cohesion: 0.22
-Nodes (16): AddResult, BulkOptions, BulkResult, RemoveResult, SingleOptions, useCalendarSync(), addSessionToCalendar(), cacheKey() (+8 more)
+Cohesion: 0.36
+Nodes (7): NotificationsScreen(), ScheduledItem, styles, formatDurationFromMs(), normalizeTrigger(), normalizeIso(), toSortableStartItem()
 
 ### Community 20 - "Screen Container & Onboarding"
 Cohesion: 0.17
@@ -232,8 +231,8 @@ Cohesion: 0.18
 Nodes (11): 1) Create the screen, 2) Register the route name and params, 3) Register the screen in the stack, 4) Link to it from an existing screen, Example: add a new screen, Navigation, Route naming and labels, Screen registration (+3 more)
 
 ### Community 22 - "MarkdownBody.tsx"
-Cohesion: 0.67
-Nodes (3): createStyles(), MarkdownBody(), Props
+Cohesion: 0.33
+Nodes (3): Props, styles, styles
 
 ### Community 23 - "ScheduleTrackFilter.tsx"
 Cohesion: 0.25
@@ -252,8 +251,8 @@ Cohesion: 0.40
 Nodes (3): Props, SocialLink, styles
 
 ### Community 27 - "Notification Deep Link"
-Cohesion: 0.40
-Nodes (3): Action, Props, styles
+Cohesion: 0.25
+Nodes (5): Action, Props, styles, needToKnow, NeedToKnowCard
 
 ### Community 28 - "Onboarding Data"
 Cohesion: 0.29
@@ -262,10 +261,6 @@ Nodes (6): Cache invalidation, Data and state, Data sources and normalization, D
 ### Community 29 - "Share Utility"
 Cohesion: 0.29
 Nodes (7): Add a new screen, Add a new UI component safely, Avoid breaking navigation or state, Development workflow, Introduce shared logic, Native project workflow, Testing onboarding flows
-
-### Community 30 - "DetailActionRow.tsx"
-Cohesion: 0.40
-Nodes (3): DetailAction, Props, styles
 
 ### Community 34 - "CoC Data"
 Cohesion: 0.33
@@ -283,6 +278,10 @@ Nodes (4): Future work, Known limitations, Likely evolution points, Safe areas t
 Cohesion: 0.40
 Nodes (4): Contributor expectations, Current posture, Testing, Where tests would live
 
+### Community 40 - "HomeHeroCard.tsx"
+Cohesion: 0.27
+Nodes (6): Props, styles, PaddedScrollView(), Props, styles, spacing
+
 ### Community 41 - "SettingsSection.tsx"
 Cohesion: 0.40
 Nodes (4): CardProps, Props, SettingsSection(), styles
@@ -292,24 +291,24 @@ Cohesion: 0.50
 Nodes (4): Documentation, How this set is organized, Purpose, Where to start
 
 ## Knowledge Gaps
-- **312 isolated node(s):** `name`, `slug`, `version`, `orientation`, `icon` (+307 more)
+- **315 isolated node(s):** `name`, `slug`, `version`, `orientation`, `icon` (+310 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **66 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **65 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `dependencies` connect `Package Dependencies` to `Settings & Timezone State`?**
+  _High betweenness centrality (0.100) - this node is a cross-community bridge._
+- **Why does `addSessionToCalendar()` connect `Schedule Utilities & Notifications` to `Package Dependencies`, `Speaker Detail & Notifications Screens`?**
+  _High betweenness centrality (0.099) - this node is a cross-community bridge._
+- **Why does `expo-calendar` connect `Package Dependencies` to `Schedule Utilities & Notifications`?**
   _High betweenness centrality (0.097) - this node is a cross-community bridge._
-- **Why does `addSessionToCalendar()` connect `SettingsRow.tsx` to `Package Dependencies`, `Speaker Detail & Notifications Screens`?**
-  _High betweenness centrality (0.096) - this node is a cross-community bridge._
-- **Why does `expo-calendar` connect `Package Dependencies` to `SettingsRow.tsx`?**
-  _High betweenness centrality (0.094) - this node is a cross-community bridge._
 - **What connects `name`, `slug`, `version` to the rest of the system?**
-  _331 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _334 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Conference Data Layer` be split into smaller, more focused modules?**
-  _Cohesion score 0.09663120567375887 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.09049773755656108 - nodes in this community are weakly interconnected._
 - **Should `Schedule Utilities & Notifications` be split into smaller, more focused modules?**
-  _Cohesion score 0.07676767676767676 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.07622504537205081 - nodes in this community are weakly interconnected._
 - **Should `Navigation & Routing` be split into smaller, more focused modules?**
-  _Cohesion score 0.07676767676767676 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.07982583454281568 - nodes in this community are weakly interconnected._
