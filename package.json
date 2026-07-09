@@ -16,7 +16,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@bottom-tabs/react-navigation": "^1.3.1",
+    "@bottom-tabs/react-navigation": "^1.4.0",
     "@expo/dom-webview": "^57.0.0",
     "@expo/vector-icons": "^15.1.1",
     "@react-native-async-storage/async-storage": "^2.2.0",
