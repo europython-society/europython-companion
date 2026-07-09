@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef } from "react";
-import { RefreshControl, SectionList, StyleSheet, View } from "react-native";
+import { RefreshControl, StyleSheet, View } from "react-native";
+import { FlashList } from "@shopify/flash-list";
 import { Text, useTheme } from "react-native-paper";
 
 import { ScheduleItem, Session } from "@app-types/conference";
@@ -12,6 +13,8 @@ import { groupBySessionStartLabel, isBreak, sortScheduleItems } from "@utils/sch
 import useSpeakerAvatars from "@hooks/useSpeakerAvatars";
 import BreakListItem from "./BreakListItem";
 import StateMessage from "../status/StateMessage";
+
+type Row = { kind: "header"; title: string } | { kind: "item"; item: ScheduleItem };
 
 type Props = {
   sessions: ScheduleItem[];
@@ -38,9 +41,12 @@ export default function SessionList({
   const wasRefreshing = useRef(refreshing);
   const speakerAvatars = useSpeakerAvatars();
 
-  const sections = useMemo(() => {
+  const rows = useMemo<Row[]>(() => {
     const sorted = sortScheduleItems(sessions, conferenceYear);
-    return groupBySessionStartLabel(sorted, timeZone);
+    return groupBySessionStartLabel(sorted, timeZone).flatMap((section) => [
+      { kind: "header", title: section.title } as Row,
+      ...section.data.map((item) => ({ kind: "item", item }) as Row),
+    ]);
   }, [sessions, timeZone, conferenceYear]);
 
   useEffect(() => {
@@ -57,27 +63,35 @@ export default function SessionList({
   }
 
   return (
-    <SectionList
-      sections={sections}
-      keyExtractor={(item) => (isBreak(item) ? item.id : (item.slotId ?? item.id))}
+    <FlashList
+      data={rows}
+      keyExtractor={(row) =>
+        row.kind === "header"
+          ? `h:${row.title}`
+          : isBreak(row.item)
+            ? row.item.id
+            : (row.item.slotId ?? row.item.id)
+      }
+      getItemType={(row) =>
+        row.kind === "header" ? "header" : isBreak(row.item) ? "break" : "session"
+      }
+      drawDistance={475}
       contentInsetAdjustmentBehavior="automatic"
       contentContainerStyle={styles.listContent}
-      stickySectionHeadersEnabled={false}
-      renderSectionHeader={({ section }) => (
-        <View style={styles.sectionHeader}>
-          <Text variant="labelLarge" style={{ color: colors.onSurfaceVariant }}>
-            {section.title}
-          </Text>
-        </View>
-      )}
-      renderItem={({ item }) =>
-        isBreak(item) ? (
-          <BreakListItem slot={item} timeZone={timeZone} />
+      renderItem={({ item: row }) =>
+        row.kind === "header" ? (
+          <View style={styles.sectionHeader}>
+            <Text variant="labelLarge" style={{ color: colors.onSurfaceVariant }}>
+              {row.title}
+            </Text>
+          </View>
+        ) : isBreak(row.item) ? (
+          <BreakListItem slot={row.item} timeZone={timeZone} />
         ) : (
           <SessionListItem
-            session={item as Session}
+            session={row.item as Session}
             onPress={onSelect}
-            isFavorite={isFavorite(item.id)}
+            isFavorite={isFavorite(row.item.id)}
             timeZone={timeZone}
             speakerAvatars={speakerAvatars}
             onToggleFavorite={onToggleFavorite ?? toggleFavorite}

@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react";
-import { FlatList, StyleSheet } from "react-native";
+import { StyleSheet } from "react-native";
+import { FlashList } from "@shopify/flash-list";
 
 import ScreenContainer from "@components/layout/ScreenContainer";
 import SearchBar from "@components/inputs/SearchBar";
@@ -54,7 +55,7 @@ export default function SpeakersScreen() {
         isEmpty={!!isEmpty}
         emptyMessage="No speakers found."
       >
-        <FlatList
+        <FlashList
           data={speakers}
           keyExtractor={(item) => item.id}
           contentInsetAdjustmentBehavior="automatic"

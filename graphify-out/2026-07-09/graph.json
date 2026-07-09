@@ -10,7 +10,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_tsx_app",
-      "community": 3,
+      "community": 16,
       "norm_label": "app.tsx"
     },
     {
@@ -20,7 +20,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "app_schedulenotificationmanager",
-      "community": 3,
+      "community": 16,
       "norm_label": "schedulenotificationmanager()"
     },
     {
@@ -30,7 +30,7 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "app_appcontent",
-      "community": 3,
+      "community": 16,
       "norm_label": "appcontent()"
     },
     {
@@ -40,7 +40,7 @@
       "source_location": "L68",
       "_origin": "ast",
       "id": "app_app",
-      "community": 3,
+      "community": 16,
       "norm_label": "app()"
     },
     {
@@ -50,7 +50,7 @@
       "source_location": "L76",
       "_origin": "ast",
       "id": "app_appscaffold",
-      "community": 3,
+      "community": 16,
       "norm_label": "appscaffold()"
     },
     {
@@ -584,10 +584,20 @@
       "norm_label": "@react-navigation/native-stack"
     },
     {
-      "label": "expo",
+      "label": "@shopify/flash-list",
       "file_type": "code",
       "source_file": "package.json",
       "source_location": "L26",
+      "_origin": "ast",
+      "id": "package_dependencies_shopify_flash_list",
+      "community": 4,
+      "norm_label": "@shopify/flash-list"
+    },
+    {
+      "label": "expo",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L27",
       "_origin": "ast",
       "id": "package_dependencies_expo",
       "community": 4,
@@ -597,17 +607,17 @@
       "label": "expo-calendar",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L27",
+      "source_location": "L28",
       "_origin": "ast",
       "id": "package_dependencies_expo_calendar",
-      "community": 4,
+      "community": 19,
       "norm_label": "expo-calendar"
     },
     {
       "label": "expo-font",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L28",
+      "source_location": "L29",
       "_origin": "ast",
       "id": "package_dependencies_expo_font",
       "community": 4,
@@ -617,7 +627,7 @@
       "label": "expo-haptics",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L29",
+      "source_location": "L30",
       "_origin": "ast",
       "id": "package_dependencies_expo_haptics",
       "community": 4,
@@ -627,7 +637,7 @@
       "label": "expo-image",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L30",
+      "source_location": "L31",
       "_origin": "ast",
       "id": "package_dependencies_expo_image",
       "community": 4,
@@ -637,7 +647,7 @@
       "label": "expo-notifications",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L31",
+      "source_location": "L32",
       "_origin": "ast",
       "id": "package_dependencies_expo_notifications",
       "community": 4,
@@ -647,7 +657,7 @@
       "label": "expo-splash-screen",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L32",
+      "source_location": "L33",
       "_origin": "ast",
       "id": "package_dependencies_expo_splash_screen",
       "community": 4,
@@ -657,7 +667,7 @@
       "label": "expo-status-bar",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L33",
+      "source_location": "L34",
       "_origin": "ast",
       "id": "package_dependencies_expo_status_bar",
       "community": 4,
@@ -667,7 +677,7 @@
       "label": "expo-system-ui",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L34",
+      "source_location": "L35",
       "_origin": "ast",
       "id": "package_dependencies_expo_system_ui",
       "community": 4,
@@ -677,7 +687,7 @@
       "label": "punycode",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L35",
+      "source_location": "L36",
       "_origin": "ast",
       "id": "package_dependencies_punycode",
       "community": 4,
@@ -687,7 +697,7 @@
       "label": "react",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L36",
+      "source_location": "L37",
       "_origin": "ast",
       "id": "package_dependencies_react",
       "community": 4,
@@ -697,7 +707,7 @@
       "label": "react-dom",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L37",
+      "source_location": "L38",
       "_origin": "ast",
       "id": "package_dependencies_react_dom",
       "community": 4,
@@ -707,7 +717,7 @@
       "label": "react-native",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L38",
+      "source_location": "L39",
       "_origin": "ast",
       "id": "package_dependencies_react_native",
       "community": 4,
@@ -717,7 +727,7 @@
       "label": "react-native-bottom-tabs",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L39",
+      "source_location": "L40",
       "_origin": "ast",
       "id": "package_dependencies_react_native_bottom_tabs",
       "community": 4,
@@ -727,7 +737,7 @@
       "label": "react-native-markdown-display",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L40",
+      "source_location": "L41",
       "_origin": "ast",
       "id": "package_dependencies_react_native_markdown_display",
       "community": 4,
@@ -737,7 +747,7 @@
       "label": "react-native-paper",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L41",
+      "source_location": "L42",
       "_origin": "ast",
       "id": "package_dependencies_react_native_paper",
       "community": 4,
@@ -747,7 +757,7 @@
       "label": "react-native-reanimated",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L42",
+      "source_location": "L43",
       "_origin": "ast",
       "id": "package_dependencies_react_native_reanimated",
       "community": 4,
@@ -757,7 +767,7 @@
       "label": "react-native-safe-area-context",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L43",
+      "source_location": "L44",
       "_origin": "ast",
       "id": "package_dependencies_react_native_safe_area_context",
       "community": 4,
@@ -767,7 +777,7 @@
       "label": "react-native-screens",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L44",
+      "source_location": "L45",
       "_origin": "ast",
       "id": "package_dependencies_react_native_screens",
       "community": 4,
@@ -777,7 +787,7 @@
       "label": "react-native-web",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L45",
+      "source_location": "L46",
       "_origin": "ast",
       "id": "package_dependencies_react_native_web",
       "community": 4,
@@ -787,7 +797,7 @@
       "label": "react-native-webview",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L46",
+      "source_location": "L47",
       "_origin": "ast",
       "id": "package_dependencies_react_native_webview",
       "community": 4,
@@ -797,7 +807,7 @@
       "label": "react-native-worklets",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L47",
+      "source_location": "L48",
       "_origin": "ast",
       "id": "package_dependencies_react_native_worklets",
       "community": 4,
@@ -807,7 +817,7 @@
       "label": "devDependencies",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L49",
+      "source_location": "L50",
       "_origin": "ast",
       "id": "package_devdependencies",
       "community": 18,
@@ -817,7 +827,7 @@
       "label": "@types/react",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L50",
+      "source_location": "L51",
       "_origin": "ast",
       "id": "package_devdependencies_types_react",
       "community": 18,
@@ -827,7 +837,7 @@
       "label": "babel-plugin-module-resolver",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L51",
+      "source_location": "L52",
       "_origin": "ast",
       "id": "package_devdependencies_babel_plugin_module_resolver",
       "community": 18,
@@ -837,7 +847,7 @@
       "label": "baseline-browser-mapping",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L52",
+      "source_location": "L53",
       "_origin": "ast",
       "id": "package_devdependencies_baseline_browser_mapping",
       "community": 18,
@@ -847,7 +857,7 @@
       "label": "prettier",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L53",
+      "source_location": "L54",
       "_origin": "ast",
       "id": "package_devdependencies_prettier",
       "community": 18,
@@ -857,7 +867,7 @@
       "label": "typescript",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L54",
+      "source_location": "L55",
       "_origin": "ast",
       "id": "package_devdependencies_typescript",
       "community": 18,
@@ -867,7 +877,7 @@
       "label": "workbox-cli",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L55",
+      "source_location": "L56",
       "_origin": "ast",
       "id": "package_devdependencies_workbox_cli",
       "community": 18,
@@ -877,7 +887,7 @@
       "label": "private",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L57",
+      "source_location": "L58",
       "_origin": "ast",
       "id": "package_private",
       "community": 15,
@@ -887,7 +897,7 @@
       "label": "packageManager",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L58",
+      "source_location": "L59",
       "_origin": "ast",
       "id": "package_packagemanager",
       "community": 15,
@@ -1350,7 +1360,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_home_needtoknowlist",
-      "community": 12,
+      "community": 27,
       "norm_label": "needtoknowlist.tsx"
     },
     {
@@ -1360,7 +1370,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "src_components_home_needtoknowlist_needtoknowlist",
-      "community": 12,
+      "community": 1,
       "norm_label": "needtoknowlist()"
     },
     {
@@ -1370,7 +1380,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_home_upcominglist",
-      "community": 12,
+      "community": 6,
       "norm_label": "upcominglist.tsx"
     },
     {
@@ -1380,7 +1390,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "src_components_home_upcominglist_props",
-      "community": 12,
+      "community": 6,
       "norm_label": "props"
     },
     {
@@ -1390,7 +1400,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "src_components_home_upcominglist_upcominglist",
-      "community": 12,
+      "community": 6,
       "norm_label": "upcominglist()"
     },
     {
@@ -1450,7 +1460,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_inputs_searchbar",
-      "community": 12,
+      "community": 6,
       "norm_label": "searchbar.tsx"
     },
     {
@@ -1460,7 +1470,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "src_components_inputs_searchbar_props",
-      "community": 12,
+      "community": 6,
       "norm_label": "props"
     },
     {
@@ -1470,7 +1480,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "src_components_inputs_searchbar_searchbar",
-      "community": 12,
+      "community": 6,
       "norm_label": "searchbar()"
     },
     {
@@ -1480,7 +1490,7 @@
       "source_location": "L51",
       "_origin": "ast",
       "id": "src_components_inputs_searchbar_styles",
-      "community": 12,
+      "community": 6,
       "norm_label": "styles"
     },
     {
@@ -1490,7 +1500,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_layout_paddedscrollview",
-      "community": 12,
+      "community": 1,
       "norm_label": "paddedscrollview.tsx"
     },
     {
@@ -1500,7 +1510,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "src_components_layout_paddedscrollview_props",
-      "community": 12,
+      "community": 1,
       "norm_label": "props"
     },
     {
@@ -1510,7 +1520,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "src_components_layout_paddedscrollview_paddedscrollview",
-      "community": 12,
+      "community": 1,
       "norm_label": "paddedscrollview()"
     },
     {
@@ -1520,7 +1530,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_layout_screencontainer",
-      "community": 12,
+      "community": 1,
       "norm_label": "screencontainer.tsx"
     },
     {
@@ -1530,7 +1540,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "src_components_layout_screencontainer_props",
-      "community": 12,
+      "community": 1,
       "norm_label": "props"
     },
     {
@@ -1540,7 +1550,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "src_components_layout_screencontainer_screencontainer",
-      "community": 12,
+      "community": 1,
       "norm_label": "screencontainer()"
     },
     {
@@ -1550,7 +1560,7 @@
       "source_location": "L147",
       "_origin": "ast",
       "id": "src_components_layout_screencontainer_styles",
-      "community": 12,
+      "community": 1,
       "norm_label": "styles"
     },
     {
@@ -1730,7 +1740,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_schedule_schedulelevelfilter",
-      "community": 25,
+      "community": 41,
       "norm_label": "schedulelevelfilter.tsx"
     },
     {
@@ -1740,7 +1750,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "src_components_schedule_schedulelevelfilter_props",
-      "community": 25,
+      "community": 41,
       "norm_label": "props"
     },
     {
@@ -1750,7 +1760,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "src_components_schedule_schedulelevelfilter_capitalizewords",
-      "community": 25,
+      "community": 41,
       "norm_label": "capitalizewords()"
     },
     {
@@ -1760,7 +1770,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "src_components_schedule_schedulelevelfilter_schedulelevelfilter",
-      "community": 25,
+      "community": 41,
       "norm_label": "schedulelevelfilter()"
     },
     {
@@ -1770,7 +1780,7 @@
       "source_location": "L58",
       "_origin": "ast",
       "id": "src_components_schedule_schedulelevelfilter_styles",
-      "community": 25,
+      "community": 41,
       "norm_label": "styles"
     },
     {
@@ -1824,10 +1834,20 @@
       "norm_label": "sessionlist.tsx"
     },
     {
+      "label": "Row",
+      "file_type": "code",
+      "source_file": "src/components/schedule/SessionList.tsx",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "src_components_schedule_sessionlist_row",
+      "community": 6,
+      "norm_label": "row"
+    },
+    {
       "label": "Props",
       "file_type": "code",
       "source_file": "src/components/schedule/SessionList.tsx",
-      "source_location": "L16",
+      "source_location": "L19",
       "_origin": "ast",
       "id": "src_components_schedule_sessionlist_props",
       "community": 6,
@@ -1837,17 +1857,17 @@
       "label": "SessionList()",
       "file_type": "code",
       "source_file": "src/components/schedule/SessionList.tsx",
-      "source_location": "L26",
+      "source_location": "L29",
       "_origin": "ast",
       "id": "src_components_schedule_sessionlist_sessionlist",
-      "community": 6,
+      "community": 1,
       "norm_label": "sessionlist()"
     },
     {
       "label": "styles",
       "file_type": "code",
       "source_file": "src/components/schedule/SessionList.tsx",
-      "source_location": "L96",
+      "source_location": "L109",
       "_origin": "ast",
       "id": "src_components_schedule_sessionlist_styles",
       "community": 6,
@@ -1950,7 +1970,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_settings_settingsrow",
-      "community": 1,
+      "community": 25,
       "norm_label": "settingsrow.tsx"
     },
     {
@@ -1960,7 +1980,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "src_components_settings_settingsrow_baseprops",
-      "community": 1,
+      "community": 25,
       "norm_label": "baseprops"
     },
     {
@@ -1970,7 +1990,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "src_components_settings_settingsrow_settingsrow",
-      "community": 1,
+      "community": 25,
       "norm_label": "settingsrow()"
     },
     {
@@ -1980,7 +2000,7 @@
       "source_location": "L58",
       "_origin": "ast",
       "id": "src_components_settings_settingsrow_switchprops",
-      "community": 1,
+      "community": 25,
       "norm_label": "switchprops"
     },
     {
@@ -1990,7 +2010,7 @@
       "source_location": "L64",
       "_origin": "ast",
       "id": "src_components_settings_settingsrow_settingsswitchrow",
-      "community": 1,
+      "community": 25,
       "norm_label": "settingsswitchrow()"
     },
     {
@@ -2000,7 +2020,7 @@
       "source_location": "L91",
       "_origin": "ast",
       "id": "src_components_settings_settingsrow_styles",
-      "community": 1,
+      "community": 25,
       "norm_label": "styles"
     },
     {
@@ -2060,7 +2080,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_status_databoundary",
-      "community": 12,
+      "community": 6,
       "norm_label": "databoundary.tsx"
     },
     {
@@ -2070,7 +2090,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "src_components_status_databoundary_props",
-      "community": 12,
+      "community": 6,
       "norm_label": "props"
     },
     {
@@ -2080,7 +2100,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "src_components_status_databoundary_databoundary",
-      "community": 12,
+      "community": 6,
       "norm_label": "databoundary()"
     },
     {
@@ -2170,7 +2190,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_status_offlinenotice",
-      "community": 12,
+      "community": 1,
       "norm_label": "offlinenotice.tsx"
     },
     {
@@ -2180,7 +2200,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "src_components_status_offlinenotice_props",
-      "community": 12,
+      "community": 1,
       "norm_label": "props"
     },
     {
@@ -2190,7 +2210,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "src_components_status_offlinenotice_offlinenotice",
-      "community": 12,
+      "community": 1,
       "norm_label": "offlinenotice()"
     },
     {
@@ -2200,7 +2220,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_status_statemessage",
-      "community": 12,
+      "community": 6,
       "norm_label": "statemessage.tsx"
     },
     {
@@ -2210,7 +2230,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "src_components_status_statemessage_props",
-      "community": 12,
+      "community": 6,
       "norm_label": "props"
     },
     {
@@ -2220,17 +2240,17 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "src_components_status_statemessage_statemessage",
-      "community": 12,
+      "community": 6,
       "norm_label": "statemessage()"
     },
     {
       "label": "styles",
       "file_type": "code",
       "source_file": "src/components/status/StateMessage.tsx",
-      "source_location": "L31",
+      "source_location": "L37",
       "_origin": "ast",
       "id": "src_components_status_statemessage_styles",
-      "community": 12,
+      "community": 6,
       "norm_label": "styles"
     },
     {
@@ -2310,7 +2330,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_config_constants",
-      "community": 1,
+      "community": 19,
       "norm_label": "constants.ts"
     },
     {
@@ -2320,7 +2340,7 @@
       "source_location": "L2",
       "_origin": "ast",
       "id": "src_config_constants_notification_lead_options",
-      "community": 1,
+      "community": 19,
       "norm_label": "notification_lead_options"
     },
     {
@@ -2330,7 +2350,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "src_config_constants_max_date_iso",
-      "community": 1,
+      "community": 19,
       "norm_label": "max_date_iso"
     },
     {
@@ -2350,7 +2370,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_data_homeinfo",
-      "community": 12,
+      "community": 27,
       "norm_label": "homeinfo.ts"
     },
     {
@@ -2360,7 +2380,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_data_homeinfo_needtoknowcard",
-      "community": 12,
+      "community": 27,
       "norm_label": "needtoknowcard"
     },
     {
@@ -2370,7 +2390,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "src_data_homeinfo_needtoknow",
-      "community": 12,
+      "community": 27,
       "norm_label": "needtoknow"
     },
     {
@@ -2470,7 +2490,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "src_hooks_useappnavigation_useappnavigation",
-      "community": 12,
+      "community": 1,
       "norm_label": "useappnavigation()"
     },
     {
@@ -2560,7 +2580,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "src_hooks_usecalendarsync_usecalendarsync",
-      "community": 19,
+      "community": 1,
       "norm_label": "usecalendarsync()"
     },
     {
@@ -2570,7 +2590,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_hooks_useeffectivetimezone",
-      "community": 12,
+      "community": 1,
       "norm_label": "useeffectivetimezone.ts"
     },
     {
@@ -2580,7 +2600,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "src_hooks_useeffectivetimezone_useeffectivetimezone",
-      "community": 12,
+      "community": 1,
       "norm_label": "useeffectivetimezone()"
     },
     {
@@ -2680,7 +2700,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_hooks_useschedulenotifications",
-      "community": 6,
+      "community": 16,
       "norm_label": "useschedulenotifications.ts"
     },
     {
@@ -2690,7 +2710,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "src_hooks_useschedulenotifications_useschedulenotifications",
-      "community": 6,
+      "community": 16,
       "norm_label": "useschedulenotifications()"
     },
     {
@@ -2700,7 +2720,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_hooks_usespeakeravatars",
-      "community": 12,
+      "community": 1,
       "norm_label": "usespeakeravatars.ts"
     },
     {
@@ -2710,7 +2730,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "src_hooks_usespeakeravatars_usespeakeravatars",
-      "community": 12,
+      "community": 1,
       "norm_label": "usespeakeravatars()"
     },
     {
@@ -3200,7 +3220,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_screens_favoritesscreen",
-      "community": 12,
+      "community": 1,
       "norm_label": "favoritesscreen.tsx"
     },
     {
@@ -3210,7 +3230,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "src_screens_favoritesscreen_favoritesscreen",
-      "community": 12,
+      "community": 1,
       "norm_label": "favoritesscreen()"
     },
     {
@@ -3220,7 +3240,7 @@
       "source_location": "L100",
       "_origin": "ast",
       "id": "src_screens_favoritesscreen_styles",
-      "community": 12,
+      "community": 1,
       "norm_label": "styles"
     },
     {
@@ -3230,7 +3250,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_screens_homescreen",
-      "community": 12,
+      "community": 1,
       "norm_label": "homescreen.tsx"
     },
     {
@@ -3240,7 +3260,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "src_screens_homescreen_homescreen",
-      "community": 12,
+      "community": 1,
       "norm_label": "homescreen()"
     },
     {
@@ -3250,7 +3270,7 @@
       "source_location": "L50",
       "_origin": "ast",
       "id": "src_screens_homescreen_styles",
-      "community": 12,
+      "community": 1,
       "norm_label": "styles"
     },
     {
@@ -3340,7 +3360,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_screens_schedulescreen",
-      "community": 12,
+      "community": 6,
       "norm_label": "schedulescreen.tsx"
     },
     {
@@ -3350,7 +3370,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "src_screens_schedulescreen_schedulescreen",
-      "community": 12,
+      "community": 6,
       "norm_label": "schedulescreen()"
     },
     {
@@ -3360,7 +3380,7 @@
       "source_location": "L248",
       "_origin": "ast",
       "id": "src_screens_schedulescreen_styles",
-      "community": 12,
+      "community": 6,
       "norm_label": "styles"
     },
     {
@@ -3370,7 +3390,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_screens_sessiondetailscreen",
-      "community": 12,
+      "community": 1,
       "norm_label": "sessiondetailscreen.tsx"
     },
     {
@@ -3380,7 +3400,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "src_screens_sessiondetailscreen_sessiondetailscreen",
-      "community": 12,
+      "community": 1,
       "norm_label": "sessiondetailscreen()"
     },
     {
@@ -3390,7 +3410,7 @@
       "source_location": "L235",
       "_origin": "ast",
       "id": "src_screens_sessiondetailscreen_styles",
-      "community": 12,
+      "community": 1,
       "norm_label": "styles"
     },
     {
@@ -3430,7 +3450,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_screens_speakerdetailscreen",
-      "community": 12,
+      "community": 1,
       "norm_label": "speakerdetailscreen.tsx"
     },
     {
@@ -3440,7 +3460,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "src_screens_speakerdetailscreen_speakerdetailscreen",
-      "community": 12,
+      "community": 1,
       "norm_label": "speakerdetailscreen()"
     },
     {
@@ -3450,7 +3470,7 @@
       "source_location": "L164",
       "_origin": "ast",
       "id": "src_screens_speakerdetailscreen_styles",
-      "community": 12,
+      "community": 1,
       "norm_label": "styles"
     },
     {
@@ -3460,27 +3480,27 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_screens_speakersscreen",
-      "community": 12,
+      "community": 1,
       "norm_label": "speakersscreen.tsx"
     },
     {
       "label": "SpeakersScreen()",
       "file_type": "code",
       "source_file": "src/screens/SpeakersScreen.tsx",
-      "source_location": "L14",
+      "source_location": "L15",
       "_origin": "ast",
       "id": "src_screens_speakersscreen_speakersscreen",
-      "community": 12,
+      "community": 1,
       "norm_label": "speakersscreen()"
     },
     {
       "label": "styles",
       "file_type": "code",
       "source_file": "src/screens/SpeakersScreen.tsx",
-      "source_location": "L76",
+      "source_location": "L77",
       "_origin": "ast",
       "id": "src_screens_speakersscreen_styles",
-      "community": 12,
+      "community": 1,
       "norm_label": "styles"
     },
     {
@@ -3830,7 +3850,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_store_conferencedata",
-      "community": 0,
+      "community": 1,
       "norm_label": "conferencedata.tsx"
     },
     {
@@ -3840,7 +3860,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "src_store_conferencedata_conferencecontextvalue",
-      "community": 0,
+      "community": 1,
       "norm_label": "conferencecontextvalue"
     },
     {
@@ -3850,7 +3870,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "src_store_conferencedata_conferencedatacontext",
-      "community": 0,
+      "community": 1,
       "norm_label": "conferencedatacontext"
     },
     {
@@ -3870,7 +3890,7 @@
       "source_location": "L208",
       "_origin": "ast",
       "id": "src_store_conferencedata_useconferencedata",
-      "community": 12,
+      "community": 1,
       "norm_label": "useconferencedata()"
     },
     {
@@ -3950,7 +3970,7 @@
       "source_location": "L146",
       "_origin": "ast",
       "id": "src_store_favorites_usefavorites",
-      "community": 12,
+      "community": 1,
       "norm_label": "usefavorites()"
     },
     {
@@ -4000,7 +4020,7 @@
       "source_location": "L50",
       "_origin": "ast",
       "id": "src_store_settings_thememode",
-      "community": 11,
+      "community": 1,
       "norm_label": "thememode"
     },
     {
@@ -4030,7 +4050,7 @@
       "source_location": "L232",
       "_origin": "ast",
       "id": "src_store_settings_usesettings",
-      "community": 12,
+      "community": 1,
       "norm_label": "usesettings()"
     },
     {
@@ -4040,7 +4060,7 @@
       "source_location": "L242",
       "_origin": "ast",
       "id": "src_store_settings_geteffectivetimezone",
-      "community": 12,
+      "community": 1,
       "norm_label": "geteffectivetimezone()"
     },
     {
@@ -4100,7 +4120,7 @@
       "source_location": "L55",
       "_origin": "ast",
       "id": "src_theme_spacing",
-      "community": 12,
+      "community": 41,
       "norm_label": "spacing"
     },
     {
@@ -4150,7 +4170,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_types_conference",
-      "community": 12,
+      "community": 0,
       "norm_label": "conference.ts"
     },
     {
@@ -4160,7 +4180,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_types_conference_speakerref",
-      "community": 12,
+      "community": 0,
       "norm_label": "speakerref"
     },
     {
@@ -4170,7 +4190,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "src_types_conference_speaker",
-      "community": 12,
+      "community": 0,
       "norm_label": "speaker"
     },
     {
@@ -4180,7 +4200,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "src_types_conference_session",
-      "community": 19,
+      "community": 0,
       "norm_label": "session"
     },
     {
@@ -4190,7 +4210,7 @@
       "source_location": "L58",
       "_origin": "ast",
       "id": "src_types_conference_breakslot",
-      "community": 14,
+      "community": 0,
       "norm_label": "breakslot"
     },
     {
@@ -4200,7 +4220,7 @@
       "source_location": "L67",
       "_origin": "ast",
       "id": "src_types_conference_scheduleitem",
-      "community": 6,
+      "community": 0,
       "norm_label": "scheduleitem"
     },
     {
@@ -4210,7 +4230,7 @@
       "source_location": "L69",
       "_origin": "ast",
       "id": "src_types_conference_dayschedule",
-      "community": 12,
+      "community": 0,
       "norm_label": "dayschedule"
     },
     {
@@ -4460,7 +4480,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "src_utils_format_getroomlabel",
-      "community": 14,
+      "community": 16,
       "norm_label": "getroomlabel()"
     },
     {
@@ -4630,7 +4650,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "src_utils_notifications_notificationentry",
-      "community": 6,
+      "community": 16,
       "norm_label": "notificationentry"
     },
     {
@@ -4690,7 +4710,7 @@
       "source_location": "L133",
       "_origin": "ast",
       "id": "src_utils_notifications_reschedulesessionnotifications",
-      "community": 6,
+      "community": 16,
       "norm_label": "reschedulesessionnotifications()"
     },
     {
@@ -4700,7 +4720,7 @@
       "source_location": "L185",
       "_origin": "ast",
       "id": "src_utils_notifications_clearscheduledsessionnotifications",
-      "community": 6,
+      "community": 16,
       "norm_label": "clearscheduledsessionnotifications()"
     },
     {
@@ -4720,7 +4740,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "src_utils_schedule_iskeynotesessiontype",
-      "community": 6,
+      "community": 16,
       "norm_label": "iskeynotesessiontype()"
     },
     {
@@ -4767,7 +4787,7 @@
       "label": "compareSessionsByStart()",
       "file_type": "code",
       "source_file": "src/utils/schedule.ts",
-      "source_location": "L38",
+      "source_location": "L40",
       "_origin": "ast",
       "id": "src_utils_schedule_comparesessionsbystart",
       "community": 6,
@@ -4777,7 +4797,7 @@
       "label": "sortScheduleItems()",
       "file_type": "code",
       "source_file": "src/utils/schedule.ts",
-      "source_location": "L60",
+      "source_location": "L65",
       "_origin": "ast",
       "id": "src_utils_schedule_sortscheduleitems",
       "community": 6,
@@ -4787,7 +4807,7 @@
       "label": "groupBySessionStartLabel()",
       "file_type": "code",
       "source_file": "src/utils/schedule.ts",
-      "source_location": "L71",
+      "source_location": "L76",
       "_origin": "ast",
       "id": "src_utils_schedule_groupbysessionstartlabel",
       "community": 6,
@@ -4797,7 +4817,7 @@
       "label": "SortableStartInput",
       "file_type": "code",
       "source_file": "src/utils/schedule.ts",
-      "source_location": "L85",
+      "source_location": "L90",
       "_origin": "ast",
       "id": "src_utils_schedule_sortablestartinput",
       "community": 6,
@@ -4807,7 +4827,7 @@
       "label": "normalizeIso()",
       "file_type": "code",
       "source_file": "src/utils/schedule.ts",
-      "source_location": "L95",
+      "source_location": "L100",
       "_origin": "ast",
       "id": "src_utils_schedule_normalizeiso",
       "community": 6,
@@ -4817,7 +4837,7 @@
       "label": "toSortableStartItem()",
       "file_type": "code",
       "source_file": "src/utils/schedule.ts",
-      "source_location": "L115",
+      "source_location": "L120",
       "_origin": "ast",
       "id": "src_utils_schedule_tosortablestartitem",
       "community": 6,
@@ -4860,7 +4880,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_utils_share",
-      "community": 12,
+      "community": 1,
       "norm_label": "share.ts"
     },
     {
@@ -4870,7 +4890,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "src_utils_share_shareoptions",
-      "community": 12,
+      "community": 1,
       "norm_label": "shareoptions"
     },
     {
@@ -4880,7 +4900,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "src_utils_share_sharelink",
-      "community": 12,
+      "community": 1,
       "norm_label": "sharelink()"
     },
     {
@@ -4940,7 +4960,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_utils_time",
-      "community": 12,
+      "community": 6,
       "norm_label": "time.ts"
     },
     {
@@ -4960,7 +4980,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "src_utils_time_formatsessionstarttime",
-      "community": 12,
+      "community": 6,
       "norm_label": "formatsessionstarttime()"
     },
     {
@@ -4970,7 +4990,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "src_utils_time_formatdateiso",
-      "community": 12,
+      "community": 6,
       "norm_label": "formatdateiso()"
     },
     {
@@ -4980,7 +5000,7 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "src_utils_time_formatconferencedaylabel",
-      "community": 12,
+      "community": 6,
       "norm_label": "formatconferencedaylabel()"
     },
     {
@@ -4990,7 +5010,7 @@
       "source_location": "L60",
       "_origin": "ast",
       "id": "src_utils_time_isupcomingsession",
-      "community": 12,
+      "community": 6,
       "norm_label": "isupcomingsession()"
     },
     {
@@ -5000,7 +5020,7 @@
       "source_location": "L67",
       "_origin": "ast",
       "id": "src_utils_time_formatfetchedat",
-      "community": 12,
+      "community": 1,
       "norm_label": "formatfetchedat()"
     },
     {
@@ -5020,7 +5040,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_utils_webalertpolyfill",
-      "community": 3,
+      "community": 16,
       "norm_label": "webalertpolyfill.ts"
     },
     {
@@ -7601,7 +7621,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L49",
+      "source_location": "L50",
       "weight": 1.0,
       "source": "package",
       "target": "package_devdependencies",
@@ -7631,7 +7651,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L58",
+      "source_location": "L59",
       "weight": 1.0,
       "source": "package",
       "target": "package_packagemanager",
@@ -7641,7 +7661,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L57",
+      "source_location": "L58",
       "weight": 1.0,
       "source": "package",
       "target": "package_private",
@@ -7781,7 +7801,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L26",
+      "source_location": "L27",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_expo",
@@ -7791,7 +7811,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L27",
+      "source_location": "L28",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_expo_calendar",
@@ -7811,7 +7831,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L28",
+      "source_location": "L29",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_expo_font",
@@ -7821,7 +7841,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L29",
+      "source_location": "L30",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_expo_haptics",
@@ -7831,7 +7851,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L30",
+      "source_location": "L31",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_expo_image",
@@ -7841,7 +7861,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L31",
+      "source_location": "L32",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_expo_notifications",
@@ -7851,7 +7871,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L32",
+      "source_location": "L33",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_expo_splash_screen",
@@ -7861,7 +7881,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L33",
+      "source_location": "L34",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_expo_status_bar",
@@ -7871,7 +7891,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L34",
+      "source_location": "L35",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_expo_system_ui",
@@ -7891,7 +7911,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L35",
+      "source_location": "L36",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_punycode",
@@ -7901,7 +7921,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L36",
+      "source_location": "L37",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_react",
@@ -7911,7 +7931,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L37",
+      "source_location": "L38",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_react_dom",
@@ -7921,7 +7941,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L38",
+      "source_location": "L39",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_react_native",
@@ -7941,7 +7961,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L39",
+      "source_location": "L40",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_react_native_bottom_tabs",
@@ -7961,7 +7981,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L40",
+      "source_location": "L41",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_react_native_markdown_display",
@@ -7971,7 +7991,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L41",
+      "source_location": "L42",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_react_native_paper",
@@ -7981,7 +8001,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L42",
+      "source_location": "L43",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_react_native_reanimated",
@@ -7991,7 +8011,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L43",
+      "source_location": "L44",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_react_native_safe_area_context",
@@ -8001,7 +8021,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L44",
+      "source_location": "L45",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_react_native_screens",
@@ -8011,7 +8031,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L45",
+      "source_location": "L46",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_react_native_web",
@@ -8021,7 +8041,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L46",
+      "source_location": "L47",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_react_native_webview",
@@ -8031,7 +8051,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L47",
+      "source_location": "L48",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_react_native_worklets",
@@ -8068,6 +8088,16 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_shopify_flash_list",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "references",
       "context": "call",
       "confidence": "EXTRACTED",
@@ -8082,7 +8112,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L51",
+      "source_location": "L52",
       "weight": 1.0,
       "source": "package_devdependencies",
       "target": "package_devdependencies_babel_plugin_module_resolver",
@@ -8092,7 +8122,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L52",
+      "source_location": "L53",
       "weight": 1.0,
       "source": "package_devdependencies",
       "target": "package_devdependencies_baseline_browser_mapping",
@@ -8102,7 +8132,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L53",
+      "source_location": "L54",
       "weight": 1.0,
       "source": "package_devdependencies",
       "target": "package_devdependencies_prettier",
@@ -8112,7 +8142,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L50",
+      "source_location": "L51",
       "weight": 1.0,
       "source": "package_devdependencies",
       "target": "package_devdependencies_types_react",
@@ -8122,7 +8152,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L54",
+      "source_location": "L55",
       "weight": 1.0,
       "source": "package_devdependencies",
       "target": "package_devdependencies_typescript",
@@ -8132,7 +8162,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L55",
+      "source_location": "L56",
       "weight": 1.0,
       "source": "package_devdependencies",
       "target": "package_devdependencies_workbox_cli",
@@ -8782,7 +8812,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/screens/SpeakersScreen.tsx",
-      "source_location": "L8",
+      "source_location": "L9",
       "weight": 1.0,
       "source": "src_screens_speakersscreen",
       "target": "src_components_speakerlistitem",
@@ -9495,7 +9525,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/screens/SpeakersScreen.tsx",
-      "source_location": "L5",
+      "source_location": "L6",
       "weight": 1.0,
       "source": "src_screens_speakersscreen",
       "target": "src_components_inputs_searchbar",
@@ -9517,7 +9547,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/screens/SpeakersScreen.tsx",
-      "source_location": "L5",
+      "source_location": "L6",
       "weight": 1.0,
       "source": "src_screens_speakersscreen",
       "target": "src_components_inputs_searchbar_searchbar",
@@ -9930,7 +9960,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/screens/SpeakersScreen.tsx",
-      "source_location": "L4",
+      "source_location": "L5",
       "weight": 1.0,
       "source": "src_screens_speakersscreen",
       "target": "src_components_layout_screencontainer",
@@ -10070,7 +10100,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/schedule/SessionList.tsx",
-      "source_location": "L13",
+      "source_location": "L14",
       "weight": 1.0,
       "source": "src_components_schedule_sessionlist",
       "target": "src_components_schedule_breaklistitem",
@@ -10580,7 +10610,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/schedule/SessionList.tsx",
-      "source_location": "L16",
+      "source_location": "L19",
       "weight": 1.0,
       "source": "src_components_schedule_sessionlist",
       "target": "src_components_schedule_sessionlist_props",
@@ -10590,7 +10620,17 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/schedule/SessionList.tsx",
-      "source_location": "L26",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "src_components_schedule_sessionlist",
+      "target": "src_components_schedule_sessionlist_row",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/schedule/SessionList.tsx",
+      "source_location": "L29",
       "weight": 1.0,
       "source": "src_components_schedule_sessionlist",
       "target": "src_components_schedule_sessionlist_sessionlist",
@@ -10600,7 +10640,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/schedule/SessionList.tsx",
-      "source_location": "L96",
+      "source_location": "L109",
       "weight": 1.0,
       "source": "src_components_schedule_sessionlist",
       "target": "src_components_schedule_sessionlist_styles",
@@ -10611,7 +10651,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/schedule/SessionList.tsx",
-      "source_location": "L7",
+      "source_location": "L8",
       "weight": 1.0,
       "source": "src_components_schedule_sessionlist",
       "target": "src_components_schedule_sessionlistitem",
@@ -10622,7 +10662,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/schedule/SessionList.tsx",
-      "source_location": "L14",
+      "source_location": "L15",
       "weight": 1.0,
       "source": "src_components_schedule_sessionlist",
       "target": "src_components_status_statemessage",
@@ -10633,7 +10673,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/schedule/SessionList.tsx",
-      "source_location": "L14",
+      "source_location": "L15",
       "weight": 1.0,
       "source": "src_components_schedule_sessionlist",
       "target": "src_components_status_statemessage_statemessage",
@@ -10644,7 +10684,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/schedule/SessionList.tsx",
-      "source_location": "L12",
+      "source_location": "L13",
       "weight": 1.0,
       "source": "src_components_schedule_sessionlist",
       "target": "src_hooks_usespeakeravatars",
@@ -10655,7 +10695,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/schedule/SessionList.tsx",
-      "source_location": "L12",
+      "source_location": "L13",
       "weight": 1.0,
       "source": "src_components_schedule_sessionlist",
       "target": "src_hooks_usespeakeravatars_usespeakeravatars",
@@ -10666,7 +10706,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/schedule/SessionList.tsx",
-      "source_location": "L8",
+      "source_location": "L9",
       "weight": 1.0,
       "source": "src_components_schedule_sessionlist",
       "target": "src_store_favorites",
@@ -10677,7 +10717,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/schedule/SessionList.tsx",
-      "source_location": "L8",
+      "source_location": "L9",
       "weight": 1.0,
       "source": "src_components_schedule_sessionlist",
       "target": "src_store_favorites_usefavorites",
@@ -10688,7 +10728,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/schedule/SessionList.tsx",
-      "source_location": "L9",
+      "source_location": "L10",
       "weight": 1.0,
       "source": "src_components_schedule_sessionlist",
       "target": "src_store_settings",
@@ -10699,7 +10739,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/schedule/SessionList.tsx",
-      "source_location": "L9",
+      "source_location": "L10",
       "weight": 1.0,
       "source": "src_components_schedule_sessionlist",
       "target": "src_store_settings_usesettings",
@@ -10710,7 +10750,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/schedule/SessionList.tsx",
-      "source_location": "L6",
+      "source_location": "L7",
       "weight": 1.0,
       "source": "src_components_schedule_sessionlist",
       "target": "src_theme",
@@ -10721,7 +10761,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/schedule/SessionList.tsx",
-      "source_location": "L6",
+      "source_location": "L7",
       "weight": 1.0,
       "source": "src_components_schedule_sessionlist",
       "target": "src_theme_spacing",
@@ -10732,7 +10772,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/schedule/SessionList.tsx",
-      "source_location": "L5",
+      "source_location": "L6",
       "weight": 1.0,
       "source": "src_components_schedule_sessionlist",
       "target": "src_types_conference",
@@ -10743,7 +10783,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/schedule/SessionList.tsx",
-      "source_location": "L5",
+      "source_location": "L6",
       "weight": 1.0,
       "source": "src_components_schedule_sessionlist",
       "target": "src_types_conference_scheduleitem",
@@ -10754,7 +10794,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/schedule/SessionList.tsx",
-      "source_location": "L5",
+      "source_location": "L6",
       "weight": 1.0,
       "source": "src_components_schedule_sessionlist",
       "target": "src_types_conference_session",
@@ -10765,7 +10805,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/schedule/SessionList.tsx",
-      "source_location": "L10",
+      "source_location": "L11",
       "weight": 1.0,
       "source": "src_components_schedule_sessionlist",
       "target": "src_utils_haptics",
@@ -10776,7 +10816,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/schedule/SessionList.tsx",
-      "source_location": "L10",
+      "source_location": "L11",
       "weight": 1.0,
       "source": "src_components_schedule_sessionlist",
       "target": "src_utils_haptics_hapticlightimpact",
@@ -10787,7 +10827,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/schedule/SessionList.tsx",
-      "source_location": "L10",
+      "source_location": "L11",
       "weight": 1.0,
       "source": "src_components_schedule_sessionlist",
       "target": "src_utils_haptics_hapticselection",
@@ -10798,7 +10838,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/schedule/SessionList.tsx",
-      "source_location": "L11",
+      "source_location": "L12",
       "weight": 1.0,
       "source": "src_components_schedule_sessionlist",
       "target": "src_utils_schedule",
@@ -10809,7 +10849,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/schedule/SessionList.tsx",
-      "source_location": "L11",
+      "source_location": "L12",
       "weight": 1.0,
       "source": "src_components_schedule_sessionlist",
       "target": "src_utils_schedule_groupbysessionstartlabel",
@@ -10820,7 +10860,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/schedule/SessionList.tsx",
-      "source_location": "L11",
+      "source_location": "L12",
       "weight": 1.0,
       "source": "src_components_schedule_sessionlist",
       "target": "src_utils_schedule_isbreak",
@@ -10831,7 +10871,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/components/schedule/SessionList.tsx",
-      "source_location": "L11",
+      "source_location": "L12",
       "weight": 1.0,
       "source": "src_components_schedule_sessionlist",
       "target": "src_utils_schedule_sortscheduleitems",
@@ -10865,7 +10905,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/schedule/SessionList.tsx",
-      "source_location": "L39",
+      "source_location": "L42",
       "weight": 1.0,
       "source": "src_components_schedule_sessionlist_sessionlist",
       "target": "src_hooks_usespeakeravatars_usespeakeravatars"
@@ -10876,7 +10916,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/schedule/SessionList.tsx",
-      "source_location": "L36",
+      "source_location": "L39",
       "weight": 1.0,
       "source": "src_components_schedule_sessionlist_sessionlist",
       "target": "src_store_favorites_usefavorites"
@@ -10887,7 +10927,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/schedule/SessionList.tsx",
-      "source_location": "L37",
+      "source_location": "L40",
       "weight": 1.0,
       "source": "src_components_schedule_sessionlist_sessionlist",
       "target": "src_store_settings_usesettings"
@@ -10898,7 +10938,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/schedule/SessionList.tsx",
-      "source_location": "L50",
+      "source_location": "L56",
       "weight": 1.0,
       "source": "src_components_schedule_sessionlist_sessionlist",
       "target": "src_utils_haptics_hapticlightimpact"
@@ -10909,7 +10949,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/schedule/SessionList.tsx",
-      "source_location": "L48",
+      "source_location": "L54",
       "weight": 1.0,
       "source": "src_components_schedule_sessionlist_sessionlist",
       "target": "src_utils_haptics_hapticselection"
@@ -10920,7 +10960,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/schedule/SessionList.tsx",
-      "source_location": "L43",
+      "source_location": "L46",
       "weight": 1.0,
       "source": "src_components_schedule_sessionlist_sessionlist",
       "target": "src_utils_schedule_groupbysessionstartlabel"
@@ -10931,7 +10971,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/schedule/SessionList.tsx",
-      "source_location": "L62",
+      "source_location": "L71",
       "weight": 1.0,
       "source": "src_components_schedule_sessionlist_sessionlist",
       "target": "src_utils_schedule_isbreak"
@@ -10942,7 +10982,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/components/schedule/SessionList.tsx",
-      "source_location": "L42",
+      "source_location": "L45",
       "weight": 1.0,
       "source": "src_components_schedule_sessionlist_sessionlist",
       "target": "src_utils_schedule_sortscheduleitems"
@@ -11540,7 +11580,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/screens/SpeakersScreen.tsx",
-      "source_location": "L7",
+      "source_location": "L8",
       "weight": 1.0,
       "source": "src_screens_speakersscreen",
       "target": "src_components_status_databoundary",
@@ -11840,7 +11880,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/screens/SpeakersScreen.tsx",
-      "source_location": "L6",
+      "source_location": "L7",
       "weight": 1.0,
       "source": "src_screens_speakersscreen",
       "target": "src_components_status_offlinenotice",
@@ -11928,7 +11968,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/screens/SpeakersScreen.tsx",
-      "source_location": "L6",
+      "source_location": "L7",
       "weight": 1.0,
       "source": "src_screens_speakersscreen",
       "target": "src_components_status_offlinenotice_offlinenotice",
@@ -11958,7 +11998,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/status/StateMessage.tsx",
-      "source_location": "L31",
+      "source_location": "L37",
       "weight": 1.0,
       "source": "src_components_status_statemessage",
       "target": "src_components_status_statemessage_styles",
@@ -12316,7 +12356,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/utils/schedule.ts",
-      "source_location": "L64",
+      "source_location": "L69",
       "weight": 1.0,
       "source": "src_utils_schedule_sortscheduleitems",
       "target": "src_config_conference_getpreferredroomorder"
@@ -12844,7 +12884,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/screens/SpeakersScreen.tsx",
-      "source_location": "L12",
+      "source_location": "L13",
       "weight": 1.0,
       "source": "src_screens_speakersscreen",
       "target": "src_hooks_useappnavigation",
@@ -13009,7 +13049,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/screens/SpeakersScreen.tsx",
-      "source_location": "L12",
+      "source_location": "L13",
       "weight": 1.0,
       "source": "src_screens_speakersscreen",
       "target": "src_hooks_useappnavigation_useappnavigation",
@@ -13021,7 +13061,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/screens/SpeakersScreen.tsx",
-      "source_location": "L17",
+      "source_location": "L18",
       "weight": 1.0,
       "source": "src_screens_speakersscreen_speakersscreen",
       "target": "src_hooks_useappnavigation_useappnavigation"
@@ -16886,7 +16926,7 @@
       "source_location": "L20",
       "weight": 1.0,
       "source": "src_screens_speakerdetailscreen",
-      "target": "src_utils_schedule_sortscheduleitems",
+      "target": "src_utils_schedule_comparesessionsbystart",
       "confidence_score": 1.0
     },
     {
@@ -16934,15 +16974,15 @@
       "target": "src_store_favorites_usefavorites"
     },
     {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
+      "relation": "indirect_call",
+      "context": "argument",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
       "source_file": "src/screens/SpeakerDetailScreen.tsx",
       "source_location": "L42",
       "weight": 1.0,
       "source": "src_screens_speakerdetailscreen_speakerdetailscreen",
-      "target": "src_utils_schedule_sortscheduleitems"
+      "target": "src_utils_schedule_comparesessionsbystart"
     },
     {
       "relation": "calls",
@@ -16959,7 +16999,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/screens/SpeakersScreen.tsx",
-      "source_location": "L14",
+      "source_location": "L15",
       "weight": 1.0,
       "source": "src_screens_speakersscreen",
       "target": "src_screens_speakersscreen_speakersscreen",
@@ -16969,7 +17009,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/screens/SpeakersScreen.tsx",
-      "source_location": "L76",
+      "source_location": "L77",
       "weight": 1.0,
       "source": "src_screens_speakersscreen",
       "target": "src_screens_speakersscreen_styles",
@@ -16980,7 +17020,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/screens/SpeakersScreen.tsx",
-      "source_location": "L11",
+      "source_location": "L12",
       "weight": 1.0,
       "source": "src_screens_speakersscreen",
       "target": "src_store_conferencedata",
@@ -16991,7 +17031,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/screens/SpeakersScreen.tsx",
-      "source_location": "L11",
+      "source_location": "L12",
       "weight": 1.0,
       "source": "src_screens_speakersscreen",
       "target": "src_store_conferencedata_useconferencedata",
@@ -17002,7 +17042,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/screens/SpeakersScreen.tsx",
-      "source_location": "L10",
+      "source_location": "L11",
       "weight": 1.0,
       "source": "src_screens_speakersscreen",
       "target": "src_theme",
@@ -17013,7 +17053,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/screens/SpeakersScreen.tsx",
-      "source_location": "L10",
+      "source_location": "L11",
       "weight": 1.0,
       "source": "src_screens_speakersscreen",
       "target": "src_theme_spacing",
@@ -17024,7 +17064,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/screens/SpeakersScreen.tsx",
-      "source_location": "L9",
+      "source_location": "L10",
       "weight": 1.0,
       "source": "src_screens_speakersscreen",
       "target": "src_types_conference",
@@ -17035,7 +17075,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/screens/SpeakersScreen.tsx",
-      "source_location": "L9",
+      "source_location": "L10",
       "weight": 1.0,
       "source": "src_screens_speakersscreen",
       "target": "src_types_conference_speaker",
@@ -17047,7 +17087,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/screens/SpeakersScreen.tsx",
-      "source_location": "L15",
+      "source_location": "L16",
       "weight": 1.0,
       "source": "src_screens_speakersscreen_speakersscreen",
       "target": "src_store_conferencedata_useconferencedata"
@@ -19698,7 +19738,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/utils/schedule.ts",
-      "source_location": "L38",
+      "source_location": "L40",
       "weight": 1.0,
       "source": "src_utils_schedule",
       "target": "src_utils_schedule_comparesessionsbystart",
@@ -19708,7 +19748,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/utils/schedule.ts",
-      "source_location": "L71",
+      "source_location": "L76",
       "weight": 1.0,
       "source": "src_utils_schedule",
       "target": "src_utils_schedule_groupbysessionstartlabel",
@@ -19748,7 +19788,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/utils/schedule.ts",
-      "source_location": "L95",
+      "source_location": "L100",
       "weight": 1.0,
       "source": "src_utils_schedule",
       "target": "src_utils_schedule_normalizeiso",
@@ -19778,7 +19818,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/utils/schedule.ts",
-      "source_location": "L85",
+      "source_location": "L90",
       "weight": 1.0,
       "source": "src_utils_schedule",
       "target": "src_utils_schedule_sortablestartinput",
@@ -19788,7 +19828,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/utils/schedule.ts",
-      "source_location": "L60",
+      "source_location": "L65",
       "weight": 1.0,
       "source": "src_utils_schedule",
       "target": "src_utils_schedule_sortscheduleitems",
@@ -19798,7 +19838,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/utils/schedule.ts",
-      "source_location": "L115",
+      "source_location": "L120",
       "weight": 1.0,
       "source": "src_utils_schedule",
       "target": "src_utils_schedule_tosortablestartitem",
@@ -19831,7 +19871,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/utils/schedule.ts",
-      "source_location": "L49",
+      "source_location": "L54",
       "weight": 1.0,
       "source": "src_utils_schedule_comparesessionsbystart",
       "target": "src_utils_schedule_roompreferencerank",
@@ -19842,7 +19882,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/utils/schedule.ts",
-      "source_location": "L65",
+      "source_location": "L70",
       "weight": 1.0,
       "source": "src_utils_schedule_sortscheduleitems",
       "target": "src_utils_schedule_comparesessionsbystart",
@@ -19854,7 +19894,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/utils/schedule.ts",
-      "source_location": "L74",
+      "source_location": "L79",
       "weight": 1.0,
       "source": "src_utils_schedule_groupbysessionstartlabel",
       "target": "src_utils_time_formatsessionstartlabel"
@@ -19864,7 +19904,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/utils/schedule.ts",
-      "source_location": "L121",
+      "source_location": "L126",
       "weight": 1.0,
       "source": "src_utils_schedule_tosortablestartitem",
       "target": "src_utils_schedule_normalizeiso",
@@ -21135,5 +21175,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "24b9c359ea5f3544afd5fe0dd5c0d78a1030528f"
+  "built_at_commit": "9691e8fd45dfafede467d2a088b6dcebc5f81bfe"
 }

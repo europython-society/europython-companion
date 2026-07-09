@@ -10,9 +10,9 @@
     "semantic_hash": ""
   },
   "babel.config.js": {
-    "mtime": 1764912736.7577994,
-    "ast_hash": "98056ea3a701d352b91e45448cf07d42",
-    "semantic_hash": "98056ea3a701d352b91e45448cf07d42"
+    "mtime": 1783592641.8317802,
+    "ast_hash": "39626410bf17113d7391598a3d40b764",
+    "semantic_hash": ""
   },
   "index.ts": {
     "mtime": 1783309392.7169955,
@@ -20,8 +20,8 @@
     "semantic_hash": "abba34ee03076e881f01c31c57d8f27a"
   },
   "package.json": {
-    "mtime": 1783504545.2310457,
-    "ast_hash": "9d8fc94fbfc7238f58af001dce4d21c1",
+    "mtime": 1783593936.2150652,
+    "ast_hash": "6b748716ba139e93f0b70530ac75de4f",
     "semantic_hash": ""
   },
   "src/components/ContactCard.tsx": {
@@ -110,8 +110,8 @@
     "semantic_hash": "e90e0c5b8edfbacc6797c0fb36e7b0a8"
   },
   "src/components/schedule/SessionList.tsx": {
-    "mtime": 1783589329.3697822,
-    "ast_hash": "eb501f27c8abe0d861895c0487e96d50",
+    "mtime": 1783593975.2852685,
+    "ast_hash": "617f98fc7fd0e006c8948fb481b65937",
     "semantic_hash": ""
   },
   "src/components/schedule/SessionListItem.tsx": {
@@ -150,9 +150,9 @@
     "semantic_hash": "bcea04a27ea2f2898aa2ae8eecf8a81f"
   },
   "src/components/status/StateMessage.tsx": {
-    "mtime": 1783469775.1180775,
-    "ast_hash": "fa7dae6e36dbd8c4b239938a6a434edc",
-    "semantic_hash": "fa7dae6e36dbd8c4b239938a6a434edc"
+    "mtime": 1783592761.1227024,
+    "ast_hash": "baa4eea374afe6c321c7db8baa181173",
+    "semantic_hash": ""
   },
   "src/config/conference.ts": {
     "mtime": 1783588890.9688241,
@@ -280,13 +280,13 @@
     "semantic_hash": ""
   },
   "src/screens/SpeakerDetailScreen.tsx": {
-    "mtime": 1783589392.3147202,
-    "ast_hash": "60ad1c122181a4b013d01d5306088636",
+    "mtime": 1783590041.3037455,
+    "ast_hash": "6ff948d863626d5fd1d33e2c97fbed07",
     "semantic_hash": ""
   },
   "src/screens/SpeakersScreen.tsx": {
-    "mtime": 1783469730.9319878,
-    "ast_hash": "d76c8d6baef7b4452e82c13e7eee62f1",
+    "mtime": 1783593945.8481655,
+    "ast_hash": "39d4b465b1ca21a3231b31f90cc7a766",
     "semantic_hash": ""
   },
   "src/store/conferenceData.tsx": {
@@ -325,8 +325,8 @@
     "semantic_hash": ""
   },
   "src/utils/format.ts": {
-    "mtime": 1783529173.629586,
-    "ast_hash": "19792bf89f5eafb4e65b595113c5a96f",
+    "mtime": 1783592761.3425245,
+    "ast_hash": "af68bb5d36658b2affadd6f3df3613f9",
     "semantic_hash": ""
   },
   "src/utils/haptics.ts": {
@@ -340,8 +340,8 @@
     "semantic_hash": ""
   },
   "src/utils/schedule.ts": {
-    "mtime": 1783589317.2140322,
-    "ast_hash": "16db5c30555deacace48f1b01f3f5856",
+    "mtime": 1783592761.364746,
+    "ast_hash": "fd072477ce14ac2fddc27e16f5f89300",
     "semantic_hash": ""
   },
   "src/utils/sessionTypes.ts": {
