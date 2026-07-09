@@ -2,8 +2,8 @@
 
 ## Prerequisites
 - Node.js LTS (CI uses the latest LTS).
-- pnpm 10.x (see `package.json` `packageManager`).
-- For native runs: Xcode for iOS, Android SDK/adb for Android.
+- pnpm (pinned to `pnpm@11.10.0` in `package.json`).
+- For native runs: Xcode for iOS, Android SDK/adb for Android. Native projects are **not** checked into the repo (`ios/`/`android/` are gitignored) — they're generated on demand.
 
 ## Install dependencies
 ```sh
@@ -15,32 +15,33 @@ pnpm install
   ```sh
   pnpm start
   ```
-- iOS simulator:
+- iOS simulator (runs `expo prebuild` first if `ios/` doesn't exist yet):
   ```sh
   pnpm ios
   ```
-- Android emulator/device:
+- Android emulator/device (same, generates `android/` first if needed):
   ```sh
   pnpm android
   ```
-- Web (starts the proxy + Expo web server):
+- Web:
   ```sh
   pnpm web
   ```
 
-## Configuration overrides
-To override data sources or the web proxy, set `EXPO_PUBLIC_*` values in your shell before starting Expo.
+There are no environment variables to configure — the app has no runtime environment-variable overrides (see [Configuration](configuration.md)). Programme data, the API base URL, and Wi-Fi info URL are all static values in `src/config/conference.ts`.
 
-Example:
+## Building for web / PWA
 ```sh
-EXPO_PUBLIC_API_BASE="https://example.com/programme/ep{year}/releases/current" pnpm start
+pnpm build:web
 ```
-
-See [docs/configuration.md](configuration.md) for precedence details and web proxy overrides.
-For `pnpm web`, `EXPO_PUBLIC_API_BASE` is ignored; use `EXPO_PUBLIC_WEB_PROXY_BASE` to point the web dev server at a different proxy origin.
+Runs `expo export -p web` then generates the Workbox service worker (`public/workbox-config.js` → `dist/sw.js`). To preview the exported build locally:
+```sh
+pnpm pwa
+```
+(builds web, then serves `dist/` on port 8081 via `serve`).
 
 ## Native builds
-`pnpm ios` and `pnpm android` build from the committed native projects. If you only need JS/UI changes, `pnpm start` is usually enough.
+`pnpm ios` / `pnpm android` run against locally-generated `ios/`/`android/` projects (Expo's Continuous Native Generation / prebuild workflow — these folders are gitignored, not committed). If you only need JS/UI changes, `pnpm start` is usually enough; you don't need a native build unless you're changing native config (`app.json` plugins, permissions, icons) or adding a library with native code.
 
 ## Code style and checks
 - Format code and docs with:
@@ -58,11 +59,10 @@ For `pnpm web`, `EXPO_PUBLIC_API_BASE` is ignored; use `EXPO_PUBLIC_WEB_PROXY_BA
 
 ## Next steps
 - For feature work and navigation changes, start with [docs/development-workflow.md](development-workflow.md).
-- For data source overrides and Expo config, continue with [docs/configuration.md](configuration.md).
+- For a full architecture walkthrough, see [docs/architecture.md](architecture.md).
 
 ## Common startup failures
-- `pnpm: command not found` or wrong pnpm version: install pnpm 10.x and retry.
-- iOS build fails immediately: Xcode or the CLI tools are missing or out of date.
+- `pnpm: command not found` or wrong pnpm version: install pnpm (`corepack enable` or see `package.json`'s `packageManager` field) and retry.
+- iOS build fails immediately: Xcode or the CLI tools are missing or out of date, or `ios/` needs to be regenerated (`expo prebuild --clean`).
 - Android build fails with missing SDK/adb: Android Studio/SDK not installed or `ANDROID_HOME` not set.
-- Web loads but schedule requests fail with CORS/network errors: the local proxy did not start or port 4000 is in use.
-- App launches but shows empty data: initial fetch requires network access; verify connectivity and try Refresh in Settings.
+- App launches but shows empty data: initial fetch requires network access; verify connectivity and try Refresh in Settings. Once any data has loaded once, it's cached and the app works offline from then on.

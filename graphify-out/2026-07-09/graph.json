@@ -10,7 +10,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_tsx_app",
-      "community": 16,
+      "community": 3,
       "norm_label": "app.tsx"
     },
     {
@@ -20,7 +20,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "app_schedulenotificationmanager",
-      "community": 16,
+      "community": 3,
       "norm_label": "schedulenotificationmanager()"
     },
     {
@@ -30,7 +30,7 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "app_appcontent",
-      "community": 16,
+      "community": 3,
       "norm_label": "appcontent()"
     },
     {
@@ -40,7 +40,7 @@
       "source_location": "L68",
       "_origin": "ast",
       "id": "app_app",
-      "community": 16,
+      "community": 3,
       "norm_label": "app()"
     },
     {
@@ -50,7 +50,7 @@
       "source_location": "L76",
       "_origin": "ast",
       "id": "app_appscaffold",
-      "community": 16,
+      "community": 3,
       "norm_label": "appscaffold()"
     },
     {
@@ -464,10 +464,20 @@
       "norm_label": "tunnel"
     },
     {
-      "label": "format",
+      "label": "prebuild",
       "file_type": "code",
       "source_file": "package.json",
       "source_location": "L13",
+      "_origin": "ast",
+      "id": "package_scripts_prebuild",
+      "community": 8,
+      "norm_label": "prebuild"
+    },
+    {
+      "label": "format",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L14",
       "_origin": "ast",
       "id": "package_scripts_format",
       "community": 8,
@@ -477,7 +487,7 @@
       "label": "format:check",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L14",
+      "source_location": "L15",
       "_origin": "ast",
       "id": "package_scripts_format_check",
       "community": 8,
@@ -487,7 +497,7 @@
       "label": "typecheck",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L15",
+      "source_location": "L16",
       "_origin": "ast",
       "id": "package_scripts_typecheck",
       "community": 8,
@@ -497,7 +507,7 @@
       "label": "dependencies",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L17",
+      "source_location": "L18",
       "_origin": "ast",
       "id": "package_dependencies",
       "community": 4,
@@ -507,7 +517,7 @@
       "label": "@bottom-tabs/react-navigation",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L18",
+      "source_location": "L19",
       "_origin": "ast",
       "id": "package_dependencies_bottom_tabs_react_navigation",
       "community": 4,
@@ -517,7 +527,7 @@
       "label": "@expo/dom-webview",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L19",
+      "source_location": "L20",
       "_origin": "ast",
       "id": "package_dependencies_expo_dom_webview",
       "community": 4,
@@ -527,7 +537,7 @@
       "label": "@expo/vector-icons",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L20",
+      "source_location": "L21",
       "_origin": "ast",
       "id": "package_dependencies_expo_vector_icons",
       "community": 4,
@@ -537,7 +547,7 @@
       "label": "@react-native-async-storage/async-storage",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L21",
+      "source_location": "L22",
       "_origin": "ast",
       "id": "package_dependencies_react_native_async_storage_async_storage",
       "community": 4,
@@ -547,7 +557,7 @@
       "label": "@react-native-community/netinfo",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L22",
+      "source_location": "L23",
       "_origin": "ast",
       "id": "package_dependencies_react_native_community_netinfo",
       "community": 4,
@@ -557,7 +567,7 @@
       "label": "@react-navigation/bottom-tabs",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L23",
+      "source_location": "L24",
       "_origin": "ast",
       "id": "package_dependencies_react_navigation_bottom_tabs",
       "community": 4,
@@ -567,7 +577,7 @@
       "label": "@react-navigation/native",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L24",
+      "source_location": "L25",
       "_origin": "ast",
       "id": "package_dependencies_react_navigation_native",
       "community": 4,
@@ -577,7 +587,7 @@
       "label": "@react-navigation/native-stack",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L25",
+      "source_location": "L26",
       "_origin": "ast",
       "id": "package_dependencies_react_navigation_native_stack",
       "community": 4,
@@ -587,7 +597,7 @@
       "label": "@shopify/flash-list",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L26",
+      "source_location": "L27",
       "_origin": "ast",
       "id": "package_dependencies_shopify_flash_list",
       "community": 4,
@@ -597,7 +607,7 @@
       "label": "expo",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L27",
+      "source_location": "L28",
       "_origin": "ast",
       "id": "package_dependencies_expo",
       "community": 4,
@@ -607,7 +617,7 @@
       "label": "expo-calendar",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L28",
+      "source_location": "L29",
       "_origin": "ast",
       "id": "package_dependencies_expo_calendar",
       "community": 19,
@@ -617,7 +627,7 @@
       "label": "expo-font",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L29",
+      "source_location": "L30",
       "_origin": "ast",
       "id": "package_dependencies_expo_font",
       "community": 4,
@@ -627,7 +637,7 @@
       "label": "expo-haptics",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L30",
+      "source_location": "L31",
       "_origin": "ast",
       "id": "package_dependencies_expo_haptics",
       "community": 4,
@@ -637,7 +647,7 @@
       "label": "expo-image",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L31",
+      "source_location": "L32",
       "_origin": "ast",
       "id": "package_dependencies_expo_image",
       "community": 4,
@@ -647,7 +657,7 @@
       "label": "expo-notifications",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L32",
+      "source_location": "L33",
       "_origin": "ast",
       "id": "package_dependencies_expo_notifications",
       "community": 4,
@@ -657,7 +667,7 @@
       "label": "expo-splash-screen",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L33",
+      "source_location": "L34",
       "_origin": "ast",
       "id": "package_dependencies_expo_splash_screen",
       "community": 4,
@@ -667,7 +677,7 @@
       "label": "expo-status-bar",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L34",
+      "source_location": "L35",
       "_origin": "ast",
       "id": "package_dependencies_expo_status_bar",
       "community": 4,
@@ -677,7 +687,7 @@
       "label": "expo-system-ui",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L35",
+      "source_location": "L36",
       "_origin": "ast",
       "id": "package_dependencies_expo_system_ui",
       "community": 4,
@@ -687,7 +697,7 @@
       "label": "punycode",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L36",
+      "source_location": "L37",
       "_origin": "ast",
       "id": "package_dependencies_punycode",
       "community": 4,
@@ -697,7 +707,7 @@
       "label": "react",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L37",
+      "source_location": "L38",
       "_origin": "ast",
       "id": "package_dependencies_react",
       "community": 4,
@@ -707,7 +717,7 @@
       "label": "react-dom",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L38",
+      "source_location": "L39",
       "_origin": "ast",
       "id": "package_dependencies_react_dom",
       "community": 4,
@@ -717,7 +727,7 @@
       "label": "react-native",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L39",
+      "source_location": "L40",
       "_origin": "ast",
       "id": "package_dependencies_react_native",
       "community": 4,
@@ -727,7 +737,7 @@
       "label": "react-native-bottom-tabs",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L40",
+      "source_location": "L41",
       "_origin": "ast",
       "id": "package_dependencies_react_native_bottom_tabs",
       "community": 4,
@@ -737,7 +747,7 @@
       "label": "react-native-markdown-display",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L41",
+      "source_location": "L42",
       "_origin": "ast",
       "id": "package_dependencies_react_native_markdown_display",
       "community": 4,
@@ -747,7 +757,7 @@
       "label": "react-native-paper",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L42",
+      "source_location": "L43",
       "_origin": "ast",
       "id": "package_dependencies_react_native_paper",
       "community": 4,
@@ -757,7 +767,7 @@
       "label": "react-native-reanimated",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L43",
+      "source_location": "L44",
       "_origin": "ast",
       "id": "package_dependencies_react_native_reanimated",
       "community": 4,
@@ -767,7 +777,7 @@
       "label": "react-native-safe-area-context",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L44",
+      "source_location": "L45",
       "_origin": "ast",
       "id": "package_dependencies_react_native_safe_area_context",
       "community": 4,
@@ -777,7 +787,7 @@
       "label": "react-native-screens",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L45",
+      "source_location": "L46",
       "_origin": "ast",
       "id": "package_dependencies_react_native_screens",
       "community": 4,
@@ -787,7 +797,7 @@
       "label": "react-native-web",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L46",
+      "source_location": "L47",
       "_origin": "ast",
       "id": "package_dependencies_react_native_web",
       "community": 4,
@@ -797,7 +807,7 @@
       "label": "react-native-webview",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L47",
+      "source_location": "L48",
       "_origin": "ast",
       "id": "package_dependencies_react_native_webview",
       "community": 4,
@@ -807,7 +817,7 @@
       "label": "react-native-worklets",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L48",
+      "source_location": "L49",
       "_origin": "ast",
       "id": "package_dependencies_react_native_worklets",
       "community": 4,
@@ -817,7 +827,7 @@
       "label": "devDependencies",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L50",
+      "source_location": "L51",
       "_origin": "ast",
       "id": "package_devdependencies",
       "community": 18,
@@ -827,7 +837,7 @@
       "label": "@types/react",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L51",
+      "source_location": "L52",
       "_origin": "ast",
       "id": "package_devdependencies_types_react",
       "community": 18,
@@ -837,7 +847,7 @@
       "label": "babel-plugin-module-resolver",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L52",
+      "source_location": "L53",
       "_origin": "ast",
       "id": "package_devdependencies_babel_plugin_module_resolver",
       "community": 18,
@@ -847,7 +857,7 @@
       "label": "baseline-browser-mapping",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L53",
+      "source_location": "L54",
       "_origin": "ast",
       "id": "package_devdependencies_baseline_browser_mapping",
       "community": 18,
@@ -857,7 +867,7 @@
       "label": "prettier",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L54",
+      "source_location": "L55",
       "_origin": "ast",
       "id": "package_devdependencies_prettier",
       "community": 18,
@@ -867,7 +877,7 @@
       "label": "typescript",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L55",
+      "source_location": "L56",
       "_origin": "ast",
       "id": "package_devdependencies_typescript",
       "community": 18,
@@ -877,7 +887,7 @@
       "label": "workbox-cli",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L56",
+      "source_location": "L57",
       "_origin": "ast",
       "id": "package_devdependencies_workbox_cli",
       "community": 18,
@@ -887,7 +897,7 @@
       "label": "private",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L58",
+      "source_location": "L59",
       "_origin": "ast",
       "id": "package_private",
       "community": 15,
@@ -897,7 +907,7 @@
       "label": "packageManager",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L59",
+      "source_location": "L60",
       "_origin": "ast",
       "id": "package_packagemanager",
       "community": 15,
@@ -1170,7 +1180,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_markdownbody",
-      "community": 12,
+      "community": 19,
       "norm_label": "markdownbody.tsx"
     },
     {
@@ -1180,7 +1190,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "src_components_markdownbody_props",
-      "community": 12,
+      "community": 19,
       "norm_label": "props"
     },
     {
@@ -1190,7 +1200,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "src_components_markdownbody_markdownbody",
-      "community": 12,
+      "community": 19,
       "norm_label": "markdownbody()"
     },
     {
@@ -1200,7 +1210,7 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "src_components_markdownbody_createstyles",
-      "community": 12,
+      "community": 19,
       "norm_label": "createstyles()"
     },
     {
@@ -1260,7 +1270,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_speakeravatar",
-      "community": 14,
+      "community": 19,
       "norm_label": "speakeravatar.tsx"
     },
     {
@@ -1270,7 +1280,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "src_components_speakeravatar_props",
-      "community": 14,
+      "community": 19,
       "norm_label": "props"
     },
     {
@@ -1280,7 +1290,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "src_components_speakeravatar_speakeravatar",
-      "community": 14,
+      "community": 19,
       "norm_label": "speakeravatar()"
     },
     {
@@ -1290,7 +1300,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_speakerlistitem",
-      "community": 14,
+      "community": 19,
       "norm_label": "speakerlistitem.tsx"
     },
     {
@@ -1300,7 +1310,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "src_components_speakerlistitem_props",
-      "community": 14,
+      "community": 19,
       "norm_label": "props"
     },
     {
@@ -1310,7 +1320,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "src_components_speakerlistitem_speakerlistitem",
-      "community": 14,
+      "community": 19,
       "norm_label": "speakerlistitem()"
     },
     {
@@ -1360,7 +1370,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_home_needtoknowlist",
-      "community": 27,
+      "community": 6,
       "norm_label": "needtoknowlist.tsx"
     },
     {
@@ -1370,7 +1380,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "src_components_home_needtoknowlist_needtoknowlist",
-      "community": 1,
+      "community": 6,
       "norm_label": "needtoknowlist()"
     },
     {
@@ -1460,7 +1470,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_inputs_searchbar",
-      "community": 6,
+      "community": 43,
       "norm_label": "searchbar.tsx"
     },
     {
@@ -1470,7 +1480,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "src_components_inputs_searchbar_props",
-      "community": 6,
+      "community": 43,
       "norm_label": "props"
     },
     {
@@ -1480,7 +1490,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "src_components_inputs_searchbar_searchbar",
-      "community": 6,
+      "community": 43,
       "norm_label": "searchbar()"
     },
     {
@@ -1490,7 +1500,7 @@
       "source_location": "L51",
       "_origin": "ast",
       "id": "src_components_inputs_searchbar_styles",
-      "community": 6,
+      "community": 43,
       "norm_label": "styles"
     },
     {
@@ -1500,7 +1510,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_layout_paddedscrollview",
-      "community": 1,
+      "community": 12,
       "norm_label": "paddedscrollview.tsx"
     },
     {
@@ -1510,7 +1520,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "src_components_layout_paddedscrollview_props",
-      "community": 1,
+      "community": 12,
       "norm_label": "props"
     },
     {
@@ -1520,7 +1530,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "src_components_layout_paddedscrollview_paddedscrollview",
-      "community": 1,
+      "community": 12,
       "norm_label": "paddedscrollview()"
     },
     {
@@ -1530,7 +1540,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_layout_screencontainer",
-      "community": 1,
+      "community": 6,
       "norm_label": "screencontainer.tsx"
     },
     {
@@ -1540,7 +1550,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "src_components_layout_screencontainer_props",
-      "community": 1,
+      "community": 6,
       "norm_label": "props"
     },
     {
@@ -1550,7 +1560,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "src_components_layout_screencontainer_screencontainer",
-      "community": 1,
+      "community": 6,
       "norm_label": "screencontainer()"
     },
     {
@@ -1560,7 +1570,7 @@
       "source_location": "L147",
       "_origin": "ast",
       "id": "src_components_layout_screencontainer_styles",
-      "community": 1,
+      "community": 6,
       "norm_label": "styles"
     },
     {
@@ -1570,7 +1580,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_schedule_breaklistitem",
-      "community": 14,
+      "community": 0,
       "norm_label": "breaklistitem.tsx"
     },
     {
@@ -1580,7 +1590,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "src_components_schedule_breaklistitem_props",
-      "community": 14,
+      "community": 0,
       "norm_label": "props"
     },
     {
@@ -1590,7 +1600,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "src_components_schedule_breaklistitem_breaklistitem",
-      "community": 14,
+      "community": 0,
       "norm_label": "breaklistitem()"
     },
     {
@@ -1600,7 +1610,7 @@
       "source_location": "L57",
       "_origin": "ast",
       "id": "src_components_schedule_breaklistitem_styles",
-      "community": 14,
+      "community": 0,
       "norm_label": "styles"
     },
     {
@@ -1740,7 +1750,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_schedule_schedulelevelfilter",
-      "community": 41,
+      "community": 25,
       "norm_label": "schedulelevelfilter.tsx"
     },
     {
@@ -1750,7 +1760,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "src_components_schedule_schedulelevelfilter_props",
-      "community": 41,
+      "community": 25,
       "norm_label": "props"
     },
     {
@@ -1760,7 +1770,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "src_components_schedule_schedulelevelfilter_capitalizewords",
-      "community": 41,
+      "community": 25,
       "norm_label": "capitalizewords()"
     },
     {
@@ -1770,7 +1780,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "src_components_schedule_schedulelevelfilter_schedulelevelfilter",
-      "community": 41,
+      "community": 25,
       "norm_label": "schedulelevelfilter()"
     },
     {
@@ -1780,7 +1790,7 @@
       "source_location": "L58",
       "_origin": "ast",
       "id": "src_components_schedule_schedulelevelfilter_styles",
-      "community": 41,
+      "community": 25,
       "norm_label": "styles"
     },
     {
@@ -1860,14 +1870,14 @@
       "source_location": "L29",
       "_origin": "ast",
       "id": "src_components_schedule_sessionlist_sessionlist",
-      "community": 1,
+      "community": 6,
       "norm_label": "sessionlist()"
     },
     {
       "label": "styles",
       "file_type": "code",
       "source_file": "src/components/schedule/SessionList.tsx",
-      "source_location": "L109",
+      "source_location": "L110",
       "_origin": "ast",
       "id": "src_components_schedule_sessionlist_styles",
       "community": 6,
@@ -1880,7 +1890,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_schedule_sessionlistitem",
-      "community": 14,
+      "community": 19,
       "norm_label": "sessionlistitem.tsx"
     },
     {
@@ -1890,7 +1900,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "src_components_schedule_sessionlistitem_props",
-      "community": 14,
+      "community": 19,
       "norm_label": "props"
     },
     {
@@ -1900,7 +1910,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "src_components_schedule_sessionlistitem_nameorunknown",
-      "community": 14,
+      "community": 19,
       "norm_label": "nameorunknown()"
     },
     {
@@ -1910,7 +1920,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "src_components_schedule_sessionlistitem_sessionlistitem",
-      "community": 14,
+      "community": 19,
       "norm_label": "sessionlistitem()"
     },
     {
@@ -1920,7 +1930,7 @@
       "source_location": "L108",
       "_origin": "ast",
       "id": "src_components_schedule_sessionlistitem_styles",
-      "community": 14,
+      "community": 19,
       "norm_label": "styles"
     },
     {
@@ -1970,7 +1980,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_settings_settingsrow",
-      "community": 25,
+      "community": 1,
       "norm_label": "settingsrow.tsx"
     },
     {
@@ -1980,7 +1990,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "src_components_settings_settingsrow_baseprops",
-      "community": 25,
+      "community": 1,
       "norm_label": "baseprops"
     },
     {
@@ -1990,7 +2000,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "src_components_settings_settingsrow_settingsrow",
-      "community": 25,
+      "community": 1,
       "norm_label": "settingsrow()"
     },
     {
@@ -2000,7 +2010,7 @@
       "source_location": "L58",
       "_origin": "ast",
       "id": "src_components_settings_settingsrow_switchprops",
-      "community": 25,
+      "community": 1,
       "norm_label": "switchprops"
     },
     {
@@ -2010,7 +2020,7 @@
       "source_location": "L64",
       "_origin": "ast",
       "id": "src_components_settings_settingsrow_settingsswitchrow",
-      "community": 25,
+      "community": 1,
       "norm_label": "settingsswitchrow()"
     },
     {
@@ -2020,7 +2030,7 @@
       "source_location": "L91",
       "_origin": "ast",
       "id": "src_components_settings_settingsrow_styles",
-      "community": 25,
+      "community": 1,
       "norm_label": "styles"
     },
     {
@@ -2110,7 +2120,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_status_installprompt",
-      "community": 16,
+      "community": 12,
       "norm_label": "installprompt.tsx"
     },
     {
@@ -2120,7 +2130,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "src_components_status_installprompt_props",
-      "community": 16,
+      "community": 12,
       "norm_label": "props"
     },
     {
@@ -2130,7 +2140,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "src_components_status_installprompt_installprompt",
-      "community": 16,
+      "community": 12,
       "norm_label": "installprompt()"
     },
     {
@@ -2140,7 +2150,7 @@
       "source_location": "L54",
       "_origin": "ast",
       "id": "src_components_status_installprompt_styles",
-      "community": 16,
+      "community": 12,
       "norm_label": "styles"
     },
     {
@@ -2150,7 +2160,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_status_offlinebanner",
-      "community": 10,
+      "community": 107,
       "norm_label": "offlinebanner.tsx"
     },
     {
@@ -2160,7 +2170,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "src_components_status_offlinebanner_props",
-      "community": 10,
+      "community": 107,
       "norm_label": "props"
     },
     {
@@ -2170,7 +2180,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "src_components_status_offlinebanner_offlinebanner",
-      "community": 10,
+      "community": 107,
       "norm_label": "offlinebanner()"
     },
     {
@@ -2180,7 +2190,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "src_components_status_offlinebanner_styles",
-      "community": 10,
+      "community": 107,
       "norm_label": "styles"
     },
     {
@@ -2190,7 +2200,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_components_status_offlinenotice",
-      "community": 1,
+      "community": 6,
       "norm_label": "offlinenotice.tsx"
     },
     {
@@ -2200,7 +2210,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "src_components_status_offlinenotice_props",
-      "community": 1,
+      "community": 6,
       "norm_label": "props"
     },
     {
@@ -2210,7 +2220,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "src_components_status_offlinenotice_offlinenotice",
-      "community": 1,
+      "community": 6,
       "norm_label": "offlinenotice()"
     },
     {
@@ -2260,7 +2270,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_config_conference",
-      "community": 1,
+      "community": 16,
       "norm_label": "conference.ts"
     },
     {
@@ -2270,7 +2280,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_config_conference_conference_years",
-      "community": 1,
+      "community": 16,
       "norm_label": "conference_years"
     },
     {
@@ -2280,7 +2290,7 @@
       "source_location": "L2",
       "_origin": "ast",
       "id": "src_config_conference_default_conference_year",
-      "community": 1,
+      "community": 16,
       "norm_label": "default_conference_year"
     },
     {
@@ -2290,7 +2300,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "src_config_conference_conferencemeta",
-      "community": 1,
+      "community": 16,
       "norm_label": "conferencemeta"
     },
     {
@@ -2300,7 +2310,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "src_config_conference_conference_meta",
-      "community": 1,
+      "community": 16,
       "norm_label": "conference_meta"
     },
     {
@@ -2330,7 +2340,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_config_constants",
-      "community": 19,
+      "community": 1,
       "norm_label": "constants.ts"
     },
     {
@@ -2340,7 +2350,7 @@
       "source_location": "L2",
       "_origin": "ast",
       "id": "src_config_constants_notification_lead_options",
-      "community": 19,
+      "community": 1,
       "norm_label": "notification_lead_options"
     },
     {
@@ -2350,7 +2360,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "src_config_constants_max_date_iso",
-      "community": 19,
+      "community": 1,
       "norm_label": "max_date_iso"
     },
     {
@@ -2370,7 +2380,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_data_homeinfo",
-      "community": 27,
+      "community": 6,
       "norm_label": "homeinfo.ts"
     },
     {
@@ -2380,7 +2390,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_data_homeinfo_needtoknowcard",
-      "community": 27,
+      "community": 6,
       "norm_label": "needtoknowcard"
     },
     {
@@ -2390,7 +2400,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "src_data_homeinfo_needtoknow",
-      "community": 27,
+      "community": 6,
       "norm_label": "needtoknow"
     },
     {
@@ -2460,7 +2470,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_hooks_useappnavtheme",
-      "community": 11,
+      "community": 16,
       "norm_label": "useappnavtheme.ts"
     },
     {
@@ -2470,7 +2480,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "src_hooks_useappnavtheme_useappnavtheme",
-      "community": 11,
+      "community": 16,
       "norm_label": "useappnavtheme()"
     },
     {
@@ -2490,7 +2500,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "src_hooks_useappnavigation_useappnavigation",
-      "community": 1,
+      "community": 6,
       "norm_label": "useappnavigation()"
     },
     {
@@ -2510,7 +2520,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "src_hooks_useapptheme_useapptheme",
-      "community": 14,
+      "community": 19,
       "norm_label": "useapptheme()"
     },
     {
@@ -2580,7 +2590,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "src_hooks_usecalendarsync_usecalendarsync",
-      "community": 1,
+      "community": 19,
       "norm_label": "usecalendarsync()"
     },
     {
@@ -2590,7 +2600,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_hooks_useeffectivetimezone",
-      "community": 1,
+      "community": 6,
       "norm_label": "useeffectivetimezone.ts"
     },
     {
@@ -2600,7 +2610,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "src_hooks_useeffectivetimezone_useeffectivetimezone",
-      "community": 1,
+      "community": 6,
       "norm_label": "useeffectivetimezone()"
     },
     {
@@ -2700,7 +2710,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_hooks_useschedulenotifications",
-      "community": 16,
+      "community": 19,
       "norm_label": "useschedulenotifications.ts"
     },
     {
@@ -2710,7 +2720,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "src_hooks_useschedulenotifications_useschedulenotifications",
-      "community": 16,
+      "community": 19,
       "norm_label": "useschedulenotifications()"
     },
     {
@@ -2720,7 +2730,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_hooks_usespeakeravatars",
-      "community": 1,
+      "community": 6,
       "norm_label": "usespeakeravatars.ts"
     },
     {
@@ -2730,7 +2740,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "src_hooks_usespeakeravatars_usespeakeravatars",
-      "community": 1,
+      "community": 6,
       "norm_label": "usespeakeravatars()"
     },
     {
@@ -3220,7 +3230,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_screens_favoritesscreen",
-      "community": 1,
+      "community": 6,
       "norm_label": "favoritesscreen.tsx"
     },
     {
@@ -3230,7 +3240,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "src_screens_favoritesscreen_favoritesscreen",
-      "community": 1,
+      "community": 6,
       "norm_label": "favoritesscreen()"
     },
     {
@@ -3240,7 +3250,7 @@
       "source_location": "L100",
       "_origin": "ast",
       "id": "src_screens_favoritesscreen_styles",
-      "community": 1,
+      "community": 6,
       "norm_label": "styles"
     },
     {
@@ -3250,7 +3260,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_screens_homescreen",
-      "community": 1,
+      "community": 6,
       "norm_label": "homescreen.tsx"
     },
     {
@@ -3260,7 +3270,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "src_screens_homescreen_homescreen",
-      "community": 1,
+      "community": 6,
       "norm_label": "homescreen()"
     },
     {
@@ -3270,7 +3280,7 @@
       "source_location": "L50",
       "_origin": "ast",
       "id": "src_screens_homescreen_styles",
-      "community": 1,
+      "community": 6,
       "norm_label": "styles"
     },
     {
@@ -3390,7 +3400,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_screens_sessiondetailscreen",
-      "community": 1,
+      "community": 19,
       "norm_label": "sessiondetailscreen.tsx"
     },
     {
@@ -3400,7 +3410,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "src_screens_sessiondetailscreen_sessiondetailscreen",
-      "community": 1,
+      "community": 19,
       "norm_label": "sessiondetailscreen()"
     },
     {
@@ -3410,7 +3420,7 @@
       "source_location": "L235",
       "_origin": "ast",
       "id": "src_screens_sessiondetailscreen_styles",
-      "community": 1,
+      "community": 19,
       "norm_label": "styles"
     },
     {
@@ -3450,7 +3460,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_screens_speakerdetailscreen",
-      "community": 1,
+      "community": 6,
       "norm_label": "speakerdetailscreen.tsx"
     },
     {
@@ -3460,7 +3470,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "src_screens_speakerdetailscreen_speakerdetailscreen",
-      "community": 1,
+      "community": 6,
       "norm_label": "speakerdetailscreen()"
     },
     {
@@ -3470,7 +3480,7 @@
       "source_location": "L164",
       "_origin": "ast",
       "id": "src_screens_speakerdetailscreen_styles",
-      "community": 1,
+      "community": 6,
       "norm_label": "styles"
     },
     {
@@ -3480,7 +3490,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_screens_speakersscreen",
-      "community": 1,
+      "community": 6,
       "norm_label": "speakersscreen.tsx"
     },
     {
@@ -3490,7 +3500,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "src_screens_speakersscreen_speakersscreen",
-      "community": 1,
+      "community": 6,
       "norm_label": "speakersscreen()"
     },
     {
@@ -3500,7 +3510,7 @@
       "source_location": "L77",
       "_origin": "ast",
       "id": "src_screens_speakersscreen_styles",
-      "community": 1,
+      "community": 6,
       "norm_label": "styles"
     },
     {
@@ -3850,7 +3860,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_store_conferencedata",
-      "community": 1,
+      "community": 6,
       "norm_label": "conferencedata.tsx"
     },
     {
@@ -3860,7 +3870,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "src_store_conferencedata_conferencecontextvalue",
-      "community": 1,
+      "community": 6,
       "norm_label": "conferencecontextvalue"
     },
     {
@@ -3870,7 +3880,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "src_store_conferencedata_conferencedatacontext",
-      "community": 1,
+      "community": 6,
       "norm_label": "conferencedatacontext"
     },
     {
@@ -3890,7 +3900,7 @@
       "source_location": "L208",
       "_origin": "ast",
       "id": "src_store_conferencedata_useconferencedata",
-      "community": 1,
+      "community": 6,
       "norm_label": "useconferencedata()"
     },
     {
@@ -3970,7 +3980,7 @@
       "source_location": "L146",
       "_origin": "ast",
       "id": "src_store_favorites_usefavorites",
-      "community": 1,
+      "community": 6,
       "norm_label": "usefavorites()"
     },
     {
@@ -3980,7 +3990,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_store_settings",
-      "community": 1,
+      "community": 16,
       "norm_label": "settings.tsx"
     },
     {
@@ -3990,7 +4000,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "src_store_settings_settingsstate",
-      "community": 1,
+      "community": 16,
       "norm_label": "settingsstate"
     },
     {
@@ -4000,7 +4010,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "src_store_settings_settingscontextvalue",
-      "community": 1,
+      "community": 16,
       "norm_label": "settingscontextvalue"
     },
     {
@@ -4010,7 +4020,7 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "src_store_settings_settingscontext",
-      "community": 1,
+      "community": 16,
       "norm_label": "settingscontext"
     },
     {
@@ -4020,7 +4030,7 @@
       "source_location": "L50",
       "_origin": "ast",
       "id": "src_store_settings_thememode",
-      "community": 1,
+      "community": 16,
       "norm_label": "thememode"
     },
     {
@@ -4030,7 +4040,7 @@
       "source_location": "L52",
       "_origin": "ast",
       "id": "src_store_settings_timezonepreference",
-      "community": 1,
+      "community": 16,
       "norm_label": "timezonepreference"
     },
     {
@@ -4040,7 +4050,7 @@
       "source_location": "L59",
       "_origin": "ast",
       "id": "src_store_settings_settingsprovider",
-      "community": 1,
+      "community": 16,
       "norm_label": "settingsprovider()"
     },
     {
@@ -4050,7 +4060,7 @@
       "source_location": "L232",
       "_origin": "ast",
       "id": "src_store_settings_usesettings",
-      "community": 1,
+      "community": 6,
       "norm_label": "usesettings()"
     },
     {
@@ -4060,7 +4070,7 @@
       "source_location": "L242",
       "_origin": "ast",
       "id": "src_store_settings_geteffectivetimezone",
-      "community": 1,
+      "community": 6,
       "norm_label": "geteffectivetimezone()"
     },
     {
@@ -4120,7 +4130,7 @@
       "source_location": "L55",
       "_origin": "ast",
       "id": "src_theme_spacing",
-      "community": 41,
+      "community": 12,
       "norm_label": "spacing"
     },
     {
@@ -4130,7 +4140,7 @@
       "source_location": "L63",
       "_origin": "ast",
       "id": "src_theme_radius",
-      "community": 10,
+      "community": 23,
       "norm_label": "radius"
     },
     {
@@ -4140,7 +4150,7 @@
       "source_location": "L71",
       "_origin": "ast",
       "id": "src_theme_tint",
-      "community": 11,
+      "community": 16,
       "norm_label": "tint()"
     },
     {
@@ -4160,7 +4170,7 @@
       "source_location": "L84",
       "_origin": "ast",
       "id": "src_theme_createpapertheme",
-      "community": 11,
+      "community": 16,
       "norm_label": "createpapertheme()"
     },
     {
@@ -4200,7 +4210,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "src_types_conference_session",
-      "community": 0,
+      "community": 19,
       "norm_label": "session"
     },
     {
@@ -4220,7 +4230,7 @@
       "source_location": "L67",
       "_origin": "ast",
       "id": "src_types_conference_scheduleitem",
-      "community": 0,
+      "community": 6,
       "norm_label": "scheduleitem"
     },
     {
@@ -4470,7 +4480,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_utils_format",
-      "community": 14,
+      "community": 19,
       "norm_label": "format.ts"
     },
     {
@@ -4480,7 +4490,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "src_utils_format_getroomlabel",
-      "community": 16,
+      "community": 19,
       "norm_label": "getroomlabel()"
     },
     {
@@ -4490,7 +4500,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "src_utils_format_timerangeinput",
-      "community": 14,
+      "community": 19,
       "norm_label": "timerangeinput"
     },
     {
@@ -4500,7 +4510,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "src_utils_format_formatsessiontimerange",
-      "community": 14,
+      "community": 0,
       "norm_label": "formatsessiontimerange()"
     },
     {
@@ -4510,7 +4520,7 @@
       "source_location": "L40",
       "_origin": "ast",
       "id": "src_utils_format_formatsessionsubtitle",
-      "community": 14,
+      "community": 19,
       "norm_label": "formatsessionsubtitle()"
     },
     {
@@ -4530,7 +4540,7 @@
       "source_location": "L67",
       "_origin": "ast",
       "id": "src_utils_format_initialsfromname",
-      "community": 14,
+      "community": 19,
       "norm_label": "initialsfromname()"
     },
     {
@@ -4550,7 +4560,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "src_utils_haptics_sethapticsenabledruntime",
-      "community": 1,
+      "community": 16,
       "norm_label": "sethapticsenabledruntime()"
     },
     {
@@ -4650,7 +4660,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "src_utils_notifications_notificationentry",
-      "community": 16,
+      "community": 19,
       "norm_label": "notificationentry"
     },
     {
@@ -4710,7 +4720,7 @@
       "source_location": "L133",
       "_origin": "ast",
       "id": "src_utils_notifications_reschedulesessionnotifications",
-      "community": 16,
+      "community": 19,
       "norm_label": "reschedulesessionnotifications()"
     },
     {
@@ -4720,7 +4730,7 @@
       "source_location": "L185",
       "_origin": "ast",
       "id": "src_utils_notifications_clearscheduledsessionnotifications",
-      "community": 16,
+      "community": 19,
       "norm_label": "clearscheduledsessionnotifications()"
     },
     {
@@ -4740,7 +4750,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "src_utils_schedule_iskeynotesessiontype",
-      "community": 16,
+      "community": 19,
       "norm_label": "iskeynotesessiontype()"
     },
     {
@@ -4860,7 +4870,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "src_utils_sessiontypes_getsessiontypeaccent",
-      "community": 14,
+      "community": 19,
       "norm_label": "getsessiontypeaccent()"
     },
     {
@@ -4880,7 +4890,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_utils_share",
-      "community": 1,
+      "community": 6,
       "norm_label": "share.ts"
     },
     {
@@ -4890,7 +4900,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "src_utils_share_shareoptions",
-      "community": 1,
+      "community": 6,
       "norm_label": "shareoptions"
     },
     {
@@ -4900,7 +4910,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "src_utils_share_sharelink",
-      "community": 1,
+      "community": 6,
       "norm_label": "sharelink()"
     },
     {
@@ -5040,7 +5050,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_utils_webalertpolyfill",
-      "community": 16,
+      "community": 3,
       "norm_label": "webalertpolyfill.ts"
     },
     {
@@ -7611,7 +7621,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L17",
+      "source_location": "L18",
       "weight": 1.0,
       "source": "package",
       "target": "package_dependencies",
@@ -7621,7 +7631,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L50",
+      "source_location": "L51",
       "weight": 1.0,
       "source": "package",
       "target": "package_devdependencies",
@@ -7651,7 +7661,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L59",
+      "source_location": "L60",
       "weight": 1.0,
       "source": "package",
       "target": "package_packagemanager",
@@ -7661,7 +7671,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L58",
+      "source_location": "L59",
       "weight": 1.0,
       "source": "package",
       "target": "package_private",
@@ -7711,7 +7721,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L13",
+      "source_location": "L14",
       "weight": 1.0,
       "source": "package_scripts",
       "target": "package_scripts_format",
@@ -7721,7 +7731,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L14",
+      "source_location": "L15",
       "weight": 1.0,
       "source": "package_scripts",
       "target": "package_scripts_format_check",
@@ -7735,6 +7745,16 @@
       "weight": 1.0,
       "source": "package_scripts",
       "target": "package_scripts_ios",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_prebuild",
       "confidence_score": 1.0
     },
     {
@@ -7771,7 +7791,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L15",
+      "source_location": "L16",
       "weight": 1.0,
       "source": "package_scripts",
       "target": "package_scripts_typecheck",
@@ -7791,7 +7811,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L18",
+      "source_location": "L19",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_bottom_tabs_react_navigation",
@@ -7801,7 +7821,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L27",
+      "source_location": "L28",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_expo",
@@ -7811,7 +7831,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L28",
+      "source_location": "L29",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_expo_calendar",
@@ -7821,7 +7841,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L19",
+      "source_location": "L20",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_expo_dom_webview",
@@ -7831,7 +7851,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L29",
+      "source_location": "L30",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_expo_font",
@@ -7841,7 +7861,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L30",
+      "source_location": "L31",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_expo_haptics",
@@ -7851,7 +7871,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L31",
+      "source_location": "L32",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_expo_image",
@@ -7861,7 +7881,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L32",
+      "source_location": "L33",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_expo_notifications",
@@ -7871,7 +7891,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L33",
+      "source_location": "L34",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_expo_splash_screen",
@@ -7881,7 +7901,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L34",
+      "source_location": "L35",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_expo_status_bar",
@@ -7891,7 +7911,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L35",
+      "source_location": "L36",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_expo_system_ui",
@@ -7901,7 +7921,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L20",
+      "source_location": "L21",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_expo_vector_icons",
@@ -7911,7 +7931,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L36",
+      "source_location": "L37",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_punycode",
@@ -7921,7 +7941,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L37",
+      "source_location": "L38",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_react",
@@ -7931,7 +7951,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L38",
+      "source_location": "L39",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_react_dom",
@@ -7941,7 +7961,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L39",
+      "source_location": "L40",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_react_native",
@@ -7951,7 +7971,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L21",
+      "source_location": "L22",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_react_native_async_storage_async_storage",
@@ -7961,7 +7981,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L40",
+      "source_location": "L41",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_react_native_bottom_tabs",
@@ -7971,7 +7991,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L22",
+      "source_location": "L23",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_react_native_community_netinfo",
@@ -7981,7 +8001,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L41",
+      "source_location": "L42",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_react_native_markdown_display",
@@ -7991,7 +8011,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L42",
+      "source_location": "L43",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_react_native_paper",
@@ -8001,7 +8021,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L43",
+      "source_location": "L44",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_react_native_reanimated",
@@ -8011,7 +8031,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L44",
+      "source_location": "L45",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_react_native_safe_area_context",
@@ -8021,7 +8041,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L45",
+      "source_location": "L46",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_react_native_screens",
@@ -8031,7 +8051,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L46",
+      "source_location": "L47",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_react_native_web",
@@ -8041,7 +8061,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L47",
+      "source_location": "L48",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_react_native_webview",
@@ -8051,7 +8071,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L48",
+      "source_location": "L49",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_react_native_worklets",
@@ -8061,7 +8081,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L23",
+      "source_location": "L24",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_react_navigation_bottom_tabs",
@@ -8071,7 +8091,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L24",
+      "source_location": "L25",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_react_navigation_native",
@@ -8081,7 +8101,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L25",
+      "source_location": "L26",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_react_navigation_native_stack",
@@ -8091,7 +8111,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L26",
+      "source_location": "L27",
       "weight": 1.0,
       "source": "package_dependencies",
       "target": "package_dependencies_shopify_flash_list",
@@ -8112,7 +8132,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L52",
+      "source_location": "L53",
       "weight": 1.0,
       "source": "package_devdependencies",
       "target": "package_devdependencies_babel_plugin_module_resolver",
@@ -8122,7 +8142,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L53",
+      "source_location": "L54",
       "weight": 1.0,
       "source": "package_devdependencies",
       "target": "package_devdependencies_baseline_browser_mapping",
@@ -8132,7 +8152,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L54",
+      "source_location": "L55",
       "weight": 1.0,
       "source": "package_devdependencies",
       "target": "package_devdependencies_prettier",
@@ -8142,7 +8162,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L51",
+      "source_location": "L52",
       "weight": 1.0,
       "source": "package_devdependencies",
       "target": "package_devdependencies_types_react",
@@ -8152,7 +8172,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L55",
+      "source_location": "L56",
       "weight": 1.0,
       "source": "package_devdependencies",
       "target": "package_devdependencies_typescript",
@@ -8162,7 +8182,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L56",
+      "source_location": "L57",
       "weight": 1.0,
       "source": "package_devdependencies",
       "target": "package_devdependencies_workbox_cli",
@@ -10640,7 +10660,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/schedule/SessionList.tsx",
-      "source_location": "L109",
+      "source_location": "L110",
       "weight": 1.0,
       "source": "src_components_schedule_sessionlist",
       "target": "src_components_schedule_sessionlist_styles",

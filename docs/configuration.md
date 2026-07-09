@@ -2,43 +2,30 @@
 
 ## app.json
 `app.json` defines Expo runtime configuration:
-- App identity: name, slug, orientation, icon, and splash.
-- Platform settings: iOS bundle ID, Android package, and calendar permissions.
-- Plugins: notifications, fonts, calendar, and system UI integration.
-- `newArchEnabled` is turned on for the project.
+- App identity: name (`EuroPython`), slug, orientation, icon, and splash screen.
+- Platform settings: iOS bundle ID (`eu.europython.companion`), Android package (same id), calendar permissions (`NSCalendarsUsageDescription` on iOS, `READ_CALENDAR`/`WRITE_CALENDAR` on Android), web manifest basics (favicon, name, description, theme color).
+- Plugins: `expo-notifications`, `expo-font`, `expo-calendar`, `expo-system-ui`, `expo-status-bar`, `expo-image`, `expo-splash-screen`.
+- `newArchEnabled` is turned on for the project (there is no legacy-architecture code path to maintain).
 
 Treat these values as release-critical. Coordinate changes to identifiers, permissions, or plugins with maintainers.
 
-## Environment and runtime config
-The data layer supports one optional environment variable (read in `src/services/conference.ts`):
-- `EXPO_PUBLIC_API_BASE` overrides the programme base URL. If it includes `{year}`, it is replaced with the selected year.
+## There is no runtime environment-variable configuration
+Unlike some Expo projects, this app reads **no** `process.env`/`EXPO_PUBLIC_*` values anywhere in `src/` or `App.tsx`. Everything that varies by environment is a static constant in `src/config/`:
 
-Resolution order in `src/services/conference.ts`:
-- Use `EXPO_PUBLIC_API_BASE` when set, otherwise fall back to the production static host.
-- A failed non-prod fetch falls back to the production host in dev.
+- **`src/config/conference.ts`** — `API_BASE` (`"https://static.europython.eu/programme"`, hardcoded), `CONFERENCE_YEARS`/`DEFAULT_CONFERENCE_YEAR`, `CONFERENCE_META` (per-year title/subtitle/time zone/preferred room order), `SCHEMA_VERSION` (conference-data cache-key version), `WIFI_INFO_URL` (a conference-specific URL that has needed manual updating between events — it currently points at a per-event, hash-looking path under `ep2026.europython.eu`).
+- **`src/config/constants.ts`** — notification lead-time defaults/options, the scheduled-notification cap, date/locale formatting constants, and the two refresh intervals (`UPCOMING_REFRESH_INTERVAL_MS` for the "now" tick on the home screen, `DATA_REFRESH_INTERVAL_MS` for both the conference-data cache TTL and the silent background refresh interval).
 
-Static configuration lives in `src/config/`:
-- `conference.ts` defines the supported years, titles/subtitles, per-year time zones, and the Wi-Fi info URL.
-- `constants.ts` holds notification defaults and shared time/date constants.
+To point the app at a different data source (e.g. a staging environment), edit `API_BASE` in `src/config/conference.ts` directly — there is no `.env` mechanism, and `app.json` (not `app.config.js`) is used, so there's no `extra`-based config injection either. If you want that flexibility, it would need to be added explicitly.
 
-`static.europython.eu` and `ep2026.europython.eu` (Wi-Fi info) both send `Access-Control-Allow-Origin: *`, so web (dev and prod) fetches them directly — no proxy needed.
-
-## Setting EXPO_PUBLIC_* locally
-This repo uses `app.json` (not `app.config.js`), so environment values must be supplied by your shell when you start Expo. Example:
-
-- Override the base API for native/dev builds:
-  ```sh
-  EXPO_PUBLIC_API_BASE="https://example.com/programme/ep{year}/releases/current" pnpm start
-  ```
-
-If you want `.env` support, add it explicitly and document it; it is not configured here.
+`static.europython.eu` and the Wi-Fi info host both send `Access-Control-Allow-Origin: *`, so web fetches them directly with no proxy — there is no dev proxy anywhere in this repo.
 
 ## What contributors should and should not change
 Safe to change:
-- Conference metadata and the year list in `src/config/conference.ts` when a new programme is published.
+- Conference metadata and the year list in `src/config/conference.ts` when a new programme is published (also update `WIFI_INFO_URL` — it's venue/event-specific and doesn't auto-update).
 - UI-focused constants like notification lead options in `src/config/constants.ts`.
+- A year's `preferredRoomOrder` in `CONFERENCE_META` (best-effort, case-insensitive exact-match room ordering for schedule display; safe to leave empty).
 
 Avoid changing without coordination:
 - Bundle identifiers, Android package, or permission lists in `app.json`.
 - Expo plugin list or `newArchEnabled`.
-- Base URL resolution logic in `src/services/conference.ts` (affects production data loading).
+- `API_BASE`/`SCHEMA_VERSION` in `src/config/conference.ts` — `API_BASE` affects production data loading for everyone; `SCHEMA_VERSION` must be bumped (not just edited) whenever `ConferenceData`'s normalized shape changes, so cached payloads from the previous shape aren't reused (see [Data and state](data-and-state.md)).

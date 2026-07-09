@@ -20,8 +20,8 @@
     "semantic_hash": "abba34ee03076e881f01c31c57d8f27a"
   },
   "package.json": {
-    "mtime": 1783593936.2150652,
-    "ast_hash": "6b748716ba139e93f0b70530ac75de4f",
+    "mtime": 1783594386.0495856,
+    "ast_hash": "22cd524e7ef007d7a31ef4f05df789da",
     "semantic_hash": ""
   },
   "src/components/ContactCard.tsx": {
@@ -110,8 +110,8 @@
     "semantic_hash": "e90e0c5b8edfbacc6797c0fb36e7b0a8"
   },
   "src/components/schedule/SessionList.tsx": {
-    "mtime": 1783593975.2852685,
-    "ast_hash": "617f98fc7fd0e006c8948fb481b65937",
+    "mtime": 1783600425.584982,
+    "ast_hash": "a17c5f8af40b78336c29f8b0a46d77b4",
     "semantic_hash": ""
   },
   "src/components/schedule/SessionListItem.tsx": {

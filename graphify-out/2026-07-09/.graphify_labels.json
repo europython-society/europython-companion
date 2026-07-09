@@ -42,6 +42,7 @@
   "40": "HomeHeroCard.tsx",
   "41": "SettingsRow.tsx",
   "42": "Documentation",
+  "43": "SearchBar.tsx",
   "44": "CLAUDE.md",
   "45": "app.json (Expo config)",
   "46": "App.tsx (root component)",
@@ -104,5 +105,6 @@
   "103": "services/ folder boundary (data access only)",
   "104": "store/ folder boundary (global state + persistence)",
   "105": "types/ folder boundary (types only)",
-  "106": "utils/ folder boundary (pure helpers + isolated side effects)"
+  "106": "utils/ folder boundary (pure helpers + isolated side effects)",
+  "107": "OfflineBanner.tsx"
 }

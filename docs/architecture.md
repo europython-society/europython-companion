@@ -1,27 +1,120 @@
 # Architecture
 
-## Runtime composition
-The app bootstraps in `App.tsx` with `SettingsProvider` always mounted to hydrate preferences before rendering. `ConferenceDataProvider` and `FavoritesProvider` are mounted only after onboarding completes, when the main tab navigator is shown.
+EuroPython Companion is an Expo/React Native app (Expo SDK 57, React 19, React Native 0.86, new architecture enabled) that works fully offline once conference data is cached. It fetches static EuroPython programme JSON, normalizes it, and stores it in AsyncStorage alongside user settings and favorites. Native (iOS/Android) and web builds share almost all code; the one deliberate fork is the bottom tab bar (see [Navigation](#navigation--tab-bar)).
 
-Navigation is layered: an onboarding stack is shown until the settings flag is set, then a bottom tab navigator hosts per-tab stack navigators built from `src/navigation/stackConfigs.ts`. Onboarding screens should not call `useConferenceData` or `useFavorites` because those providers are not mounted yet.
+## Boot flow
 
-## Data flow
-High-level flow at runtime:
-1. `src/services/data.ts` fetches and normalizes `sessions.json`, `speakers.json`, and `schedule.json`.
-2. `src/store/conferenceData.tsx` owns fetch state and exposes `useConferenceData` for screens.
-3. Screens render lists/detail views and pass data down to UI components.
-4. User actions update local state through `src/store/settings.tsx` and `src/store/favorites.tsx`.
+1. `index.ts` calls `registerRootComponent(App)`.
+2. `App.tsx` imports `@utils/webAlertPolyfill` for its side effect (patches `Alert.alert` on web — see [Utilities](#utilities)), configures `Notifications.setNotificationHandler` to show banners/lists/sound in the foreground, and renders `<SettingsProvider><AppContent /></SettingsProvider>`.
+3. `AppContent` reads `conferenceYear`, `themeMode`, `onboardingSeen`, `hydrated` from `useSettings()`. It renders **nothing** until `hydrated` is true (settings have finished loading from AsyncStorage).
+4. `useAppNavTheme(themeMode)` derives the active Paper theme and a matching React Navigation theme. `useNotificationDeepLink()` wires notification-tap deep linking and returns `onNavReady`. `usePwaInstallPrompt()` (web-only logic) returns install-prompt state.
+5. `AppScaffold` wraps everything in `PaperProvider` → `SafeAreaProvider` → `NavigationContainer` (with `ref={navigationRef}` and `onReady={onNavReady}`).
+6. If `!onboardingSeen`, only the onboarding stack (`builtStacks.onboarding`) is rendered — the onboarding stack is **not** part of `AppTabs`/`tabScreens`, so it's only reachable via this pre-tabs gate. Onboarding screens should not call `useConferenceData`/`useFavorites`, since those providers aren't mounted yet.
+7. Once onboarding is complete, `ConferenceDataProvider(year)` → `FavoritesProvider(year)` wrap a `ScheduleNotificationManager` (a component that calls `useScheduleNotifications()` and renders `null` — a side-effect-only hook needs a mount point), `InstallPrompt` (rendered with the `usePwaInstallPrompt()` result spread as props), and `AppTabs`.
 
-## Hooks and cross-cutting logic
-Hooks are used to keep screens thin and to centralize side effects:
-- `useScheduleNotifications` mirrors favorites/keynotes/breaks into local notifications.
-- `useCalendarSync` wraps calendar access, confirmations, and haptics.
-- `useAppNavigation` normalizes navigation behavior across stacks and tabs.
-- `useEffectiveTimeZone` and `useAppTheme` standardize derived values.
+## Navigation & tab bar
 
-## Constraints and tradeoffs
-- Offline-first caching favors resilience over live updates; manual refresh is explicit.
-- Programme data is treated as static JSON; changes in upstream shape require updates in `src/services/data.ts`.
-- User preferences and favorites are device-local only; there is no account sync.
-- Local notifications are fully re-scheduled and capped to avoid OS limits.
-- The tab + stack model simplifies deep navigation at the cost of more route wiring.
+Navigation is a bottom tab navigator (`src/navigation/AppTabs.tsx` / `AppTabs.native.tsx`) with one native-stack navigator per tab, built from a declarative config.
+
+- **`src/navigation/routes.ts`** — route name constants and typed param lists. `TabRoutes` are the 5 tabs (`HomeTab`, `ScheduleTab`, `SpeakersTab`, `AgendaTab`, `SettingsTab`). Each tab's root screen route uses a `*Main` suffix (`HomeMain`, `ScheduleMain`, `SpeakersMain`, `AgendaMain`, `SettingsMain`). `SharedRoutes` (`SessionDetail`, `SpeakerDetail`) are **duplicated into every tab's stack** (Home/Schedule/Speakers/Agenda) rather than living in one shared modal stack — so a session/speaker detail screen pushed from any tab stays within that tab. The Settings stack is the exception: it has `NotificationsList` instead. `CombinedParamList` intersects all of the above for cross-stack-typed navigation.
+- **`src/navigation/stackConfigs.ts`** — maps route names to screen components per stack (`stackConfigs.home/schedule/speakers/agenda/settings/onboarding`), plus `tabIconNames` (Ionicons glyphs, used by the web tab bar) and `tabSfSymbols` (SF Symbol names, used by the native iOS tab bar). `tabScreens` is the ordered list of the 5 tabs with `{ name, stackKey, title }`. **The "Agenda" tab renders `MyAgendaScreen`, which is imported from `@screens/FavoritesScreen`** — the route/tab is conceptually "My agenda" but the underlying screen file and export are named `FavoritesScreen`.
+- **`src/navigation/stacks.tsx`** — `makeStackNavigator(screens)` is a generic factory around `createNativeStackNavigator` (`headerShown: false` globally). `builtStacks` is built eagerly at module load by iterating `stackConfigs`'s keys, giving one navigator component per stack key.
+- **`src/navigation/navigationRef.ts`** — a `createNavigationContainerRef<RootTabParamList>()`, for navigating from outside a component's `useNavigation()` context (used by `useNotificationDeepLink` and as the final fallback in `useAppNavigation`).
+
+### Native vs. web tab bar (platform-split files, not a runtime branch)
+
+`App.tsx` imports `AppTabs` from `@navigation/AppTabs` with a bare specifier — there is **no** `Platform.OS`/`Platform.select` branch anywhere. Both `src/navigation/AppTabs.tsx` and `src/navigation/AppTabs.native.tsx` export a same-signature `AppTabs({ theme })`; Metro/Expo's automatic platform-extension resolution picks `.native.tsx` for iOS/Android builds and falls back to the plain `.tsx` for web. The two implementations are genuinely different libraries, not a themed variant of the same one:
+
+- **`AppTabs.tsx`** (web) uses `@react-navigation/bottom-tabs` (`createBottomTabNavigator`, JS-rendered). It overrides `tabBarStyle.height` to `55` when `useWindowDimensions().width < 768` (narrow-screen override), otherwise leaves it `undefined`. Icons are `Ionicons` components looked up via `tabIconNames`.
+- **`AppTabs.native.tsx`** (iOS/Android) uses `@bottom-tabs/react-navigation` (`createNativeBottomTabNavigator`), which renders the actual OS-native tab bar. Native tabs can't take a React component as an icon, so:
+  - On iOS, `tabBarIcon` returns `{ sfSymbol: tabSfSymbols[route] }` directly — no async work needed.
+  - On other platforms, icons must be pre-resolved to `ImageSourcePropType` via `Ionicons.getImageSource(name, 24, "black")` (color is irrelevant — the image is rendered as a template and re-tinted natively per active/inactive state). This resolution happens once in a `useEffect` on mount; **the component renders `null` until it resolves**, so there's a brief blank frame on non-iOS native platforms before the tab bar appears.
+  - `useAppNavTheme` (below) also calls `Appearance.setColorScheme(...)` on non-web platforms, because the native tab bar reads the OS light/dark trait directly and would otherwise flash the wrong scheme when it disagrees with the in-app theme.
+
+### Two independent deep-link/fallback systems into the same nav tree
+
+- **`src/hooks/useAppNavigation.ts`** (`useAppNavigation` / default export) is what screens call for everyday navigation: `goToScheduleTab`, `goToSpeakersTab`, `goToHomeTab`, `goToSettingsTab`, `goToAgendaTab`, `openSession(id)`, `openSpeaker(id)`, `openNotificationsList`, `openCoC`, `openCoCContacts`. Detail-opening helpers use a 3-tier fallback: (1) if the current stack already has the target route, navigate directly within it; (2) else if a parent tab navigator exists, navigate it with a nested `{ screen, params }`; (3) else fall back to `navigationRef` directly (e.g. called before any navigator has mounted). `openCoC`/`openCoCContacts` use a `try/catch` around `navigation.navigate` instead of the route-inspection check the other helpers use — an inconsistency, not a bug, worth knowing about if you're adding a similar helper.
+- **`src/hooks/useNotificationDeepLink.ts`** is a separate, independent mechanism that reacts to OS notification taps (see [Notifications](#notifications)) and drives `navigationRef` directly rather than going through `useAppNavigation`.
+
+## State & data flow
+
+- **`src/store/settings.tsx`** (`SettingsProvider` / `useSettings`) — persists to AsyncStorage key `app:settings`: `conferenceYear`, `themeMode` (`system`/`light`/`dark`/`night`), `timeZonePreference` (`conference`/`local`), `onboardingSeen`, `notificationsEnabled`, `breakNotificationsEnabled`, `hapticsEnabled`, `notificationLeadMinutes`. `notificationsEnabled`, `breakNotificationsEnabled`, and `hapticsEnabled` all default to `Platform.OS !== "web"` (off by default on web). UI should gate on `hydrated` before trusting these values. Also exports `getEffectiveTimeZone(preference, year)` (`preference === "local" ? undefined : getConferenceMeta(year).timeZone`) and re-exports `getConferenceMeta` from `@config/conference`.
+- **`src/store/conferenceData.tsx`** (`ConferenceDataProvider(year)` / `useConferenceData`) — on every fetch cycle, loads conference data (`loadConferenceDataWithMeta`, see below) **and** Wi-Fi info (`loadWifiInfo`) in parallel. Tracks `loading`, `refreshing`, `error`, `fromCache`, `fetchedAt`, `isOffline`, `lastFetchFailed`, `resolvedYear`. Auto-refreshes silently every `DATA_REFRESH_INTERVAL_MS` (10 minutes) via `setInterval`, and again whenever `AppState` transitions to `"active"`; both are throttled against `DATA_REFRESH_INTERVAL_MS` to avoid duplicate fetches. Subscribes to `NetInfo` for `isOffline`, with a `navigator.onLine === false` fallback check on web. Exposes `refresh()` (force network fetch, ignores cache TTL) and `refreshIfStale()` (respects the TTL — used for pull-to-refresh where forcing isn't desired).
+- **`src/store/favorites.tsx`** (`FavoritesProvider(year)` / `useFavorites`) — starred session IDs as a `Set<string>`, persisted per year at `europython:favorites:{year}`. Mutations (`toggleFavorite`, `setFavorite`, `clearFavorites`) update state optimistically and roll back if the AsyncStorage write throws.
+
+### Conference data pipeline (`src/services/`)
+
+- **`conference.ts`** — `loadConferenceDataWithMeta(year, { forceRefresh })` is the entry point. Cache key is `ep{year}:conferenceData:v{SCHEMA_VERSION}` (`SCHEMA_VERSION = 3`, from `@config/conference`). If a cached copy exists, isn't `forceRefresh`d, and is younger than `DATA_REFRESH_INTERVAL_MS` (10 min), it's served without touching the network. Otherwise it fetches `sessions.json`, `speakers.json`, `schedule.json` in parallel from `buildBaseUrl(year)` = `` `${API_BASE}/ep${year}/releases/current` `` (`API_BASE` is the hardcoded constant `"https://static.europython.eu/programme"` in `@config/conference` — **there is no environment-variable override**; see [Configuration](configuration.md)), normalizes the payload, and caches the result with a `fetchedAt` ISO timestamp. If the network fetch fails, it falls back to whatever cached data exists (regardless of age) and only throws if there's no cache at all. If the AsyncStorage write fails (quota), it purges old schema-version keys and other years' cache entries once, then retries the write.
+- **`conferenceTransform.ts`** — pure normalization. `normalizeSpeaker`/`normalizeSession` map raw JSON fields to the app's `Speaker`/`Session` shapes. `buildDays(sessionsById, rawSchedule)` treats `schedule.json` as the source of truth for room/time overrides: for every schedule event it either synthesizes a `BreakSlot` (id `break-{date}-{idx}`) or merges the event's rooms/start/end onto the matching session (rooms unioned via `mergeRooms`, session start/end widened to the earliest/latest slot seen, and — since a session can appear in the schedule more than once — each occurrence gets a `slotId` of `` `${code}-${date}-${idx}` ``). Returns a **fresh** `sessionsById` map (does not mutate its input) plus a `DaySchedule[]` sorted by date.
+- **`guards.ts`** — runtime type guards, notably `isWrappedSessions`/`isWrappedSpeakers` which unwrap either a bare `Record<code, Raw*>` or a `{ sessions: {...} }`/`{ speakers: {...} }` wrapper — the upstream API has been observed in both shapes historically, so the loader tolerates either.
+- **`wifi.ts`** — `loadWifiInfo()` always tries the network first (venue Wi-Fi credentials can rotate independently of an app update) and only falls back to the AsyncStorage cache (`wifiInfo:v1`) on failure; unlike conference data, there's no TTL — every call attempts a fresh fetch.
+
+### Notifications
+
+`src/hooks/useScheduleNotifications.ts` (mounted via the no-render `ScheduleNotificationManager` in `App.tsx`) keeps local notifications in sync: if both `notificationsEnabled` and `breakNotificationsEnabled` are off, it clears everything. Otherwise it builds a deduped map of `NotificationEntry` (keyed by `slotId ?? id` for sessions, by event id for breaks) — a session is included if it's favorited **or** is a keynote (`isKeynoteSessionType`, matched via a case-insensitive substring check on `sessionType`) regardless of favorite status — then calls `rescheduleSessionNotifications` (`src/utils/notifications.ts`), which cancels all previously-scheduled notifications and schedules up to `MAX_SCHEDULED_NOTIFICATIONS` (180) of the soonest upcoming ones, `leadMinutes` before session start (breaks fire at their start time, no lead). This is a rebuild-from-scratch strategy, not an incremental diff. Notification taps are handled separately by `useNotificationDeepLink.ts` (see [Navigation](#navigation--tab-bar)), which is a no-op on web (no OS notification tray to resolve a cold start from).
+
+## Theme
+
+`src/theme.ts` defines `lightPalette`, `darkPalette`, and `nightPalette` (an AMOLED-black variant of dark), plus `spacing`/`radius` scales. `createPaperTheme(mode)` builds an `MD3Theme` from a palette, including elevation shades computed by a small `tint()` RGB-interpolation helper. `useAppTheme()` (`src/hooks/useAppTheme.ts`) exposes `{ paperTheme, palette }` for components that need palette-only values (e.g. the `favorite` star color) that aren't part of Paper's theme surface. `useAppNavTheme(themeMode)` (`src/hooks/useAppNavTheme.ts`) is the higher-level hook actually used in `App.tsx` — it resolves `themeMode === "system"` against `useColorScheme()`, derives both the Paper theme and a matching React Navigation theme, and syncs native OS appearance (see above).
+
+## Screens (`src/screens/`)
+
+One file per route, each wrapped in `ScreenContainer` (app chrome: title/subtitle header, back button, optional info button, and a persistent "you are viewing old data" banner when `conferenceYear !== DEFAULT_CONFERENCE_YEAR`).
+
+- **`OnboardingScreen`** — slide deck from `@data/onboarding`; per-slide `action` keys (`requestNotifications`, `promptDiscord`) are resolved against a local action map.
+- **`HomeScreen`** — hero card, `OfflineNotice`, a favorites-only `UpcomingList`, and `NeedToKnowList`.
+- **`ScheduleScreen`** — search + day/track/level filters (state owned here, filter UI in `ScheduleFilters`), computes `bestDay` (today if present in `data.days`, else the first day) and defaults `selectedDay` to it both on mount and via `useFocusEffect`; renders through `SessionList`.
+- **`SpeakersScreen`** — search over `data.speakersById`, alphabetized, rendered directly with `FlashList` (not through `SessionList`, which is schedule-specific).
+- **`SpeakerDetailScreen`** — bio (`MarkdownBody`), social links, and that speaker's sessions (sorted with `compareSessionsByStart`, no room-order tiebreaker passed since a speaker's own session list doesn't need one), share.
+- **`SessionDetailScreen`** — abstract markdown, metadata, speaker list, favorite toggle, share, and calendar add/remove (checks `isSessionInCalendar` on mount to show the correct calendar icon state).
+- **`FavoritesScreen`** (the "Agenda" tab's screen, exported as `MyAgendaScreen` from `stackConfigs.ts`) — starred sessions via `SessionList`, "add all to calendar" bulk action.
+- **`SettingsScreen`** — year/theme selection, favorites export (via `Share.share`, one line per favorite) and clear, notification toggles (session lead-time picker, break toggle, and a disabled placeholder "push notifications" row that isn't implemented), haptics toggle, time-zone preference, onboarding reset, data freshness + manual refresh.
+- **`NotificationsScreen`** — lists currently-scheduled OS notifications via `Notifications.getAllScheduledNotificationsAsync()`, normalized and sorted with the same `compareSessionsByStart`/`toSortableStartItem` helpers used for schedule sorting.
+- **`CoCScreen`** — Code of Conduct in a `WebView` with injected JS to hide the site's header/nav chrome; `onShouldStartLoadWithRequest` only allows the first same-origin load (blocks in-page navigation away from the CoC URL).
+- **`CoCContactsScreen`** — a hardcoded primary contact card plus `@data/coc_contacts.json`, loaded through `loadJsonData` (a `require()` wrapper, see [Utilities](#utilities)).
+
+## Components (`src/components/`)
+
+- **`layout/`** — `ScreenContainer` (app chrome, described above), `PaddedScrollView` (a `ScrollView` with theme-consistent padding).
+- **`home/`** — `HomeHeroCard`, `UpcomingList` (auto-refreshes "now" every `UPCOMING_REFRESH_INTERVAL_MS`; can filter to favorites-only), `NeedToKnowList` (renders `InfoCard`s from `@data/homeInfo`, with a special case that substitutes live Wi-Fi credentials into the "Wi-Fi Info" card when available).
+- **`schedule/`** — `SessionList` (the shared list component; see below), `SessionListItem` (`React.memo`-wrapped), `BreakListItem`, `ScheduleFilters` (composes `ScheduleDayChips` + `ScheduleTrackFilter` + `ScheduleLevelFilter`, each in their own file), `FavoriteToggleButton`, `SessionTypeLegendDialog`.
+- **`inputs/`** — `SearchBar`, `ChipPicker` (generic single-select chip row).
+- **`settings/`** — `SettingsSection` (card wrapper with optional header action), `SettingsRow`/`SettingsSwitchRow`.
+- **`status/`** — `OfflineBanner` (dumb banner), `OfflineNotice` (reads `useConferenceData()` and decides visibility/message from `fromCache`/`isOffline`/`lastFetchFailed`), `StateMessage` (centered loading/empty/error message), `DataBoundary` (loading/error/empty guard used by most data screens), `InstallPrompt` (PWA install banner, web-only — takes the full return value of `usePwaInstallPrompt()` as props).
+- **Shared/flat** — `SpeakerListItem`, `SpeakerAvatar` (renders an `expo-image` with `cachePolicy="memory-disk"` when an avatar URL exists, else `Avatar.Text` initials), `SocialLinksRow`, `DetailActionRow` (icon-button stack for detail-screen headers; supports a `render()` escape hatch for non-icon actions like the favorite star), `InfoCard`, `MarkdownBody` (theme-aware `react-native-markdown-display` wrapper), `ContactCard`.
+
+### `SessionList` (the shared list)
+
+`src/components/schedule/SessionList.tsx` is used by `ScheduleScreen` and `FavoritesScreen`. It's a `@shopify/flash-list` `FlashList` (not `FlatList`/`SectionList`) rendering a flattened `Row[]` of `{ kind: "header" }` / `{ kind: "item" }` entries — sections are flattened rather than using FlashList's native section support, with `getItemType` distinguishing `"header"` / `"break"` / `"session"` rows for FlashList's recycling. Sessions are sorted via `sortScheduleItems` (see below) before grouping by start-time label. `SpeakersScreen` renders its own `FlashList` directly instead of going through `SessionList`, since it isn't schedule/section data.
+
+## Utilities (`src/utils/`)
+
+- **`schedule.ts`** — `compareSessionsByStart(a, b, preferredRoomOrder)`: sorts by start time first; ties go to breaks before sessions, then to the year's `preferredRoomOrder` (exact case-insensitive room-name match, unmatched rooms rank last and fall back to alphabetical), then to title. `sortScheduleItems(items, conferenceYear)` looks up `getPreferredRoomOrder(conferenceYear)` and applies the comparator. `groupBySessionStartLabel` groups pre-sorted items into `{ title, data }` sections for list rendering. `toSortableStartItem`/`SortableScheduleItem` adapt loosely-typed inputs (used to sort the scheduled-notifications list, which has no native `Session` shape).
+- **`format.ts`** — `getRoomLabel` (returns `"Plenary"` when a session spans multiple rooms), `formatSessionTimeRange`/`formatSessionSubtitle`, `formatDurationFromMs`, `initialsFromName`.
+- **`time.ts`** — `formatSessionStartLabel`, `formatSessionStartTime`, `formatDateISO`, `formatConferenceDayLabel` (anchors at midday UTC to avoid date rollover across time zones), `isUpcomingSession`, `formatFetchedAt`, `getLocalTimeZone`.
+- **`notifications.ts`** — permission request/caching (`ensureNotificationPermission`, cached in a module-level variable and reset via `resetNotificationPermissionCache`), `normalizeTrigger` (best-effort parsing of Expo's notification trigger shapes into a date or relative-ms value), `rescheduleSessionNotifications`/`clearScheduledSessionNotifications` (both no-ops on web).
+- **`calendar.ts`** — `expo-calendar` wrapper. `ensureCalendarAccess(year)` resolves or creates a per-year "EuroPython {year}" calendar (reusing an existing writable one where possible, with iOS/Android-specific `source` handling), caches the resolved calendar id both in-memory and per-year event-id mappings in AsyncStorage (`ep:calendarEvents:{year}`). Exposes `addSessionToCalendar`, `removeSessionFromCalendar`, `isSessionInCalendar`, `getCalendarIdForYear`.
+- **`sessionTypes.ts`** — `getSessionTypeAccent` (substring-matches a session type string against `@data/sessionTypes`' color map) and `useSessionTypeLegendEntries` (memoized legend list).
+- **`haptics.ts`** — thin `expo-haptics` wrappers, gated by a module-level `hapticsEnabled` flag toggled via `setHapticsEnabledRuntime` (called from an effect in `SettingsProvider` whenever the persisted `hapticsEnabled` setting changes). All calls swallow errors.
+- **`share.ts`** — `shareLink` wraps `Share.share` with an `Alert.alert` failure fallback.
+- **`storage.ts`** — `loadJsonFromStorage`/`saveJsonToStorage` (AsyncStorage JSON helpers with fallback-on-error), `loadJsonData(loader, fallback)` (wraps a `require()` call passed in by the caller, so Metro's static-require analysis still works while failures degrade gracefully — used for `coc_contacts.json`).
+- **`webAlertPolyfill.ts`** — a side-effect-only module (imported once in `App.tsx`) that, on web only, monkey-patches `Alert.alert` to use `window.confirm`/`window.alert`. React Native's `Alert.alert` has no web implementation by default, and several flows (`useCalendarSync`, notification permission prompts, favorites clear/export) depend on it — this is what makes those flows functional on web instead of silently no-op-ing.
+
+## Data & content (`src/data/`)
+
+Static, declarative content bundled with the app: `homeInfo.ts` ("Need to know" cards, with an `actions` array of `{ key, label }` resolved dynamically against `useAppNavigation()`'s returned functions by key), `onboarding.ts` (slide copy + Discord link), `sessionTypes.ts` (accent color map + legend entries), `coc.ts` (CoC URL), `coc_contacts.json` (CoC team contact list).
+
+## Config (`src/config/`)
+
+- **`conference.ts`** — `CONFERENCE_YEARS` (currently `[2026, 2025, 2024, 2023, 2022]`), `DEFAULT_CONFERENCE_YEAR` (the max of that list), `CONFERENCE_META` (per-year `title`/`subtitle`/`timeZone`/optional `preferredRoomOrder`), `API_BASE` (hardcoded, no runtime override), `SCHEMA_VERSION` (cache-key version, bump when `ConferenceData`'s shape changes so stale cached payloads aren't parsed as the new shape), `WIFI_INFO_URL` (a conference-specific, effectively per-year URL that needs manual updating).
+- **`constants.ts`** — notification defaults/caps, date formatting constants, refresh intervals (see [Notifications](#notifications) and the conference-data pipeline above).
+
+## Types (`src/types/`)
+
+`raw.ts` — the upstream JSON shapes (`RawSession`, `RawSpeaker`, `RawSchedule*`), including the two possible top-level wrapper shapes handled by `guards.ts`. `conference.ts` — the app's normalized types: `Session` (with optional `slotId` for multi-slot sessions), `Speaker`, `SpeakerRef` (the trimmed shape embedded in `Session.speakers`), `BreakSlot`, `ScheduleItem` (`Session | BreakSlot`), `DaySchedule`, `ConferenceData`.
+
+## Web / PWA specifics
+
+- `public/manifest.json`, `public/index.html` (registers `service-worker.js`), and `public/workbox-config.js` (Workbox precaching config, plus a runtime `CacheFirst` rule for Pretalx speaker-avatar URLs under `programme.europython.eu/media/avatars/`) drive the installable PWA. The service worker is generated by `pnpm build:web` (`expo export -p web && workbox generateSW public/workbox-config.js`), not committed to source.
+- `usePwaInstallPrompt` / `InstallPrompt` implement the "Add to Home Screen" banner: listens for the `beforeinstallprompt` browser event (Chromium-based browsers) and separately detects iOS Safari (which has no such event) via a `/iPhone|iPod/` user-agent check — note this excludes iPad, which reports a desktop Safari UA string.
+- `webAlertPolyfill.ts` (above) is what keeps `Alert.alert`-dependent flows working on web at all.
