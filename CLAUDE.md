@@ -2,6 +2,10 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## CRITICAL BEHAVIORS (Always Follow)
+- **Auto-Update Documentation:** Whenever you modify codebase logic, add new screens, change configuration, or alter the architecture, you **MUST automatically update the corresponding markdown files in the `docs/` directory** in the same set of changes. Do not ask for permission to update the docs; just do it so they never drift from the source code.
+- **Auto-Update Graphify:** After modifying code, run `graphify update .` to keep the AST/knowledge graph current (AST-only, no API cost).
+
 ## graphify
 
 This project has a knowledge graph at graphify-out/ with god nodes, community structure, and cross-file relationships.
@@ -10,7 +14,6 @@ Rules:
 - For codebase questions, first run `graphify query "<question>"` when graphify-out/graph.json exists. Use `graphify path "<A>" "<B>"` for relationships and `graphify explain "<concept>"` for focused concepts. These return a scoped subgraph, usually much smaller than GRAPH_REPORT.md or raw grep output.
 - If graphify-out/wiki/index.md exists, use it for broad navigation instead of raw source browsing.
 - Read graphify-out/GRAPH_REPORT.md only for broad architecture review or when query/path/explain do not surface enough context.
-- After modifying code, run `graphify update .` to keep the graph current (AST-only, no API cost).
 
 ## Commands
 
@@ -36,7 +39,7 @@ There are no runtime environment variables — the app reads no `process.env`/`E
 
 ## Documentation
 
-`docs/` is a maintained, current reference — prefer it over re-deriving things from source:
+`docs/` is a maintained, current reference — prefer it over re-deriving things from source. **You must keep these files updated when you change the code**:
 - `docs/getting-started.md` — setup, run commands, common startup failures
 - `docs/architecture.md` — full runtime structure, navigation, data flow, file-by-file
 - `docs/project-structure.md` — why each `src/` folder exists and its boundaries
