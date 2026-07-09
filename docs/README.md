@@ -20,4 +20,4 @@ This directory is the maintained reference for building and extending the EuroPy
 - Refactors: [docs/architecture.md](architecture.md), then [docs/project-structure.md](project-structure.md) and [docs/configuration.md](configuration.md) to avoid breaking assumptions.
 
 ## Keeping this accurate
-This set was rewritten from a full read of the current source (not from the previous docs, which had drifted — stale references to a removed dev proxy, `EXPO_PUBLIC_*` env vars that no longer exist, a renamed `src/services/data.ts`, and committed `ios/`/`android/` folders that are actually gitignored). When you change code that these docs describe, update the relevant doc in the same change — don't let it drift again.
+This set was rewritten from a full read of the current source (not from the previous docs, which had drifted). When you change code that these docs describe, update the relevant doc in the same change — don't let it drift again.
