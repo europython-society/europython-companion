@@ -1,4 +1,4 @@
-name: Run Type Check
+name: Run Type and Format Checks
 
 on:
   push:
@@ -24,7 +24,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v6
         with:
-          node-version: "26.4.0"
+          node-version: 26
           cache: "pnpm"
 
       - name: Type check
