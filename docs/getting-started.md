@@ -43,6 +43,8 @@ pnpm pwa
 ## Native builds
 `pnpm ios` / `pnpm android` run against locally-generated `ios/`/`android/` projects (Expo's Continuous Native Generation / prebuild workflow — these folders are gitignored, not committed). If you only need JS/UI changes, `pnpm start` is usually enough; you don't need a native build unless you're changing native config (`app.config.js` plugins, permissions, icons) or adding a library with native code.
 
+`expo-dev-client` is installed, so `pnpm ios`/`pnpm android` build a custom dev client (not plain Expo Go) and `pnpm start` connects to it automatically — no extra flags needed. This matters because the app uses native modules (e.g. `expo-calendar`, `react-native-worklets`) that plain Expo Go doesn't support. EAS's `development` build profile (`eas.json`) also sets `developmentClient: true` for building a shareable internal dev client via `eas build --profile development`.
+
 ## Code style and checks
 - Format code and docs with:
   ```sh

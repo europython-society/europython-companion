@@ -46,3 +46,12 @@ yarn-error.*
 # example data from programapi
 # static.europython.eu/programme/{year}/releases/current/{speakers|sessions|schedule}.json
 example_data/
+
+# EAS Local Build Outputs
+*.apk
+*.aab
+*.ipa
+*.tar.gz
+
+# EAS Local Build Directories
+.eas/

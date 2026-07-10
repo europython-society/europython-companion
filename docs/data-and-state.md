@@ -25,6 +25,10 @@ Derived values are computed close to where they're used, not centralized:
 - `sortScheduleItems`/`compareSessionsByStart` (`src/utils/schedule.ts`) is the single sort entrypoint used by `SessionList`, `UpcomingList`, `SpeakerDetailScreen`, and `NotificationsScreen` — time first, then break-before-session, then the year's `preferredRoomOrder` as a tiebreaker, then title.
 - Session type colors/legend are mapped through `src/utils/sessionTypes.ts` (substring matching against `src/data/sessionTypes.ts`'s color map).
 
+## Static content data
+
+`src/data/venue.ts` exports `venueViews`, the ICE Kraków interior wayfinding content shown by `VenueMapScreen` — no store, no fetch, just bundled `require()`'d images (`assets/venue/`) and hand-verified room/floor text. Not fetched or cached like conference data; ships with the app binary and updates only via a new release.
+
 ## Side effects and isolation
 Side effects are centralized so screens stay mostly declarative:
 - Notifications are scheduled in `src/utils/notifications.ts` and kept in sync with favorites/keynotes/breaks by `useScheduleNotifications` (`src/hooks/useScheduleNotifications.ts`), mounted via a no-render wrapper in `App.tsx`. Notification-tap deep linking is a separate concern handled by `useNotificationDeepLink`. `ep{year}.europython.eu` universal-link deep linking is a third, also-separate concern handled by `useUrlDeepLink` (`src/hooks/useUrlDeepLink.ts`, native only, mounted the same no-render way), which is the one deep-link mechanism that reads `useConferenceData()` — it resolves the slug in the link against `sessionsById`/`speakersById` and switches `conferenceYear` via `useSettings()` if the link's year isn't the one currently loaded.

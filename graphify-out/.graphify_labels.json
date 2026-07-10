@@ -21,7 +21,6 @@
   "19": "Settings Row Components",
   "20": "Detail Action Row",
   "21": "Info Card Component",
-  "22": "Chip Picker Input",
   "23": "Schedule Level Filter",
   "24": "Settings Section Wrapper",
   "25": "Social Links Row",
@@ -79,10 +78,5 @@
   "78": "Docs Rewritten From Full Source Read",
   "79": "Good First Test Candidates",
   "80": "Service Worker Registration Script",
-  "81": "theme.ts",
-  "82": "package.json",
-  "83": "devDependencies",
-  "84": "DetailActionRow.tsx",
-  "85": "ScheduleLevelFilter.tsx",
-  "87": "ScheduleTrackFilter.tsx"
+  "81": "theme.ts"
 }

@@ -17,6 +17,7 @@ export const HomeStackRoutes = {
   Home: "HomeMain",
   CoC: "CoC",
   CoCContacts: "CoCContacts",
+  VenueMap: "VenueMap",
   SessionDetail: SharedRoutes.SessionDetail,
   SpeakerDetail: SharedRoutes.SpeakerDetail,
 } as const;
@@ -55,6 +56,7 @@ export type HomeStackParamList = {
   [HomeStackRoutes.Home]: undefined;
   [HomeStackRoutes.CoC]: undefined;
   [HomeStackRoutes.CoCContacts]: undefined;
+  [HomeStackRoutes.VenueMap]: undefined;
   [HomeStackRoutes.SessionDetail]: SessionDetailParams;
   [HomeStackRoutes.SpeakerDetail]: SpeakerDetailParams;
 };

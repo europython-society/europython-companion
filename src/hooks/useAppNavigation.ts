@@ -160,6 +160,22 @@ export function useAppNavigation() {
     });
   }, [navigation, parentNav]);
 
+  const openVenue = useCallback(() => {
+    try {
+      navigation.navigate(HomeStackRoutes.VenueMap);
+      return;
+    } catch {}
+    if (parentNav) {
+      parentNav.navigate(TabRoutes.Home, {
+        screen: HomeStackRoutes.VenueMap,
+      });
+      return;
+    }
+    navigationRef.current?.navigate(TabRoutes.Home, {
+      screen: HomeStackRoutes.VenueMap,
+    });
+  }, [navigation, parentNav]);
+
   return {
     navigation,
     goToScheduleTab,
@@ -172,6 +188,7 @@ export function useAppNavigation() {
     openNotificationsList,
     openCoC,
     openCoCContacts,
+    openVenue,
   };
 }
 

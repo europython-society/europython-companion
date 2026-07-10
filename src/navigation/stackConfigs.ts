@@ -21,6 +21,7 @@ import {
 import HomeScreen from "@screens/HomeScreen";
 import CoCScreen from "@screens/CoCScreen";
 import CoCContactsScreen from "@screens/CoCContactsScreen";
+import VenueMapScreen from "@screens/VenueMapScreen";
 import SessionDetailScreen from "@screens/SessionDetailScreen";
 import SpeakerDetailScreen from "@screens/SpeakerDetailScreen";
 import ScheduleScreen from "@screens/ScheduleScreen";
@@ -82,6 +83,11 @@ export const stackConfigs = {
         name: HomeStackRoutes.CoCContacts,
         component: CoCContactsScreen,
         options: { title: "CoC Contacts" },
+      },
+      {
+        name: HomeStackRoutes.VenueMap,
+        component: VenueMapScreen,
+        options: { title: "Venue map" },
       },
     ] satisfies StackScreenConfig<HomeStackParamList>[],
   },

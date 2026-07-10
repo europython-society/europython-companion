@@ -1,5 +1,3 @@
-// Build-time only: read by the Expo CLI/Node while resolving config, never
-// shipped into src/ or the client bundle. Defaults to root; deploy-web.yaml
 // sets WEB_BASE_URL=/europython-companion for the GitHub Pages build.
 const baseUrl = process.env.WEB_BASE_URL ?? "";
 
@@ -11,10 +9,16 @@ module.exports = {
   expo: {
     name: "EuroPython",
     slug: "europython-companion",
+    owner: "europython",
     version: "1.0.0",
     orientation: "portrait",
     icon: "./assets/icon.png",
     userInterfaceStyle: "automatic",
+    extra: {
+      "eas": {
+        "projectId": "65eee084-4cf7-40f1-93d0-994fdbc62b28"
+      }
+    },
     ios: {
       icon: "./assets/icon-ios.png",
       supportsTablet: true,
@@ -22,6 +26,7 @@ module.exports = {
       infoPlist: {
         NSCalendarsUsageDescription:
           "Allow EuroPython Companion to add sessions to your calendar.",
+        ITSAppUsesNonExemptEncryption: false,
       },
       associatedDomains: deepLinkHosts.map((host) => `applinks:${host}`),
     },
@@ -49,7 +54,7 @@ module.exports = {
     web: {
       favicon: "./assets/icon.png",
       name: "EuroPython",
-      description: "Your companion for the EuroPython in your pocket.",
+      description: "Conference companion app for EuroPython",
       themeColor: "#001B31",
     },
     experiments: {

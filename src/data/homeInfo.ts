@@ -10,6 +10,13 @@ export const needToKnow: NeedToKnowCard[] = [
     lines: ["SSID: TBD", "Password: TBD"],
   },
   {
+    title: "Finding your way",
+    lines: [
+      "See which rooms are on which floor, entrance details, and where specific rooms are.",
+    ],
+    actions: [{ key: "openVenue", label: "Open venue map" }],
+  },
+  {
     title: "Help and support",
     lines: [
       "Look for volunteers wearing a yellow t-shirt around the venue.",

@@ -3,6 +3,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import type { Theme as NavTheme } from "@react-navigation/native";
 import { PaperProvider, MD3Theme } from "react-native-paper";
 import { SafeAreaProvider } from "react-native-safe-area-context";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 import * as Notifications from "expo-notifications";
 
 import "@utils/webAlertPolyfill";
@@ -92,12 +93,14 @@ function AppScaffold({
   onNavReady: () => void;
 }) {
   return (
-    <PaperProvider theme={theme}>
-      <SafeAreaProvider>
-        <NavigationContainer theme={navTheme} ref={navigationRef} onReady={onNavReady}>
-          {children}
-        </NavigationContainer>
-      </SafeAreaProvider>
-    </PaperProvider>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <PaperProvider theme={theme}>
+        <SafeAreaProvider>
+          <NavigationContainer theme={navTheme} ref={navigationRef} onReady={onNavReady}>
+            {children}
+          </NavigationContainer>
+        </SafeAreaProvider>
+      </PaperProvider>
+    </GestureHandlerRootView>
   );
 }
