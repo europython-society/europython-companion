@@ -15,9 +15,9 @@ module.exports = {
     icon: "./assets/icon.png",
     userInterfaceStyle: "automatic",
     extra: {
-      "eas": {
-        "projectId": "65eee084-4cf7-40f1-93d0-994fdbc62b28"
-      }
+      eas: {
+        projectId: "65eee084-4cf7-40f1-93d0-994fdbc62b28",
+      },
     },
     ios: {
       icon: "./assets/icon-ios.png",
