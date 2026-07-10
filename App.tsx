@@ -14,12 +14,18 @@ import { ConferenceDataProvider } from "@store/conferenceData";
 import { FavoritesProvider } from "@store/favorites";
 import { useScheduleNotifications } from "@hooks/useScheduleNotifications";
 import { useNotificationDeepLink } from "@hooks/useNotificationDeepLink";
+import { useUrlDeepLink } from "@hooks/useUrlDeepLink";
 import { useAppNavTheme } from "@hooks/useAppNavTheme";
 import { usePwaInstallPrompt } from "@hooks/usePwaInstallPrompt";
 import InstallPrompt from "@components/status/InstallPrompt";
 
 function ScheduleNotificationManager() {
   useScheduleNotifications();
+  return null;
+}
+
+function UrlDeepLinkManager() {
+  useUrlDeepLink();
   return null;
 }
 
@@ -57,6 +63,7 @@ function AppContent() {
       <ConferenceDataProvider year={conferenceYear}>
         <FavoritesProvider year={conferenceYear}>
           <ScheduleNotificationManager />
+          <UrlDeepLinkManager />
           <InstallPrompt {...pwaInstallPrompt} />
           <AppTabs theme={activePaperTheme} />
         </FavoritesProvider>

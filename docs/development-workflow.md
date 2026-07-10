@@ -28,7 +28,7 @@ See [docs/navigation.md](navigation.md) for a full worked example.
 
 ## Avoid breaking navigation or state
 - Keep route names centralized in `src/navigation/routes.ts` and update the typed param lists together.
-- For destinations used across multiple stacks, add or extend a helper in `src/hooks/useAppNavigation.ts` so cross-tab fallbacks stay consistent. If the destination is opened from a notification tap, also check `src/hooks/useNotificationDeepLink.ts` — it's a separate mechanism.
+- For destinations used across multiple stacks, add or extend a helper in `src/hooks/useAppNavigation.ts` so cross-tab fallbacks stay consistent. If the destination is opened from a notification tap, also check `src/hooks/useNotificationDeepLink.ts`; if it's opened from a `ep{year}.europython.eu` universal link, also check `src/hooks/useUrlDeepLink.ts` — both are separate mechanisms from `useAppNavigation`.
 - Ensure screens using `useConferenceData`, `useSettings`, or `useFavorites` remain inside their providers in `App.tsx` (the onboarding stack is rendered **before** `ConferenceDataProvider`/`FavoritesProvider` mount — don't call those hooks from onboarding screens).
 - When adding new settings, update default values, hydration parsing, and persistence together in `src/store/settings.tsx`.
 - When changing schedule data shape, keep `ConferenceData` normalization (`src/services/conferenceTransform.ts`) consistent with `src/types/raw.ts`/`src/types/conference.ts`, and bump `SCHEMA_VERSION` in `src/config/conference.ts` (see [Data and state](data-and-state.md#cache-invalidation)).

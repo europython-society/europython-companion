@@ -3,6 +3,10 @@
 // sets WEB_BASE_URL=/europython-companion for the GitHub Pages build.
 const baseUrl = process.env.WEB_BASE_URL ?? "";
 
+// Kept in sync manually with CONFERENCE_YEARS in src/config/conference.ts
+const CONFERENCE_YEARS = [2026, 2025, 2024, 2023, 2022];
+const deepLinkHosts = CONFERENCE_YEARS.map((year) => `ep${year}.europython.eu`);
+
 module.exports = {
   expo: {
     name: "EuroPython",
@@ -19,6 +23,7 @@ module.exports = {
         NSCalendarsUsageDescription:
           "Allow EuroPython Companion to add sessions to your calendar.",
       },
+      associatedDomains: deepLinkHosts.map((host) => `applinks:${host}`),
     },
     android: {
       adaptiveIcon: {
@@ -28,6 +33,18 @@ module.exports = {
       predictiveBackGestureEnabled: false,
       permissions: ["READ_CALENDAR", "WRITE_CALENDAR"],
       package: "eu.europython.companion",
+      intentFilters: [
+        {
+          action: "VIEW",
+          autoVerify: true,
+          category: ["BROWSABLE", "DEFAULT"],
+          data: deepLinkHosts.flatMap((host) => [
+            { scheme: "https", host, pathPrefix: "/session" },
+            { scheme: "https", host, pathPrefix: "/speaker" },
+            { scheme: "https", host, path: "/schedule" },
+          ]),
+        },
+      ],
     },
     web: {
       favicon: "./assets/icon.png",

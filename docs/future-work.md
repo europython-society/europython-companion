@@ -15,7 +15,8 @@
 - New conference years require updates to `src/config/conference.ts` (`CONFERENCE_YEARS`, `CONFERENCE_META` including time zone, and `WIFI_INFO_URL`), plus validating `preferredRoomOrder` against the new venue's room names.
 - If the upstream programme JSON shape changes, update `src/types/raw.ts` and `src/services/conferenceTransform.ts` together, and bump `SCHEMA_VERSION` in `src/config/conference.ts` so old cached payloads aren't reused (see [Data and state](data-and-state.md#cache-invalidation)).
 - If push notifications are ever implemented, they'd need a backend (token registration + a push service) — nothing in this repo currently talks to one; the Settings UI slot already exists but is a no-op.
-- Navigation may expand if new tabs or deep-linked entry points are introduced — remember there are two navigation-fallback systems (`useAppNavigation` and `useNotificationDeepLink`) to keep in sync (see [Architecture](architecture.md#two-independent-deep-linkfallback-systems-into-the-same-nav-tree)).
+- Navigation may expand if new tabs or deep-linked entry points are introduced — remember there are three navigation-fallback systems (`useAppNavigation`, `useNotificationDeepLink`, `useUrlDeepLink`) to keep in sync (see [Architecture](architecture.md#three-independent-deep-linkfallback-systems-into-the-same-nav-tree)).
+- `useUrlDeepLink`'s universal links (`https://ep{year}.europython.eu/...`) won't actually reach the app until EuroPython hosts `apple-app-site-association`/`assetlinks.json` for those hosts — this is coordination outside this repo, not something to fix here (see [Configuration](configuration.md#appconfigjs)).
 - A test runner could be added (see [Testing](testing.md)) — `src/services/conferenceTransform.ts`, `src/utils/schedule.ts`, and `src/services/guards.ts` are pure and would be the easiest first targets.
 
 ## Safe areas to experiment

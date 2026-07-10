@@ -4,11 +4,6 @@
     "ast_hash": "a4129bd83c4b17c9ecfded7131548ee0",
     "semantic_hash": "a4129bd83c4b17c9ecfded7131548ee0"
   },
-  "app.json": {
-    "mtime": 1783680254.9884303,
-    "ast_hash": "00f753f1d04bfec7b34130a264e6aa52",
-    "semantic_hash": ""
-  },
   "babel.config.js": {
     "mtime": 1783592641.8317802,
     "ast_hash": "39626410bf17113d7391598a3d40b764",
@@ -375,13 +370,13 @@
     "semantic_hash": ""
   },
   "docs/architecture.md": {
-    "mtime": 1783680305.7925012,
-    "ast_hash": "f2c0f1192bd2f7b295cf0d26cb77e861",
+    "mtime": 1783680834.3198435,
+    "ast_hash": "7bef156c8497eaf327751781802dd2cd",
     "semantic_hash": ""
   },
   "docs/configuration.md": {
-    "mtime": 1783680289.8918405,
-    "ast_hash": "4453b0fa2e715b248b5889342fc57b54",
+    "mtime": 1783680824.5744815,
+    "ast_hash": "b31342993d9af9521b4274e1125c7946",
     "semantic_hash": ""
   },
   "docs/data-and-state.md": {
@@ -390,9 +385,9 @@
     "semantic_hash": "bde78e295ddd1ee27150bae52ef06c03"
   },
   "docs/development-workflow.md": {
-    "mtime": 1783630329.1703525,
-    "ast_hash": "d77d3fb0b3e8e30c3763afdbea5f31ac",
-    "semantic_hash": "d77d3fb0b3e8e30c3763afdbea5f31ac"
+    "mtime": 1783680850.7464607,
+    "ast_hash": "75584d595759cdff8e71d80e9300e0a7",
+    "semantic_hash": ""
   },
   "docs/future-work.md": {
     "mtime": 1783630356.9030886,
@@ -400,9 +395,9 @@
     "semantic_hash": "a5be158fc79acee93f6f02dbe5174191"
   },
   "docs/getting-started.md": {
-    "mtime": 1783630207.7831285,
-    "ast_hash": "a51584994c33df115faf22e562ef28fe",
-    "semantic_hash": "a51584994c33df115faf22e562ef28fe"
+    "mtime": 1783680853.7012334,
+    "ast_hash": "ea8c4fb0fc55d4223854b6a5bdcd6167",
+    "semantic_hash": ""
   },
   "docs/navigation.md": {
     "mtime": 1783630279.3738618,
@@ -515,8 +510,8 @@
     "semantic_hash": "6ae4ac9fc326d4da6d2bef5fe1d60249"
   },
   "public/workbox-config.js": {
-    "mtime": 1783680264.1419723,
-    "ast_hash": "315a53c2f94b0974b0917f27b7b6391a",
+    "mtime": 1783680765.9807394,
+    "ast_hash": "0854c34c935c62f48395679eeb97ce7a",
     "semantic_hash": ""
   },
   "public/index.html": {
@@ -565,8 +560,13 @@
     "semantic_hash": ""
   },
   ".github/workflows/deploy-web.yaml": {
-    "mtime": 1783638881.0544105,
-    "ast_hash": "83acc4478400734843f14d87c7fa82ca",
+    "mtime": 1783680769.0869858,
+    "ast_hash": "394b80d91cd5ed6e3b79bc9a5725bf78",
+    "semantic_hash": ""
+  },
+  "app.config.js": {
+    "mtime": 1783680750.6585197,
+    "ast_hash": "5b963e70ca8f7902452f9f12cde9bd99",
     "semantic_hash": ""
   }
 }

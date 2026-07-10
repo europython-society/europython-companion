@@ -29,6 +29,8 @@ Route names and params are typed in `src/navigation/routes.ts`. Each stack has i
 
 This is a **separate mechanism** from `src/hooks/useNotificationDeepLink.ts`, which handles OS-notification-tap deep linking by driving `navigationRef` directly (with a pending-ref buffer for cold starts before the navigator is ready) rather than going through `useAppNavigation`. If you change how session detail is reached, check both.
 
+There's a third mechanism: `src/hooks/useUrlDeepLink.ts` handles incoming `https://ep{year}.europython.eu/{session,speaker}/{slug}` and `.../schedule` universal links (native only — see [Configuration](configuration.md#appconfigjs) for why web can't do this and why this needs external hosting cooperation from EuroPython to actually fire). It also drives `navigationRef` directly, but unlike the notification hook it buffers on **data readiness**, not nav readiness: the link carries a slug and a year, session/speaker data is indexed by id and loaded per-year, so the target is held in a ref and retried whenever `useConferenceData()`'s data or the selected year changes, switching `conferenceYear` first if the link's year differs from what's loaded.
+
 ## Example: add a new screen
 This example adds a `VenueMap` screen to the Home stack.
 
